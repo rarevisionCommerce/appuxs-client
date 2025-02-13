@@ -1,12 +1,12 @@
-import QuikeLinks from "./QuikeLinks";
-import Footer from "./Footer"; 
-import EstimatePortrait from "./assets/EstP.jpg";
+import QuikeLinks from "./QuikeLinks.jsx";
+import Footer from "./Footer.jsx"; 
+import EstimatePortrait from "../../assets/EstP.jpg";
 
 function Estimate(){
 
     return(<>
         <div id="Estimate" className="flex pt-[100px] bg-[url(./assets/Estimate-bg.jpg)] bg-cover ">
-            <div className="hidden w-1/3 bg-gradient-to-b from-blue-200 via-blue-200 to-gray-300 ...  lg:flex  flex-col gap-y-5 py-16 px-4 ">
+            <div className="hidden w-1/3 bg-gradient-to-b from-blue-200 via-blue-200 to-gray-300 ...  lg:flex  flex-col gap-y-5 py-16 px-2 ">
                 <h1 className="text-2xl font-semibold">Estimate Your Project!</h1>
                 <p>Got an Idea ? We can help you realize it.</p>
                 <img src={EstimatePortrait} className="h-72" />
@@ -19,10 +19,8 @@ function Estimate(){
             
                     {/**Estimation form **/}
             
-            <div className="bg-green-50 rounded-lg flex flex-col md:px-4 px-12 py-6 h-full w-3/4">
-            
-            
-
+            <div className="bg-slate-50 border border-gray-300 rounded-lg flex flex-col md:px-4 px-4 py-6 h-full w-3/4">
+                     
             <div className="flex flex-col mt-5  gap-y-1">
                 <label> Name*</label>
                 <input type="text"  className="p-2 border outline-none  border-gray-300 rounded-md"/>
@@ -41,7 +39,7 @@ function Estimate(){
                 <label>Phone Number*</label>
                 <input type="text" placeholder="eg. Starts with +254 7..." className="p-2 border border-gray-300 outline-none rounded-md"/>
             </div>
-
+                            {/**Project type selection **/}
                 <div className="py-2">
                     <h1 className="tetx-lg font-semibold" >What type is Your Project type?</h1>
                     <div className="flex flex-col md:flex-row md:gap-3 gap-0" >
@@ -70,11 +68,8 @@ function Estimate(){
                 <textarea   className="p-2 border outline-none  border-gray-300 rounded-md"/>
             </div>
                 </div>
-            
-           
-
-            
-
+                                        {/**Amount selection */}
+     
                 <div className="py-2">
                     <h1 className="tetx-lg font-semibold" >Select amount in your budget</h1>
                     <div className="flex flex-col md:flex-row md:gap-3 gap-0" >
@@ -100,7 +95,7 @@ function Estimate(){
                     </div>
                    
                 </div>
-
+                            {/**Project timeline selection */}
                 <div className="py-2">
                     <h1 className="tetx-lg font-semibold" >What is your expected project timeline?</h1>
                     <div className="flex flex-col md:flex-row md:gap-3 gap-0" >
@@ -139,8 +134,8 @@ function Estimate(){
 
         </div>
 
-        <QuikeLinks/>
-        <Footer/>
+      <QuikeLinks/>
+        <Footer/>   
         </>);
    
 

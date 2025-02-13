@@ -1,4 +1,4 @@
-import Logo from "./assets/Logo.png";
+import Logo from "../../assets/Logo.png";
 import {Link} from 'react-router-dom';
 
 function QuikeLinks(){
@@ -22,20 +22,20 @@ function QuikeLinks(){
                     {/**Services Link **/}
             <div className="flex flex-col gap-2 w-full md:w-1/4">
                 <h1 className="bg-yellow-400 font-semibold p-2 text-center rounded-tr-2xl rounded-bl-2xl" >Services</h1>
-                <Link to="/WebDev" className="text-white hover:text-yellow-400" >Web Development</Link>
-                <Link to="/WebDesign" className="text-white hover:text-yellow-400" >Web Design</Link>
-                <Link to="/MobileApp" className="text-white hover:text-yellow-400" >Mobile App Development</Link>
-                <Link to="/BizMgnt" className="text-white hover:text-yellow-400" >Business Management Solutions</Link>
-                <Link to="/Bulk" className="text-white hover:text-yellow-400" >Bulk SMS Intergration</Link>
+                <Link to="/Web-Development" className="text-white hover:text-yellow-400" >Web Development</Link>
+                <Link to="/Web-Design" className="text-white hover:text-yellow-400" >Web Design</Link>
+                <Link to="/Mobile-App-Development" className="text-white hover:text-yellow-400" >Mobile App Development</Link>
+                <Link to="/Business-Management" className="text-white hover:text-yellow-400" >Business Management Solutions</Link>
+                <Link to="/Bulk-SMS-Intergration" className="text-white hover:text-yellow-400" >Bulk SMS Intergration</Link>
             </div>
                     {/**Info **/}
                     <div className="flex flex-col gap-2 w-full md:w-1/4">
                 <h1 className=" font-semibold p-2 text-white text-xl rounded-tr-2xl rounded-bl-2xl" > Info:</h1>
                 <p className="text-white " >Spur Mall,Kimbo Juja </p>
-                <p className="text-white " >info@isosoft.com</p>
+                <a target="blank" href="https://mail.google.com/mail/u/0/#inbox" className="text-white " >info@isosoft.com</a>
                 <p className="text-white " >0706181387</p>
                 <p className="text-white " >0742310701</p>
-                <p className="text-white " >Instagram: Isosoft_Softwares</p>
+                <a target="blank" href="https://www.instagram.com/gachora_kimani?igsh=Z2M2Mm92aW00ZWk5" className="text-white " >Instagram: Isosoft_Softwares</a>
             </div>
 
         </div>

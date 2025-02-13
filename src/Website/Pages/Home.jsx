@@ -1,25 +1,27 @@
-
-import WebIcon from "./assets/web.png";
+import WebIcon from "../../assets/web.png";
 import { Link, animateScroll as scroll } from 'react-scroll'
-import Voip from "./assets/voip.png"
-import Ui from "./assets/UiDesign.png"
-import MobileApp from "./assets/MobileApp.png"
-import BulkIcon from "./assets/BulkIcon.jpg"
+import Voip from "../../assets/voip.png"
+import Ui from "../../assets/UiDesign.png"
+import MobileApp from "../../assets/MobileApp.png"
+import BulkIcon from "../../assets/BulkIcon.jpg"
 import React, {useEffect, useState} from "react";
-import "./App.css";
-import Photo1 from "./assets/Lemka.jpg";
-import Photo2 from "./assets/Spring.jpg";
-import Photo3 from "./assets/Bafrica.jpg";
-import Photo4 from "./assets/agape1.jpg";
-import Estimate from "./Estimate.jsx";
-import Technologies from "./Technologies.jsx";
+import "../../App.css";
+import Photo1 from "../../assets/Lemka.jpg";
+import Photo2 from "../../assets/Spring.jpg";
+import Photo3 from "../../assets/Bafrica.jpg";
+import Photo4 from "../../assets/agape1.jpg";
+import Estimate from "../Components/Estimate.jsx";
+import Technologies from "../Components/Technologies.jsx";
 
+          //Typing and deliting animation of services text 
 const texts = ["Web Development", "AU/AX Design", "Mobile App Development", "Business Management Solutions", "Bulk SMS Intergration"];
 
+          //Projects photos
 const images = [Photo1, Photo2,Photo3,Photo4 ];
   
 function Home(){
-                  // Divs Slide in Animation 
+
+                  //Title Divs Sliding from up and down respectively, Animation functionality 
    useEffect(() => {
           const company = document.getElementById('Company');
         company.classList.add('slide');
@@ -29,7 +31,7 @@ function Home(){
                
         }, []);
 
-                //Image slider
+                //Projects Images slider
         const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
   useEffect(() => {
@@ -109,26 +111,22 @@ function Home(){
         timer = setTimeout(handleTyping, typingSpeed);
 
         return () => clearTimeout(timer);
-    }, [currentText, isDeleting, loopNum, typingSpeed, currentIndex]);
-
-      
-      
-  
-
-        
-
+    }, [currentText, isDeleting, loopNum, typingSpeed, currentIndex]); 
          
 return(
 <main className=" ">
+                          {/**Top home bg div*/}
 <article className="flex flex-row sm:py-20 py-9 px-5 md:px-16  bg-[url(./assets/ServicesBackground.jpg)]  bg-cover  " >
 <div className="md:w-1/2   flex flex-col gap-5  " >
+                        {/**Title div */}
     <div id="Company" className=" "><h1 className="text-4xl  font-bold text-yellow-400 " >Isosoft Softwares  </h1>
     <p className="text-lg text-white leading-7 mb-10 " >Isosoft is a company that is comprised of a qualified team of talented ,passionate and skilled developers and designers that have the zeal to deliver the best and most cost-efficient tech services to our clients.</p></div>
-
+                          {/**Description and services animation div */}
     <div id="Developers" className="flex flex-col gap-4 md:gap-0" ><h1 className="text-2xl h-[40px] font-bold text-yellow-400 " >Services: <span className="text-white">{currentText}</span>  <span className="blinking-cursor">|</span> </h1>
     <p className="text-lg text-white leading-7  " >Isosoft's team of  software developers will create long-term value with our excellent software development services. By using deep technical knowledge and industry-spanning experience, we facilitate strong, full-cycle support from the first market research and business analysis to the idea, production, and release..</p></div>
 
     <div className=" flex gap-3">
+                  {/**Links to project and estimation divs below the page */}
         <Link to="targetDiv" smooth={true} duration={1000} className="bg-yellow-400 hover:bg-yellow-300 p-2 text-slate-800 font-semibold rounded-md" >Projects</Link>
         <Link to="Estimate" smooth={true} duration={1000} ><button className="bg-yellow-400 hover:bg-yellow-300 p-2 text-slate-800 font-semibold rounded-md" >Estimate Project</button></Link>
     </div>
@@ -148,29 +146,29 @@ return(
     </div>
                     {/**Services themselves😂 **/}
     <div className=" md:flex grid grid-cols-1   md:gap-x-4 gap-4" >
-        <div className="items-center flex flex-col bg-slate-900 md:w-1/5 w-full  p-6">
+        <div className="items-center flex flex-col bg-slate-200 border border-gray-300 md:w-1/5 w-full  p-6">
             <img src={WebIcon} className="h-36" />
-            <h1 className="text-xl text-white font-semibold" >Web Development</h1>
+            <h1 className="text-xl text-slate-900 font-semibold" >Web Development</h1>
         </div>
 
-        <div className="items-center flex flex-col bg-slate-900 md:w-1/5 w-full p-6">
+        <div className="items-center flex flex-col bg-slate-200 border border-gray-300 md:w-1/5 w-full p-6">
             <img src={Ui} className="h-36" />
-            <h1 className="text-xl text-white font-semibold" >Web Design</h1>
+            <h1 className="text-xl text-slate-900 font-semibold" >Web Design</h1>
         </div>
 
-        <div className="items-center flex flex-col bg-slate-900 w-full md:w-1/5  p-4">
+        <div className="items-center flex flex-col bg-slate-200 border border-gray-300 w-full md:w-1/5  p-4">
             <img src={MobileApp} className="h-36" />
-            <h1 className="text-xl text-white font-semibold" >Mobile Application</h1>
+            <h1 className="text-xl text-slate-900 font-semibold" >Mobile Application</h1>
         </div>
 
-        <div className="items-center flex flex-col bg-slate-900 w-full md:w-1/5  p-4">
+        <div className="items-center flex flex-col bg-slate-200 border border-gray-300 w-full md:w-1/5  p-4">
             <img src={Voip} className="h-36" />
-            <h1 className="text-xl text-center text-white font-semibold" >Business Management Solutions</h1>
+            <h1 className="text-xl text-center text-slate-900 font-semibold" >Business Management Solutions</h1>
         </div>
 
-        <div  className="items-center flex flex-col bg-slate-900 w-full md:w-1/5  p-4">
+        <div  className="items-center  flex flex-col bg-slate-200 border border-gray-300 w-full md:w-1/5  p-4">
             <img src={BulkIcon} className="h-36" />
-            <h1 className="text-xl font-semibold text-white " >Bulk SMS Intergration</h1>
+            <h1 className="text-xl text-center font-semibold text-slate-900 " >Bulk SMS Intergration</h1>
         </div>
 
     </div>                
@@ -191,7 +189,7 @@ return(
           </div>
           
         
-                        {/**Scrolling photos div */}
+                        {/**Scrolling projects photos div */}
             
                         <div className="w-full h-96 flex justify-center items-center overflow-hidden relative">
       {images.map((src, index) => (

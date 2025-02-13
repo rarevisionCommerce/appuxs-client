@@ -1,8 +1,8 @@
-import Footer from "./Footer";
-import QuikeLinks from "./QuikeLinks";
-import Portrait from "./assets/MobileAppPortrait.jpg";
+import Footer from "../Components/Footer";
+import QuikeLinks from "../Components/QuikeLinks";
+import Portrait from "../../assets/MobileAppPortrait.jpg";
 import React, {useEffect} from "react";
-import "./App.css";
+import "../../App.css";
 
 
 
@@ -11,9 +11,10 @@ function MobileApp(){
 
 
 useEffect(() => {
+                    //Mobile app article slide in animation functinality 
           const company = document.getElementById('Article');
         company.classList.add('slide-faq');
-
+                //Mobile app portrait slide in animation functinality 
         const devs = document.getElementById('Portrait');
         devs.classList.add('slide-pt');
                
@@ -21,10 +22,11 @@ useEffect(() => {
 
 
     return(<main className="">
+                    {/**Top bg div  */}
         <div className="bg-[url(./assets/MobileAppBg.jpg)] bg-center  h-[440px]  " ></div>
-        <div className="bg-gray-100 flex  py-10 md:px-28 px-6 gap-20 " >
+        <div className="bg-white flex  py-10 md:px-28 px-6 gap-20 " >
                           {/** Mobile development article div**/}
-            <div id="Article" className=" flex flex-col md:w-1/2 w-full ">
+            <div id="Article" className=" flex flex-col md:w-2/3 w-full ">
             <h1 className="text-yellow-400 font-bold text-4xl mb-4 " >Mobile App Development</h1>
             <p className="text-slate-900 border-l-4 p-4 border-l-yellow-300">
             Isosoft designs highly practical, technologically transformational, feature-rich native mobile apps for consumers and enterprises. We'll oversee mobile app development from inception to delivery and maintenance.
@@ -40,7 +42,7 @@ useEffect(() => {
 
             </div>
             </div>
-                            {/** Web design portrait**/}
+                            {/** Mobile app portrait  portrait**/}
             <div id="Portrait" className="w-1/2 hidden md:block" >
                 <img  src={Portrait} className="hover:scale-105 h-full  transition-all" />
                     

@@ -1,17 +1,18 @@
-import Footer from "./Footer";
-import QuikeLinks from "./QuikeLinks";
-import Portrait from "./assets/WebDesignPortrait.jpg";
+import Footer from "../Components/Footer";
+import QuikeLinks from "../Components/QuikeLinks";
+import Portrait from "../../assets/WebDesignPortrait.jpg";
 import React, {useEffect} from "react";
-import "./App.css";
+import "../../App.css";
 
 
 
 function WebDesign(){
 
 useEffect(() => {
+                    //Web design article slide in animation functionality
           const company = document.getElementById('Article');
         company.classList.add('slide-faq');
-
+                         //Web design Portrait slide in animation functionality
         const devs = document.getElementById('Portrait');
         devs.classList.add('slide-pt');
                
@@ -28,6 +29,7 @@ useEffect(() => {
             With our exceptional UI/UX design services, we help you show off your brand's finest and exceed user expectations. Let’s collaborate to establish long-term customer retention strategies and real, human-centered brand identities that have a direct impact on today's digital landscape.
             </p>
             <div className="text-slate-900 p-5 bg-yellow-400" >
+                            {/**List of features that our designs come with */}
         <ul style={{ listStyleType: 'disc', paddingLeft: '20px' }} >
         <h1 className="text-xl font-bold text-center">We help you build UI/UX Designs  with:</h1>      
             <li> <span className="font-semibold text-lg" > User-Centered and Accessible:</span> Prioritize user needs and ensure the design is usable for everyone, including individuals with different abilities.</li>
@@ -39,7 +41,7 @@ useEffect(() => {
             </div>
             </div>
                             {/** Web design portrait**/}
-            <div id="Portrait" className="w-1/3 hidden md:block" >
+            <div id="Portrait" className="w-1/3 hidden md:flex md:items-center md:justify-center" >
                 <img  src={Portrait} className=" h-[440px] w-[430px] transition-all" />
                     
                 

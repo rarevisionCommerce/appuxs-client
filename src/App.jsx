@@ -1,43 +1,45 @@
-import Header from "./Header";
-import Home from "./Home.jsx"
-import { BrowserRouter as Router,
-Route, Switch, Link } from 'react-router-dom';
+import Header from "./Website/Components/Header.jsx"
+import Home from "./Website/Pages/Home.jsx"
+import {BrowserRouter as Router,Route, Switch, Link} from 'react-router-dom';
 import { MantineProvider } from '@mantine/core';
-import Faq from "./Faq.jsx"
-import Contacts from "./Contacts.jsx";
-import About from "./About.jsx";
-import Drop from "./ScrollPage.jsx";
-import BulkSMS from "./BulkSMS.jsx";
-import WebDev from "./WebDev.jsx";
-import WebDesign from "./WebDesign.jsx";
-import BizMgnt from "./BizMgnt.jsx";
-import MobileApp from "./MobileApp.jsx";
-import Projects from "./Projects.jsx";
-import Estimate from "./Estimate.jsx";
+import "@mantine/core/styles.css";
+import "@mantine/dates/styles.css";
+import Faq from "./Website/Pages/Faq.jsx"
+import Contacts from "./Website/Pages/Contacts.jsx";
+import About from "./Website/Pages/About.jsx";
+import BulkSMS from "./Website/Pages/BulkSMS.jsx";
+import WebDev from "./Website/Pages/WebDev.jsx";
+import WebDesign from "./Website/Pages/WebDesign.jsx";
+import BizMgnt from "./Website/Pages/BizMgnt.jsx";
+import MobileApp from "./Website/Pages/MobileApp.jsx";
+import Projects from "./Website/Pages/Projects.jsx";
+import Estimate from "./Website/Components/Estimate.jsx";
 
 function App() {
-  return(
+  return (
     <>
-  <Router>
-    <Header/>
-      <Switch>
-        <Route exact path="/" component={Home}/>
-        <Route  path="/Faq" component={Faq}/>
-        <Route  path="/Contacts" component={Contacts}/>
-        <Route  path="/About" component={About}/>
-        <Route  path="/About" component={Drop}/>
-        <Route  path="/Bulk" component={BulkSMS}/>
-        <Route  path="/WebDev" component={WebDev}/>
-        <Route  path="/WebDesign" component={WebDesign}/>
-        <Route  path="/BizMgnt" component={BizMgnt}/>
-        <Route  path="/MobileApp" component={MobileApp}/>
-        <Route  path="/Projects" component={Projects}/>
-        <Route  path="/Estimate" component={Estimate}/>
-      </Switch>   
-      
-  </Router>
-  
-  </>
+      <MantineProvider>
+
+        <Router>
+          <Header />
+          <Switch>
+            <Route exact path="/" component={Home} />
+            <Route path="/Faq" component={Faq} />
+            <Route path="/Contacts" component={Contacts} />
+            <Route path="/About" component={About} />
+            <Route path="/Bulk-SMS-Intergration" component={BulkSMS} />
+            <Route path="/Web-Development" component={WebDev} />
+            <Route path="/Web-Design" component={WebDesign} />
+            <Route path="/Business-Management" component={BizMgnt} />
+            <Route path="/Mobile-App-Development" component={MobileApp} />
+            <Route path="/Projects" component={Projects} />
+            <Route path="/Estimate" component={Estimate} />
+          </Switch>
+
+        </Router>
+      </MantineProvider>
+
+    </>
   );
 }
 

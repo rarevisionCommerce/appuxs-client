@@ -1,20 +1,19 @@
 import React, { useState,useEffect } from "react";
-import './App.css';
-
-import Footer from "./Footer.jsx";
-import QuikeLinks from "./QuikeLinks.jsx";
+import '../../App.css';
+import Footer from "../Components/Footer.jsx";
+import QuikeLinks from "../Components/QuikeLinks.jsx";
 
 const FAQ = () => {
+          //Open and close question functionality
   const [openIndex, setOpenIndex] = useState(null);
-
   const handleToggle = (index) => {
     setOpenIndex(openIndex === index ? null : index);
   };
-
+            //Faq questions and answers
   const faqs = [
     {
       question: "Whats the current technical stack in your company",
-      answer:<> <p>React, React Native, Java, Docker, MongoDb, SQL, Postgress, NodeJs</p>
+      answer:<> <p>React, React Native,Taiwind CSS, Javascript, Python Docker, MongoDb, SQL, Postgress, NodeJs, ExpressJs, RestJS </p>
        </>
     },
     {
@@ -76,7 +75,7 @@ const FAQ = () => {
 
 
   ];
-
+        //Open answer when question is clicked functionality
   const toggleFaq = (index) => {
     setOpenIndex(openIndex === index ? null : index);
   };
@@ -89,28 +88,22 @@ const FAQ = () => {
 
   return (<>
 
-  <div className=" " >
-
-    
-    
+  <div className=" " >    
+             {/**top bg div*/}
     <div  className=" bg-[url(./assets/FaqBg.jpg)] bg-center px-4 md:px-16 py-28 text-lg ">
-    <h1 className="text-3xl font-semibold mb-6 text-white">Frequently Asked Questions</h1>
-    <div id="FaqArticle" className=" bg-yellow-400 text-slate-900 p-5 rounded-tr-3xl text-xl w-full md:w-1/3">
-    <p> 
+              {/**Faq article sliding div */}
+    <div id="FaqArticle" >
+    <h1 className="text-4xl font-semibold mb-6 text-white">Frequently Asked Questions</h1>
+    <p className="bg-yellow-400 text-slate-900 p-5 rounded-tr-3xl text-xl w-full md:w-1/3" > 
       Do you have any inquiries about our working and operations.Read the answers to frequently asked questions to help you make a decision and gain a better understanding. Understanding a problem is half-way solving it!🙂 
       </p>
+    </div>      
     </div>
-      
-    </div>
-
-
-    <div className="bg-gray-100 md:px-20 px-2 py-8 rounded-lg   ">
-
-    
-
-      
+    <div className="bg-gray-100 md:px-20 px-2 py-8 rounded-lg   "> 
+   
       {faqs.map((faq, index) => (
         <div key={index} className="mb-4 flex flex-col items-center justify-center  sm:ml-6 ">
+                  {/**Question */}
           <div
             onClick={() => handleToggle(index)}
             className=" flex justify-between items-center w-full md:w-2/3  md:text-lg font-semibold px-3 py-3 bg-white hover:bg-yellow-200 rounded-lg focus:outline-none"
@@ -118,8 +111,9 @@ const FAQ = () => {
             <div className="w-[350px] sm:w-full " >{faq.question} </div> 
            <div className=" rounded-full text-2xl w-10 flex  place-content-center bg-yellow-400 border-2 border-slate-900 h-10 "><span>{openIndex === index ? '-' : '+'}</span>  </div>  
           </div>
-          {openIndex === index && (
-            <p className="mt-2 w-full md:w-2/3 text-gray-700 bg-white p-4 rounded-lg shadow-md">
+                {/**Answer */}
+          {openIndex === index && ( 
+                   <p className="mt-2 w-full md:w-2/3 text-gray-700 bg-white p-4 rounded-lg shadow-md">
               {faq.answer} 
             </p>
           )}

@@ -1,7 +1,7 @@
-import Logo from "./assets/Logo.png";
+import Logo from "../../assets/Logo.png";
 import React from "react";
-import Instagram from "./assets/Instagram.jpg";
-import Mail from "./assets/Mail.jpg";
+import Instagram from "../../assets/Instagram.jpg";
+import Mail from "../../assets/Mail.jpg";
 
 function Footer(){
 

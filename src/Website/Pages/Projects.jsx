@@ -1,9 +1,10 @@
-import Footer from "./Footer";
-import QuikeLinks from "./QuikeLinks";
-import Spring from "./assets/Spring.jpg"
-import Lemka from "./assets/Lemka.jpg"
-import Bafrica from "./assets/Bafrica.jpg"
-import Agape from "./assets/agape1.jpg"
+import Footer from "../Components/Footer";
+import QuikeLinks from "../Components/QuikeLinks";
+import Spring from "../../assets/Spring.jpg"
+import Lemka from "../../assets/Lemka.jpg"
+import Bafrica from "../../assets/Bafrica.jpg"
+import Agape from "../../assets/agape1.jpg"
+import { Link, animateScroll as scroll } from 'react-scroll'
 
 
 function Projects(){
@@ -12,16 +13,18 @@ function Projects(){
         <>
         <main className="   flex    flex-col  " >
             
-                <div className="flex   bg-[url(./assets/ProjectBg.jpg)] bg-no-repeat bg-cover bg-center    gap-10 " >
-                <div className="inset-[196px]   bg-black opacity-40 flex md:flex-row flex-col pb-3 gap-6 px-4 md:px-28 py-28  " >
+                <div className="flex inset-0 py-14    bg-[url(./assets/ProjectBg.jpg)] bg-no-repeat bg-cover bg-center    gap-10 " > 
+               
+                  
+                <div className=" flex md:flex-row flex-col pb-3 gap-6 px-4 md:px-28 py-28  " >
 
                 <div className="flex flex-col   gap-3 w-full md:w-1/2">
            
-           <h2 className="text-4xl text-yellow-500 font-bold" >Projects</h2>
-           <p className="text-gray-100 text-lg" >Since the day Isosoft was founded, as a moral commitment to our clients, we always do our best to deliver highest-quality IT services to help them grow their business at a world-class level. With talented teams full of software developing experts, we put customers' satisfaction with the 1st priority. Thanks to our fine and affordable services, we have gained a big reputation in the IT market and created a solid network of loyal customers.
+           <h2 className="text-4xl text-yellow-400 font-bold" >Projects</h2>
+           <p className="text-white text-lg" >Since the day Isosoft was founded, as a moral commitment to our clients, we always do our best to deliver highest-quality IT services to help them grow their business at a world-class level. With talented teams full of software developing experts, we put customers' satisfaction with the 1st priority. Thanks to our fine and affordable services, we have gained a big reputation in the IT market and created a solid network of loyal customers.
 
        </p>
-       <div className="flex justify-end" ><button className="bg-yellow-400 text-white p-2 w-full md:w-1/2 hover:bg-yellow-300  text-xl " >Our recent accomplishments</button></div>
+       <Link to="projects" smooth={true} duration={1000} className="flex " ><button className="bg-yellow-400 text-white p-2 w-full md:w-1/2 hover:bg-yellow-300  text-xl " >Our recent accomplishments</button></Link>
        </div>
       
                {/**Millage div **/}
@@ -38,15 +41,15 @@ function Projects(){
        </div>
                 </div>
             
-
+                </div>
           
-            </div>
+          
                         {/**Examples of the projects **/}
-            <div id="Recents" className=" grid md:grid-cols-2 grid-cols-1  gap-7 px-4 md:px-32 py-16 bg-gradient-to-b from-gray-100 via-gray-50 to-gray-50 ... " >
+            <div id="projects" className=" grid md:grid-cols-2 grid-cols-1  gap-7 px-4 md:px-32 py-16 bg-gradient-to-b from-gray-100 via-gray-50 to-gray-50 ... " >
 
                
-
-                <div className="bg-gray-200" >
+                            {/**Lemka div */}
+                <div  className="bg-gray-100" >
                     <div  ><img  src={Lemka} /></div>
                     <div className="p-4 flex flex-col gap-3 " >
                     <p>
@@ -56,8 +59,8 @@ function Projects(){
                     </div>
                    
                 </div>
-
-                <div  className="bg-gray-200" >
+                        {/**Builders Africa div */}
+                <div  className="bg-gray-100" >
                     <div><img src={Bafrica} /></div> 
                     <div className="p-5 flex flex-col gap-3 justify-between " ><p>
                     Builders is an O2O industrial Internet platform for global real estate, engineering, building materials, equipment and design industry chain.
@@ -66,8 +69,8 @@ function Projects(){
                     </div>
                 </div>
 
-
-<div className="bg-gray-200" >
+                    {/**Springs Hotel div */}
+<div className="bg-gray-100" >
     <div > <img src={Spring} /></div>
     <div className="p-5 flex flex-col gap-3" >
     <p>
@@ -77,8 +80,8 @@ function Projects(){
 
     </div>
 </div>
-
-                <div className="bg-gray-200 flex" >
+                    {/**Agape writing solution div */}
+                <div className="bg-gray-100 flex" >
                     <div className="p-3  w-1/2" ><img  src={Agape}  className="h-[400px] " /></div>
                     <div className=" flex w-1/2 flex-col gap-3 " >
                     <p>

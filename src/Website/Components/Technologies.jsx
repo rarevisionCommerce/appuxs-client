@@ -1,27 +1,23 @@
-import BackEnd from "./assets/BackEnd.jpg"
-import FrontEnd from "./assets/FrontEnd.jpg"
-import MobileStack from "./assets/MobileStack.jpg"
-import IAC from "./assets/IAC.jpg"
-import DBMS from "./assets/DBMS.jpg"
-import ReactIcon from "./assets/ReactLogo.png"
-import Node from "./assets/Nodejs.png"
-import Native from "./assets/ReactNative.png"
-import Tailwind from "./assets/Tailwind.jpg"
-import TypeScript from "./assets/Typescript.png"
-import Github from "./assets/github.jpg"
-import Docker from "./assets/Docker.jpg"
-import AWS from "./assets/AWS.jpg"
-import Mongo from "./assets/Mongo.jpg"
-import SQL from "./assets/SQL.jpg"
-import Capacitor from "./assets/Capacitor.jpg"
-import Rest from "./assets/Rest.jpg"
-import Bm from "./assets/Bm.jpg"
-import "./App.css"
+import BackEnd from "../../assets/BackEnd.jpg"
+import FrontEnd from "../../assets/FrontEnd.jpg"
+import MobileStack from "../../assets/MobileStack.jpg"
+import IAC from "../../assets/IAC.jpg"
+import DBMS from "../../assets/DBMS.jpg"
+import ReactIcon from "../../assets/ReactLogo.png"
+import Node from "../../assets/Nodejs.png"
+import Native from "../../assets/ReactNative.png"
+import Tailwind from "../../assets/Tailwind.jpg"
+import TypeScript from "../../assets/Typescript.png"
+import Github from "../../assets/github.jpg"
+import Docker from "../../assets/Docker.jpg"
+import AWS from "../../assets/AWS.jpg"
+import Mongo from "../../assets/Mongo.jpg"
+import SQL from "../../assets/SQL.jpg"
+import Capacitor from "../../assets/Capacitor.jpg"
+import Rest from "../../assets/Rest.jpg"
+import Bm from "../../assets/Bm.jpg"
+import "../../App.css"
 import React, {useEffect,useState} from "react"
-
-
-
-
 
 function Technologies(){
 
@@ -68,7 +64,7 @@ function Technologies(){
             <div id="first"  className={` transform transition-transform duration-1000 ${isFirstVisible ? 'translate-y-0' : 'translate-y-full'
           } flex md:flex-row  flex-col   gap-7 xl:px-36 lg:px-20`}  >
                 {/**FrontEnd **/}
-            <div className="bg-gray-300 hover:bg-gray-400 pb-2 w-full lg:w-1/3 hover:shadow-xl">
+            <div className="bg-gray-100 hover:bg-slate-200 pb-2 w-full lg:w-1/3 hover:shadow-xl">
                 <div> <img src={FrontEnd} className="h-[186px] w-full " /></div>
                 <div className="flex justify-start gap-2 ml-4 items-center mt-3">
                     <img src={ReactIcon}  className="h-10 bg-gray-400"/>
@@ -88,7 +84,7 @@ function Technologies(){
                 
             </div>
                             {/**BackEnd */}
-             <div className="bg-gray-300 hover:bg-gray-400 pb-3  w-full  lg:w-1/3 hover:shadow-xl">
+             <div className="bg-gray-100 hover:bg-slate-200 pb-3  w-full  lg:w-1/3 hover:shadow-xl">
                 <div> <img  src={BackEnd} className="h-[186px] w-full"/></div>
                 <div className="flex justify-start gap-2 ml-4 items-center mt-3">
                     <img src={Node} className="h-10 w-12"/>
@@ -102,7 +98,7 @@ function Technologies(){
 
                             {/**Mobile Development */}
             
-             <div className="bg-gray-300 hover:bg-gray-400 pb-3 w-full  lg:w-1/3 hover:shadow-xl">
+             <div className="bg-gray-100 hover:bg-slate-200 pb-3 w-full  lg:w-1/3 hover:shadow-xl">
                 <div> <img src={MobileStack} className="h-[186px] w-full "/></div>
                 <div className="flex justify-start gap-2 ml-4 items-center mt-3">
                     <img src={Native} className="h-10 bg-gray-400"/>
@@ -120,8 +116,8 @@ function Technologies(){
 
             <div id="second"  className={` transform transition-transform duration-1000 ${isSecondVisible ? 'translate-y-0' : 'translate-y-full'
           } flex md:flex-row  flex-col   gap-7 xl:px-36 lg:px-20 `}  >
-                {/**FrontEnd **/}
-            <div className="bg-gray-300 hover:bg-gray-400 pb-2 w-full lg:w-1/3 hover:shadow-xl">
+                {/**DataBase Management systems  **/}
+            <div className="bg-gray-100 hover:bg-slate-200 pb-2 w-full lg:w-1/3 hover:shadow-xl">
                 <div> <img src={DBMS} className="h-[186px] w-full " /></div>
                 <div className="flex justify-start gap-2 ml-4 items-center mt-3">
                     <img src={SQL}  className="h-10 bg-gray-400"/>
@@ -140,8 +136,8 @@ function Technologies(){
 
                 
             </div>
-                            {/**BackEnd */}
-             <div className="bg-gray-300 hover:bg-gray-400 pb-3  w-full  lg:w-1/3 hover:shadow-xl">
+                            {/**Infrastructure As Code */}
+             <div className="bg-gray-100 hover:bg-slate-200 pb-3  w-full  lg:w-1/3 hover:shadow-xl">
                 <div> <img  src={IAC} className="h-[186px] w-full"/></div>
                 <div className="flex justify-start gap-2 ml-4 items-center mt-3">
                     <img src={Github} className="h-10 w-12"/>
@@ -158,9 +154,9 @@ function Technologies(){
                 </div>
                 </div>
 
-                            {/**Mobile Development */}
+                            {/**Business management tools */}
             
-             <div className="bg-gray-300 hover:bg-gray-400 pb-3 w-full  lg:w-1/3 hover:shadow-xl">
+             <div className="bg-gray-100 hover:bg-slate-200 pb-3 w-full  lg:w-1/3 hover:shadow-xl">
                 <div> <img src={Bm} className="h-[186px] w-full "/></div>
                 <div className="flex justify-start gap-2 ml-4 items-center mt-3">
                     <img src={Native} className="h-10 bg-gray-400"/>

@@ -1,27 +1,27 @@
-import Footer from "./Footer";
-import QuikeLinks from "./QuikeLinks";
-import Portrait from "./assets/BulkPortrait.jpg";
+import Footer from "../Components/Footer";
+import QuikeLinks from "../Components/QuikeLinks.jsx";
+import Portrait from "../../assets/BulkPortrait.jpg";
 import React, {useEffect} from "react" ;
-import "./App.css";
+import "../../App.css";
 
 
 
 function BulkSMS(){
 
 useEffect(() => {
+                //  Bulk SMS article sliding div functionality 
           const company = document.getElementById('Article');
         company.classList.add('slide-faq');
-
+                      //  Bulk SMS Portrait sliding div functionality 
         const devs = document.getElementById('Portrait');
         devs.classList.add('slide-pt');
                
         }, []);
 
-
-
     return(<main className=" ">
+                              {/**Top bg div  */}
         <div className="bg-[url(./assets/BulkBG.jpg)]   h-[440px] bg-cover bg-center bg-no-repeat " ></div>
-        <div className="bg-gray-100 flex py-10 md:px-24 p-6 gap-12 " >
+        <div className="bg-white flex py-10 md:px-24 p-6 gap-12 " >
                           {/** Bulk sms article div**/}
             <div id="Article" className=" flex flex-col md:w-1/2 w-full ">
             <h1 className="text-yellow-400 font-bold text-4xl mb-4 " >Bulk SMS  Intergration</h1>
