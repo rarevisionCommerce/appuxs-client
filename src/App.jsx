@@ -1,6 +1,6 @@
 import Header from "./Website/Components/Header.jsx"
 import Home from "./Website/Pages/Home.jsx"
-import {BrowserRouter as Router,Route, Switch, Link} from 'react-router-dom';
+import { BrowserRouter as Router, Route, Switch, Link } from 'react-router-dom';
 import { MantineProvider } from '@mantine/core';
 import "@mantine/core/styles.css";
 import "@mantine/dates/styles.css";
