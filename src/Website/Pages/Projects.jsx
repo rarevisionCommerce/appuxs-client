@@ -13,10 +13,10 @@ function Projects() {
         <>
             <main className="   flex    flex-col  " >
 
-                <div className="flex inset-0 py-14 bg-projectsBg bg-no-repeat bg-cover bg-center    gap-10 " >
+                <div className="flex inset-0 py-20 md:py-28 bg-projectsBg bg-no-repeat bg-cover bg-center    gap-10 " >
 
 
-                    <div className=" flex md:flex-row flex-col pb-3 gap-6 px-4 md:px-28 py-28  " >
+                    <div className=" flex md:flex-row flex-col pb-3 gap-6 px-4 lg:px-28 py-2  " >
 
                         <div className="flex flex-col   gap-3 w-full md:w-1/2">
 
@@ -45,7 +45,7 @@ function Projects() {
 
 
                 {/**Examples of the projects **/}
-                <div id="projects" className=" grid md:grid-cols-2 grid-cols-1  gap-7 px-4 md:px-32 py-16 bg-gradient-to-b from-gray-100 via-gray-50 to-gray-50 ... " >
+                <div id="projects" className=" grid md:grid-cols-2 grid-cols-1  gap-7 px-4 lg:px-32 py-16 bg-gradient-to-b from-gray-100 via-gray-50 to-gray-50 ... " >
 
 
                     {/**Lemka div */}

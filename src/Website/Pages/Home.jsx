@@ -1,4 +1,5 @@
 import WebIcon from "../../assets/web.png";
+import Hero from "../../assets/Dev2.jpg";
 import { Link, animateScroll as scroll } from 'react-scroll'
 import Voip from "../../assets/voip.png"
 import Ui from "../../assets/UiDesign.png"
@@ -116,13 +117,18 @@ return () => clearInterval(interval);
   return (
     <main className=" ">
       {/**Top home bg div*/}
-      <article className="flex flex-row sm:py-20 py-9 px-5 md:px-16  bg-homeBg  bg-cover  " >
-        <div className="md:w-1/2   flex flex-col gap-5  " >
+      <article className="flex flex-row py-10 md:py-20 lg:px-16 px-4  bg-homeBg  bg-cover  " >
+        <div className="flex w-full lg:gap-10 gap-1  ">
+
+        <div className="w-[600px]  p-2  flex flex-col gap-5  " >
           {/**Title div */}
           <div id="Company" className=" "><h1 className="text-4xl  font-bold text-yellow-400 " >Isosoft Softwares  </h1>
             <p className="text-lg text-white leading-7 mb-10 " >Isosoft is a company that is comprised of a qualified team of talented ,passionate and skilled developers and designers that have the zeal to deliver the best and most cost-efficient tech services to our clients.</p></div>
           {/**Description and services animation div */}
-          <div id="Developers" className="flex flex-col gap-4 md:gap-0" ><h1 className="text-2xl h-[40px] font-bold text-yellow-400 " >Services: <span className="text-white">{currentText}</span>  <span className="blinking-cursor">|</span> </h1>
+          <div id="Developers" className="flex flex-col gap-4 md:gap-0" >
+
+          <h1 className="text-2xl h-[40px] md:hidden font-bold text-yellow-400 " >Services: <span className="text-white">{currentText}</span>  <span className="blinking-cursor">|</span> </h1>
+
             <p className="text-lg text-white leading-7  " >Isosoft's team of  software developers will create long-term value with our excellent software development services. By using deep technical knowledge and industry-spanning experience, we facilitate strong, full-cycle support from the first market research and business analysis to the idea, production, and release..</p></div>
 
           <div className=" flex gap-3">
@@ -130,7 +136,21 @@ return () => clearInterval(interval);
             <Link to="targetDiv" smooth={true} duration={1000} className="bg-yellow-400 hover:bg-yellow-300 p-2 text-slate-800 font-semibold rounded-md" >Projects</Link>
             <Link to="Estimate" smooth={true} duration={1000} ><button className="bg-yellow-400 hover:bg-yellow-300 p-2 text-slate-800 font-semibold rounded-md" >Estimate Project</button></Link>
           </div>
+        </div> 
+         {/**Hero section portrait and services */}
+      <div  className=" hidden md:flex flex-col   w-[550px] p-7 gap-4  " >
+        <div className="p-4" >
+        <h1 className="text-2xl h-[40px] font-bold text-yellow-400 " >Services: <span className="text-white">{currentText}</span>  <span className="blinking-cursor">|</span> </h1>
         </div>
+
+        <div className="p-2">
+          <img src={Hero} className=" rounded-r-[160px] rounded-bl-[170px] " />
+        </div>
+      </div>
+
+        </div>
+        
+
         <div className="w-1/2 h-[400px] " >
 
 
@@ -148,17 +168,17 @@ return () => clearInterval(interval);
         <div className=" md:flex grid grid-cols-1   md:gap-x-4 gap-4" >
           <div className="items-center flex flex-col bg-slate-200 border border-gray-300 md:w-1/5 w-full  p-6">
             <img src={WebIcon} className="h-36" />
-            <h1 className="text-xl text-slate-900 font-semibold" >Web Development</h1>
+            <h1 className="text-xl text-center text-slate-900 font-semibold" >Web Development</h1>
           </div>
 
           <div className="items-center flex flex-col bg-slate-200 border border-gray-300 md:w-1/5 w-full p-6">
             <img src={Ui} className="h-36" />
-            <h1 className="text-xl text-slate-900 font-semibold" >Web Design</h1>
+            <h1 className="text-xl text-center text-slate-900 font-semibold" >Web Design</h1>
           </div>
 
           <div className="items-center flex flex-col bg-slate-200 border border-gray-300 w-full md:w-1/5  p-4">
             <img src={MobileApp} className="h-36" />
-            <h1 className="text-xl text-slate-900 font-semibold" >Mobile Application</h1>
+            <h1 className="text-xl text-center text-slate-900 font-semibold" >Mobile Application</h1>
           </div>
 
           <div className="items-center flex flex-col bg-slate-200 border border-gray-300 w-full md:w-1/5  p-4">

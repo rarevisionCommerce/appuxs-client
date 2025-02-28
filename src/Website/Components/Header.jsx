@@ -181,7 +181,7 @@ return (
                         </Link>
                         <Link onClick={closeDropDownLarge} to="/Web-Design" className="block p-2 hover:bg-yellow-300 border-b-2 border-b-yellow-400  lg:bg-gray-50">
                             <div className="flex lg:p-5 gap-3">
-                                <div className="hidden xl:block"><img className="h-14 " src={MobileApp} /></div>
+                                <div className="hidden xl:block"><img className="h-14 " src={Design} /></div>
                                 <div>
                                     <h1 className="text-center text-slate-950">UI/UX Design</h1>
                                     <p className="text-sm hidden lg:block text-slate-600">Designing userfriendly and prophe</p>
@@ -201,7 +201,7 @@ return (
                         </Link>
                         <Link onClick={closeDropDownLarge} to="/Mobile-App-Development" className="block hover:bg-yellow-300 p-2 border-b-2 border-b-yellow-400  lg:bg-gray-50">
                             <div className="flex xl:p-5 gap-3">
-                                <div className="hidden xl:block" ><img className="h-14 " src={Design} /></div>
+                                <div className="hidden xl:block" ><img className="h-14 " src={MobileApp} /></div>
                                 <div>
                                     <h1 className="text-center text-slate-950">Mobile App Develpment</h1>
                                     <p className="text-sm hidden lg:block text-slate-600">Developing of fast and Strong mobile Apps</p>
