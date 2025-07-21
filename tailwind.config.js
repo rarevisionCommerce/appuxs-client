@@ -18,6 +18,10 @@ export default {
         contactsBg: "url('src/assets/Contacts.jpg')",
         faqBg:"url('src/assets/FaqBg.jpg')",
         estimateBg:"url('src/assets/EstimateBg.jpg')"
+      },
+      colors : {
+        primary: "yellow-500",
+        secondary: "slate-800"
       }
     },
   },
