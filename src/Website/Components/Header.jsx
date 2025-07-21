@@ -61,7 +61,7 @@ return (
 <header className={`fixed w-full top-0 left-0 right-0 z-50 p-2 transition-colors duration-500 ${scrolled ? 'bg-slate-900 bg-opacity-90' : 'bg-transparent'}`} >
     <section className="max-w-7xl   mx-auto px-3 flex justify-between items-center">
         <div className="text-2xl font-bold flex items-center gap-3">
-            <img src={Logo} className="h-16 " />
+            <img src={Logo} className="h-14 " />
             <h1 className="text-yellow-500" ></h1>
 
         </div>

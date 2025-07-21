@@ -20,38 +20,11 @@ import "../../App.css"
 import React, { useEffect, useState } from "react"
 
 function Technologies() {
-
-    const [isFirstVisible, setIsFirstVisible] = useState(false);
-    const [isSecondVisible, setIsSecondVisible] = useState(false);
-
-    useEffect(() => {
-        const handleScroll = () => {
-            const firstDiv = document.getElementById('first');
-            const secondDiv = document.getElementById('second');
-            const firstRect = firstDiv.getBoundingClientRect();
-            const secondRect = secondDiv.getBoundingClientRect();
-
-            if (firstRect.top <= window.innerHeight) {
-                setIsFirstVisible(true);
-            }
-            if (secondRect.top <= window.innerHeight) {
-                setIsSecondVisible(true);
-            }
-        };
-
-        window.addEventListener('scroll', handleScroll);
-
-        return () => {
-            window.removeEventListener('scroll', handleScroll);
-        };
-    }, []);
-
-
-
+   
     return (
         <>
 
-            <div className="h-full flex flex-col justify-center items-center gap-7  bg-gray-50 scroll-mt-20  py-10" id="stack">
+            <div className="h-full flex flex-col justify-center items-center gap-7  bg-gray-50 scroll-mt-20  py-10" id="stck">
                 <div>
                     <p className=" text-4xl font-bold text-yellow-400 text-center  ">Tech Stack</p>
 
@@ -61,8 +34,7 @@ function Technologies() {
 
                     {/**1st row */}
 
-                    <div id="first" className={` transform transition-transform duration-1000 ${isFirstVisible ? 'translate-y-0' : 'translate-y-full'
-                        } flex md:flex-row  flex-col   gap-7 xl:px-36 lg:px-20`}  >
+                    <div id="first" className={` transform transition-transform duration-1000  flex md:flex-row  flex-col   gap-7 xl:px-36 lg:px-20`}  >
                         {/**FrontEnd **/}
                         <div className="bg-gray-100 hover:bg-slate-200 pb-2 w-full lg:w-1/3 hover:shadow-xl">
                             <div> <img src={FrontEnd} className="h-[186px] w-full " /></div>
@@ -114,8 +86,7 @@ function Technologies() {
                     </div>
                     {/**Second row **/}
 
-                    <div id="second" className={` transform transition-transform duration-1000 ${isSecondVisible ? 'translate-y-0' : 'translate-y-full'
-                        } flex md:flex-row  flex-col   gap-7 xl:px-36 lg:px-20 `}  >
+                    <div id="secnd" className={` transform transition-transform duration-1000  flex md:flex-row  flex-col   gap-7 xl:px-36 lg:px-20 `}  >
                         {/**DataBase Management systems  **/}
                         <div className="bg-gray-100 hover:bg-slate-200 pb-2 w-full lg:w-1/3 hover:shadow-xl">
                             <div> <img src={DBMS} className="h-[186px] w-full " /></div>

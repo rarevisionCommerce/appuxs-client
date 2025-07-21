@@ -1,6 +1,6 @@
 import Header from "./Website/Components/Header.jsx"
 import Home from "./Website/Pages/Home.jsx"
-import { BrowserRouter as Router, Route, Switch, Link } from 'react-router-dom';
+import { Routes, Route, Router } from 'react-router-dom';
 import { MantineProvider } from '@mantine/core';
 import "@mantine/core/styles.css";
 import "@mantine/dates/styles.css";
@@ -14,30 +14,33 @@ import BizMgnt from "./Website/Pages/BizMgnt.jsx";
 import MobileApp from "./Website/Pages/MobileApp.jsx";
 import Projects from "./Website/Pages/Projects.jsx";
 import Estimate from "./Website/Components/Estimate.jsx";
+import useScrollToTop from "./Website/Components/ScrollToTop.jsx"
+
 
 function App() {
-  return (
-    <>
-      <MantineProvider>
+  useScrollToTop()
+  return (<> 
 
-        <Router>
-          <Header />
-          <Switch>
-            <Route exact path="/" component={Home} />
-            <Route path="/Faq" component={Faq} />
-            <Route path="/Contacts" component={Contacts} />
-            <Route path="/About" component={About} />
-            <Route path="/Bulk-SMS-Intergration" component={BulkSMS} />
-            <Route path="/Web-Development" component={WebDev} />
-            <Route path="/Web-Design" component={WebDesign} />
-            <Route path="/Business-Management" component={BizMgnt} />
-            <Route path="/Mobile-App-Development" component={MobileApp} />
-            <Route path="/Projects" component={Projects} />
-            <Route path="/Estimate" component={Estimate} />
-          </Switch>
+  <Header />
+      <Routes>
+        <Route exact path="/" element={<Home/>} />
+        <Route path="/Faq" element={<Faq/>} />
+        <Route path="/Contacts" element={<Contacts/>} />
+        <Route path="/About" element={<About/>} />
+        <Route path="/Bulk-SMS-Intergration" element={<BulkSMS/>} />
+        <Route path="/Web-Development" element={<WebDev/>} />
+        <Route path="/Web-Design" element={<WebDesign/>} />
+        <Route path="/Business-Management" element={<BizMgnt/>} />
+        <Route path="/Mobile-App-Development" element={<MobileApp/>} />
+        <Route path="/Projects" element={<Projects/>} />
+        <Route path="/Estimate" element={<Estimate/>} />
+      </Routes>
 
-        </Router>
-      </MantineProvider>
+
+       
+          
+        
+      
 
     </>
   );

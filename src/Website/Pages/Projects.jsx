@@ -69,16 +69,16 @@ const AnimatedCounter = ({ end, duration, suffix = "", prefix = "", icon: Icon }
   return (
     <div ref={ref} className="group">
       <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20 hover:bg-white/15 transition-all duration-300 hover:scale-105 hover:shadow-2xl">
-        <div className="flex items-center justify-center mb-3">
+        <div className="flex items-center justify-center ">
           <div className="bg-yellow-400/20 p-3 rounded-full group-hover:bg-yellow-400/30 transition-colors duration-300">
             <Icon className="w-6 h-6 text-yellow-400" />
           </div>
         </div>
-        <div className="text-center">
-          <div className="text-3xl font-bold text-yellow-400 mb-1">
+        <div className="flex flex-col justify-center items-center">
+          <div className="text-xl md:text-2xl font-bold text-yellow-400 mb-1">
             {prefix}{count}{suffix}
           </div>
-          <div className="text-gray-300 text-sm font-medium">
+          <div className="text-gray-300 text-sm  text-nowrap font-medium">
             {end === 20 && "Projects Delivered"}
             {end === 150 && "Working Hours"}
             {end === 500 && "Client Meetings"}
@@ -103,13 +103,13 @@ const ProjectCard = ({ image, title, description, link, layout = "standard" }) =
             <img 
               src={image} 
               alt={title}
-              className="object-cover h-64 w-full transition-transform duration-700 group-hover:scale-110"
+              className="object-cover h-64 w-full transition-transform duration-700 "
             />
             <div className="absolute inset-0 bg-gradient-to-r from-transparent to-black/20 group-hover:to-black/30 transition-all duration-500" />
           </div>
           <div className="lg:w-1/2 p-8 flex flex-col justify-center">
             <div className="space-y-4">
-              <h3 className="text-xl font-bold text-gray-800 group-hover:text-yellow-600 transition-colors duration-300">
+              <h3 className="text-xl font-bold text-gray-800 group-hover:text-yellow-500 transition-colors duration-300">
                 {title}
               </h3>
               <p className="text-gray-600 leading-relaxed text-sm">
@@ -119,7 +119,7 @@ const ProjectCard = ({ image, title, description, link, layout = "standard" }) =
                 href={link} 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 bg-gradient-to-r from-yellow-400 to-yellow-500 text-white px-6 py-3 rounded-full font-semibold hover:from-yellow-500 hover:to-yellow-600 transition-all duration-300 hover:scale-105 hover:shadow-lg group/btn"
+                className="inline-flex items-center gap-2 bg-gradient-to-r from-yellow-400 to-yellow-500 text-white px-6 py-3 rounded-lg font-semibold  transition-all duration-300 hover:scale-105 hover:shadow-lg group/btn"
               >
                 <span>Visit Project</span>
                 <ExternalLink className="w-4 h-4 transition-transform duration-300 group-hover/btn:translate-x-1" />
@@ -143,7 +143,7 @@ const ProjectCard = ({ image, title, description, link, layout = "standard" }) =
         <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent   " />
         <div className="absolute top-4 right-4 opacity-0 group-hover:opacity-100 transition-all duration-300 transform translate-y-2 group-hover:translate-y-0">
           <div className="bg-white/90 backdrop-blur-sm rounded-full p-2">
-            <ExternalLink className="w-4 h-4 text-yellow-600" />
+            <ExternalLink className="w-4 h-4 text-yellow-500" />
           </div>
         </div>
       </div>
@@ -208,7 +208,7 @@ function Projects() {
   return (
     <main className="flex flex-col">
       {/* Hero Section */}
-      <div className="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 overflow-hidden">
+      <div className="relative pt-28 flex items-center justify-center bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 overflow-hidden">
         {/* Animated background elements */}
         <div className="absolute inset-0">
           <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-yellow-400/10 rounded-full blur-3xl animate-pulse" />
@@ -217,17 +217,17 @@ function Projects() {
         </div>
 
         <div className="relative z-10 w-full max-w-7xl mx-auto px-4 lg:px-8">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
+          <div className="grid lg:grid-cols-2 gap-6 items-center">
             
             {/* Content Section */}
-            <div className="space-y-8 py-2  pt-28">
-              <div className="space-y-6">
+            <div className="lg:space-y-8 space-y-5  lg:py-2  ">
+              <div className="space-y-4">
                 <div className="flex items-center gap-2 text-yellow-400">
                   <Sparkles className="w-5 h-5" />
                   <span className="text-sm font-semibold tracking-wider uppercase">Our Portfolio</span>
                 </div>
                 
-                <h1 className="text-2xl lg:text-4xl font-bold text-white leading-tight">
+                <h1 className="text-xl lg:text-4xl font-bold text-white leading-tight">
                   Our <span className="text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 to-yellow-500">Projects</span>
                 </h1>
                 
@@ -238,7 +238,7 @@ function Projects() {
 
               <button 
                 onClick={scrollToProjects}
-                className="group inline-flex items-center gap-3 bg-gradient-to-r from-yellow-400 to-yellow-500 text-white px-8 py-4 rounded-full font-semibold md:text-lg hover:from-yellow-500 hover:to-yellow-600 transition-all duration-300 hover:scale-105 hover:shadow-2xl"
+                className="group inline-flex items-center gap-3 bg-gradient-to-r from-yellow-400 to-yellow-500 text-white px-8 py-4 rounded-lg font-semibold md:text-lg hover:from-yellow-500 hover:to-yellow-600 transition-all duration-300 hover:scale-105 hover:shadow-2xl"
               >
                 <span>Explore Our Work</span>
                 <ArrowRight className="w-5 h-5 transition-transform duration-300 group-hover:translate-x-1" />
@@ -246,7 +246,7 @@ function Projects() {
             </div>
 
             {/* Stats Section */}
-            <div className="lg:pl-12 pb-3">
+            <div className="lg:pl-10 pb-3">
               <div className="text-center mb-8">
                 <h2 className="text-2xl font-bold text-white mb-2 flex items-center justify-center gap-2">
                   <TrendingUp className="w-8 h-8 text-yellow-400" />
