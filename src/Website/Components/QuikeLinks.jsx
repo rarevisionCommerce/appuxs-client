@@ -5,7 +5,7 @@ function QuikeLinks() {
 
     return (
         <>
-            <div className=" md:flex block bg-slate-800 gap-4 p-10" >
+            <div className=" md:flex block bg-slate-900 gap-4 p-10" >
                 <div className="md:w-1/4 w-full grid" >
                     <img src={Logo} className="h-20" />
                     <p className="text-white text-lg">Your reliable partner in software development servises.</p>

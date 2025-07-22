@@ -6,7 +6,7 @@ import Mail from "../../assets/Mail.jpg";
 function Footer() {
 
     return (
-        <div className="bg-slate-900 py-1 flex justify-around items-center  relative bottom-0 right-0 left-0">
+        <div className="bg-slate-950 py-1 flex justify-around items-center  relative bottom-0 right-0 left-0">
 
             <div className=" flex  text-white text-xl items-center">
                 <img className="h-14 " src={Logo} />

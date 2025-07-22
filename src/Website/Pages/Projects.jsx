@@ -1,5 +1,3 @@
-import Footer from "../Components/Footer";
-import QuikeLinks from "../Components/QuikeLinks";
 import Spring from "../../assets/Spring.jpg"
 import Lemka from "../../assets/Lemka.jpg"
 import Bafrica from "../../assets/Bafrica.jpg"
@@ -17,6 +15,9 @@ import {
   Sparkles,
   TrendingUp
 } from 'lucide-react';
+import CTA from "../Components/CTA";
+import QuikeLinks from "../Components/QuikeLinks"
+import Footer from "../Components/Footer";
 
 // Counter hook for animated numbers
 const useCounter = (end, duration = 2000, start = 0) => {
@@ -300,6 +301,9 @@ function Projects() {
           </div>
         </div>
       </div>
+      <CTA/>
+      <QuikeLinks/>
+      <Footer/>
     </main>
   );
 }

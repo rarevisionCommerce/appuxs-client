@@ -7,6 +7,7 @@ import "@mantine/dates/styles.css";
 import Faq from "./Website/Pages/Faq.jsx"
 import Contacts from "./Website/Pages/Contacts.jsx";
 import About from "./Website/Pages/About.jsx";
+import Services from "./Website/Pages/Services.jsx"
 import BulkSMS from "./Website/Pages/BulkSMS.jsx";
 import WebDev from "./Website/Pages/WebDev.jsx";
 import WebDesign from "./Website/Pages/WebDesign.jsx";
@@ -34,6 +35,7 @@ function App() {
         <Route path="/Mobile-App-Development" element={<MobileApp/>} />
         <Route path="/Projects" element={<Projects/>} />
         <Route path="/Estimate" element={<Estimate/>} />
+        <Route path="/Services" element={<Services/>} />
       </Routes>
 
 

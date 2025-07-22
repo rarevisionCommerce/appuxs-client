@@ -7,6 +7,7 @@ import Photo4 from "../../assets/agape1.jpg";
 import { NavLink } from "react-router-dom";
 
 
+
 // Projects images array
 const images = [Photo1, Photo2, Photo3, Photo4];
 
@@ -28,9 +29,10 @@ function ProjectsSection() {
         
         {/* Section Header */}
         <div className="mb-7">
-          <h2 className="text-2xl lg:text-4xl font-bold text-slate-800 ">
+          <h2 className="text-2xl lg:text-4xl font-bold text-slate-800 mb-3 ">
             Our <span className="text-yellow-500">Projects</span>
           </h2>
+          <div className="h-[5px] rounded-full w-28 mb-3 bg-gradient-to-r from-transparent to-dark"></div>
          
         </div>
 
@@ -42,14 +44,14 @@ function ProjectsSection() {
             {/* Description */}
             <div>
              
-              <p className="text-lg text-slate-700 leading-relaxed">
+              <p className=" text-slate-700 leading-relaxed">
                 Due to our high quality and affordable services, we have earned a very good 
                 reputation in the IT market and luckily we have constructed a solid line of loyal clients.
               </p>
             </div>
 
             {/* Stats */}
-            <div className="grid grid-cols-2 gap-6">
+            <div className="grid grid-cols-2 gap-3">
               <div className="text-center p-6 bg-white rounded-xl shadow-lg border border-slate-200">
                 <div className="p-3 inline-flex items-center bg-yellow-500 rounded-full  mb-2">
                   <FiAward className="text-2xl text-white" />
@@ -161,6 +163,7 @@ function ProjectsSection() {
 
         </div>
       </div>
+      
     </section>
   );
 }

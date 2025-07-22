@@ -5,6 +5,7 @@ import Projects from "../Components/Projects.jsx";
 import Technologies from "../Components/Technologies.jsx";
 import Estimate from "../Components/Estimate.jsx";
 import "../../App.css";
+import CTA from "../Components/CTA.jsx";
 
 function Home() {
   return (
@@ -12,7 +13,8 @@ function Home() {
       <Hero />
       <Services />
       <Projects />
-      <Technologies />
+      <CTA/>
+      
       <div id="estimate">
         <Estimate />
       </div>
