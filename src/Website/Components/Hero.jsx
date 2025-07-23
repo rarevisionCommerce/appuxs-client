@@ -54,18 +54,18 @@ function HeroSection() {
   }, [currentText, isDeleting, loopNum, typingSpeed, currentIndex]);
 
   return (
-    <section className="min-h-screen bg-primary bg-homeBg aspect-auto bg-cover py-2 relative">
+    <section className="min-h-screen bg-primary bg-homeBg aspect-auto bg-cover bg-center bg-no-repeat py-2 relative">
       {/* Overlay for better text readability */}
-      <div className="absolute inset-0 bg-primary/20"></div>
+      <div className="absolute inset-0 bg-primary/70"></div>
       
-      <div className="relative z-10 flex flex-col lg:flex-row items-center justify-between py-12 lg:px-16 px-6 max-w-7xl mx-auto">
+      <div className="relative z-10 flex flex-col lg:flex-row items-center justify-between lg:mb-6 pt-12 lg:px-16 px-3 max-w-7xl mx-auto">
         
         {/* Left Content */}
-        <div className="flex-1 lg:pr-12 mb-12 lg:mb-0">
+        <div className="flex-1 lg:pr-12 mb-12">
           
           {/* Company Title */}
           <div id="Company" className="mb-10">
-            <h1 className="text-2xl lg:text-4xl font-bold text-secondary mb-6">
+            <h1 className="text-2xl lg:text-4xl font-bold text-secondary mb-2">
               Isosoft Softwares
             </h1>
             <p className=" text-light leading-relaxed">
@@ -76,8 +76,8 @@ function HeroSection() {
           </div>
 
           {/* Services Animation - Mobile */}
-          <div className=" border border-secondary p-2 flex items-center rounded-xl">
-            <h2 className="text-lg font-bold  text-secondary mb-4">
+          <div className=" border border-secondary p-2 flex items-center lg:mb-4 rounded-xl">
+            <h2 className="text-lg font-bold  text-secondary ">
               Services: 
               <span className="text-light ml-2">{currentText}</span>
               <span className="blinking-cursor text-secondary">|</span>
@@ -85,7 +85,7 @@ function HeroSection() {
           </div>
 
           {/* Description */}
-          <div id="Developers" className="mb-10">
+          <div id="Developers" className="mb-5 lg:mb-7">
             <p className=" text-light leading-relaxed">
               Isosoft's team of software developers will create long-term value with our 
               excellent software development services. 
@@ -93,7 +93,7 @@ function HeroSection() {
           </div>
 
           {/* CTA Buttons */}
-          <div className="flex flex-col sm:flex-row gap-4">
+          <div className="flex justify-center lg:justify-start gap-4">
             <Link 
               to="projects" 
               smooth={true} 

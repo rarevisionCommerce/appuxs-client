@@ -52,19 +52,19 @@ function ProjectsSection() {
 
             {/* Stats */}
             <div className="grid grid-cols-2 gap-3">
-              <div className="text-center p-6 bg-white rounded-xl shadow-lg border border-slate-200">
-                <div className="p-3 inline-flex items-center bg-yellow-500 rounded-full  mb-2">
+              <div className="items-center flex flex-col gap-1 p-4 bg-white rounded-xl shadow-md border border-slate-200">
+                <div className="p-3 inline-flex items-center bg-yellow-500 rounded-full">
                   <FiAward className="text-2xl text-white" />
                 </div>
                 <div className="md:text-4xl text-2xl font-bold text-yellow-500 ">20+</div>
                 <p className="text-slate-700 text-nowrap font-semibold">Projects Delivered</p>
               </div>
               
-              <div className="text-center p-6 bg-white rounded-xl shadow-lg border border-slate-200">
-                <div className="p-3 inline-flex bg-yellow-500 rounded-full  mb-2">
+              <div className="flex flex-col items-center  gap-1 p-4 bg-white rounded-xl shadow-md border border-slate-200">
+                <div className="p-3 inline-flex bg-yellow-500 rounded-full">
                   <FiClock className="text-2xl text-white" />
                 </div>
-                <div className="md:text-4xl text-2xl font-bold text-yellow-500 mb-2">5+</div>
+                <div className="md:text-4xl text-2xl font-bold text-yellow-500 ">5+</div>
                 <p className="text-slate-700 text-nowrap font-semibold">Years of Experience</p>
               </div>
             </div>

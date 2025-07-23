@@ -36,7 +36,7 @@ const Services = () => {
               Our <span className="text-yellow-400">Services</span>
             </h1>
             
-            <div className="w-40 ml-[-50px] h-1 bg-gradient-to-r from-transparent rounded-2xl to-yellow-400  "></div>
+            <div className="w-28 lg:ml-[-80px] h-1 bg-gradient-to-r from-transparent rounded-2xl to-yellow-400  "></div>
             
             <p className="lg:text-lg text-light leading-relaxed max-w-3xl mx-auto">
               Transforming businesses through cutting-edge technology solutions. 
@@ -61,21 +61,21 @@ const Services = () => {
           {/* Glassmorphic Service Navigation */}
           <div className="relative my-3">
             {/* Main Navigation Container */}
-            <div className="backdrop-blur-lg bg-white/10 border border-white/20 rounded-3xl p-4 shadow-2xl">
+            <div className="backdrop-blur-lg bg-white/10 border border-white/20 rounded-3xl  md:p-4 shadow-2xl">
               
-              <h3 className="text-2xl font-bold text-white text-center mb-8">
+              <h3 className="text-2xl font-bold text-white text-center mb-4">
                 Explore Our Expertise
               </h3>
               
               {/* Service Links Grid */}
-              <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
+              <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 p-2 gap-3">
                 
                 <Link
                   to="webdev"
                   smooth={true}
-				  offset={-30}
+				          offset={-50}
                   duration={800}
-                 className="group flex flex-col items-center p-3 rounded-lg  cursor-pointer backdrop-blur-sm hover:scale-105 bg-blue-600 text-light duration-300 font-semibold"
+                 className="group flex flex-col items-center p-2 sm:p-3 text-sm md:text-[16px] rounded-lg  cursor-pointer backdrop-blur-sm hover:scale-105 bg-blue-600 text-light duration-300 font-semibold"
                 >
                   
                   Web Development
@@ -84,45 +84,46 @@ const Services = () => {
                 <Link
                   to="webdesign"
                   smooth={true}
-				   offset={-30}
+				          offset={-50}
                   duration={800}
-                  className="group flex flex-col items-center p-3 rounded-lg  cursor-pointer backdrop-blur-sm hover:scale-105 bg-purple-600 text-light duration-300 font-semibold"
+                  className="group flex flex-col items-center sm:p-3 p-2 rounded-lg text-sm md:text-[16px]  cursor-pointer backdrop-blur-sm hover:scale-105 bg-purple-600 text-light duration-300 font-semibold"
                 >
                   
                   Web Design
-				</Link>
+				        </Link>
 
                 <Link
                   to="mobileapp"
                   smooth={true}
-				   offset={-30}
+				          offset={-50}
                   duration={800}
-                 className="group flex flex-col items-center p-3 rounded-lg  cursor-pointer backdrop-blur-sm hover:scale-105 bg-pink-600 text-light duration-300 font-semibold"
+                 className="group flex flex-col items-center p-3 rounded-lg  cursor-pointer text-sm md:text-[16px] backdrop-blur-sm hover:scale-105 bg-pink-600 text-light duration-300 font-semibold"
                 >
                   
                   Mobile Apps
                 </Link>
 
-                <Link
-                  to="bizmgnt"
-                  smooth={true}
-				   offset={-30}
-                  duration={800}
-                 className="group flex flex-col items-center p-3 rounded-lg  cursor-pointer backdrop-blur-sm hover:scale-105 bg-green-600 text-light duration-300 font-semibold"
-                >
-                  
-                 Business Solutions
-                </Link>
+                
 
                 <Link
                   to="bulksms"
-				   offset={-30}
+				          offset={-50}
                   smooth={true}
                   duration={800}
-                  className="group flex flex-col items-center p-3 rounded-lg  cursor-pointer backdrop-blur-sm hover:scale-105 bg-red-600 text-light duration-300 font-semibold"
+                  className="group flex flex-col items-center p-3 rounded-lg text-sm md:text-[16px]  cursor-pointer backdrop-blur-sm hover:scale-105 bg-red-600 text-light duration-300 font-semibold"
                 >
                  
                  Bulk SMS
+                </Link>
+                <Link
+                  to="bizmgnt"
+                  smooth={true}
+				          offset={-50}
+                  duration={800}
+                 className="group flex flex-col text-nowrap items-center p-3 rounded-lg  cursor-pointer text-sm md:text-[16px] backdrop-blur-sm hover:scale-105 bg-green-600 text-light duration-300 font-semibold"
+                >
+                  
+                 Business Solutions
                 </Link>
 
               </div>

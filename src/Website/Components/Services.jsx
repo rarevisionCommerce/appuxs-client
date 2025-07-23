@@ -12,7 +12,7 @@ import { NavLink } from "react-router-dom";
 function ServicesSection() {
   return (
     <section className="bg-gradient-to-b from-slate-100 via-slate-50 to-white py-10">
-      <div className="max-w-7xl mx-auto px-6">
+      <div className="max-w-7xl mx-auto lg:px-6 px-2">
         
         {/* Section Header */}
         <div className="mb-10">
@@ -35,7 +35,7 @@ function ServicesSection() {
           {/* Web Development */}
           <div className="group bg-white  p-3 shadow-md transition-all duration-300 transform hover:-translate-y-2 border border-slate-200 hover:border-yellow-500">
             <div className="text-center">
-              <div className="w-12 h-12 mx-auto mb-2 bg-gradient-to-br from-yellow-500 to-amber-600 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+              <div className="w-12 h-12 mx-auto mb-2 bg-secondary rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
                 <FiMonitor className="text-3xl text-white" />
               </div>
               <h3 className="md:text-lg text-sm font-semibold text-slate-800 group-hover:text-yellow-600 transition-colors duration-300">
@@ -48,7 +48,7 @@ function ServicesSection() {
           {/* Web Design */}
           <div className="group bg-white  p-3 shadow-md  transition-all duration-300 transform hover:-translate-y-2 border border-slate-200 hover:border-yellow-500/50">
             <div className="text-center">
-              <div className="w-12 h-12 mx-auto mb-2 bg-gradient-to-br from-yellow-500 to-amber-600 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+              <div className="w-12 h-12 mx-auto mb-2 bg-secondary  rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
                 <FiLayers className="text-3xl text-white" />
               </div>
               <h3 className="md:text-lg text-sm font-semibold text-slate-800 group-hover:text-yellow-600 transition-colors duration-300">
@@ -61,10 +61,10 @@ function ServicesSection() {
           {/* Mobile Application */}
           <div className="group bg-white  p-3 shadow-md  transition-all duration-300 transform hover:-translate-y-2 border border-slate-200 hover:border-yellow-500/50">
             <div className="text-center">
-              <div className="w-12 h-12 mx-auto mb-2 bg-gradient-to-br from-yellow-500 to-amber-600 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+              <div className="w-12 h-12 mx-auto mb-2 bg-secondary rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
                 <FiSmartphone className="text-3xl text-white" />
               </div>
-              <h3 className="md:text-lg text-small font-semibold text-slate-800 group-hover:text-yellow-600 transition-colors duration-300">
+              <h3 className="md:text-lg text-sm font-semibold text-slate-800 group-hover:text-yellow-600 transition-colors duration-300">
                 Mobile Application
               </h3>
               <div className="w-12 h-1 bg-yellow-500 mx-auto mt-4 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
@@ -74,7 +74,7 @@ function ServicesSection() {
           {/* Business Management */}
           <div className="group bg-white  p-3 shadow-md  transition-all duration-300 transform hover:-translate-y-2 border border-slate-200 hover:border-yellow-500/50">
             <div className="text-center">
-              <div className="w-12 h-12 mx-auto mb-2 bg-gradient-to-br from-yellow-500 to-amber-600 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+              <div className="w-12 h-12 mx-auto mb-2 bg-secondary rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
                 <FiSettings className="text-3xl text-white" />
               </div>
               <h3 className="md:text-lg text-sm font-semibold text-slate-800 group-hover:text-yellow-600 transition-colors duration-300">
@@ -87,7 +87,7 @@ function ServicesSection() {
           {/* Bulk SMS */}
           <div className="group bg-white  p-3 shadow-md  transition-all duration-300 transform hover:-translate-y-2 border border-slate-200 hover:border-yellow-500/50 md:col-span-2 lg:col-span-1">
             <div className="text-center">
-              <div className="w-12 h-12 mx-auto mb-2 bg-gradient-to-br from-yellow-500 to-amber-600 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+              <div className="w-12 h-12 mx-auto mb-2 bg-secondary rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
                 <FiMessageSquare className="text-3xl text-white" />
               </div>
               <h3 className="md:text-lg text-sm font-semibold text-slate-800 group-hover:text-yellow-600 transition-colors duration-300">

@@ -7,7 +7,7 @@ export default {
   theme: {
     extend: {
       backgroundImage:{
-        "homeBg" : "url('public/assets/ServicesBackground.jpg')",
+        "homeBg" : "url('/assets/ServicesBackground.jpg')",
         aboutBg: "url('src/assets/AboutBackground.jpg')",
         webDevBg: "url('src/assets/WebDevBg.jpg')",
         mobileAppsBg: "url('src/assets/MobileAppBg.jpg')",
@@ -20,11 +20,11 @@ export default {
         estimateBg:"url('src/assets/EstimateBg.jpg')"
       },
       colors: {
-  primary: "#1e293b",      // 
-  secondary: "#facc15",   // 
-  tertiary: "#d97706",     //  (complements yellow, warmer tone)
-  dark: "#0f172a",         // (darker than primary for backgrounds)
-  light: "#f1f5f9"         // (light neutral that pairs with slate)
+  primary: "#1e293b",      
+  secondary: "#facc15",   
+  tertiary: "#d97706",     
+  dark: "#0f172a",         
+  light: "#f1f5f9"     
 }
     },
   },

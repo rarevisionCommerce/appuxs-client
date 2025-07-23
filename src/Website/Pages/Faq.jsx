@@ -90,7 +90,7 @@ const FAQ = () => {
 
     <div className=" " >
       {/**top bg div*/}
-      <div className=" bg-faqBg bg-center px-4 md:px-16 py-28 text-lg ">
+      <div className=" bg-primary bg-center px-4 md:px-16 py-28 text-lg ">
         {/**Faq article sliding div */}
         <div id="FaqArticle" >
           <h1 className="text-4xl font-semibold mb-6 text-white">Frequently Asked Questions</h1>

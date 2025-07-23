@@ -7,14 +7,14 @@ function BizMgnt() {
     return (<>
         <div className="bg-gradient-to-br from-gray-50 via-slate-100 to-white flex flex-col lg:flex-row py-8 sm:py-12 lg:py-16 px-4 sm:px-8 md:px-5 lg:px-8 gap-6 lg:gap-12">
                                
-                               <div  className="w-full order-last relative lg:w-1/2 p-4 bg-light border border-dark/10 flex items-center justify-center   rounded-2xl">
+                               <div  className="w-full lg:order-last relative lg:w-1/2 p-4 bg-light border border-dark/10 flex items-center justify-center   rounded-2xl">
                                 <div className="absolute inset-0 bg-gradient-to-br from-secondary/20 via-green-500/20 to-primary/20 rounded-2xl blur-xl transform scale-110"></div>
                                    <div className=" w-full relative h-full  group">
                                       
                                        <img 
                                            src={Portrait} 
                                            alt="Web Development Professional"
-                                           className=" h-full object-center rounded-2xl shadow-sm" 
+                                           className="h-56 lg:h-full object-center rounded-2xl shadow-sm" 
                                        />
                                        
                                    </div>
@@ -26,21 +26,21 @@ function BizMgnt() {
                                        <h1 className="text-secondary font-bold text-2xl sm:text-3xl lg:text-4xl  leading-tight">
                                           <span className="text-dark">Bussiness</span> Automation
                                        </h1>
-                                       <div className="h-[5px] rounded-full w-44 bg-gradient-to-r from-transparent to-dark"></div>
+                                       <div className="h-[5px] rounded-full w-32 bg-gradient-to-r from-transparent to-dark"></div>
                                        <div className="bg-white p-4 sm:p-6 rounded-lg shadow-md border-l-4 border-secondary">
                                            <div>
                                                <Rating value={5}/>
                                            </div>
                                            <p className="text-dark text-sm sm:text-base  leading-relaxed">
-                                                Work smarter in Your bussiness  and bring about impeccable efficiency. Our services include CRM, tasks, document, project and time management, business process automation, team collaboration, corporate directory, HRMS, just to name a few
+                                                Work smarter in Your bussiness  and bring about impeccable efficiency. Our services include CRM, tasks, document, project and time management, business process automation, team collaboration, corporate directory, HRMS, just to name a few.
                                            </p>
                                        </div>
                                    </div>
                
                                    {/* Features Section */}
                                    <div className="p-2  flex flex-col ">
-                                       <h1 className="font-semibold mb-2 text-center">Lets build a system that Allows; </h1>                        
-                                       <div className="flex flex-col gap-2">
+                                       <h1 className="font-semibold mb-2 ">Priority Features : </h1>                        
+                                       <div className="flex flex-col text-sm lg:text-[15px] gap-2">
                                            {/* User-Friendly Design */}
                                            <div className="flex items-center  gap-3  ">
                                                <div className="bg-secondary p-2 rounded-full">
@@ -61,7 +61,7 @@ function BizMgnt() {
                                                </div>
                                                <div>
                                                    <span className="font-semibold  text-dark">
-                                                     Data Integration,ensuring seamless data exchange and synchronization
+                                                     Data Integration,ensuring seamless data exchange and synchronization.
                                                    </span>
                                                    
                                                </div>
@@ -74,7 +74,7 @@ function BizMgnt() {
                                                </div>
                                                <div>
                                                    <span className="font-semibold  text-dark">
-                                                      Rule-Based Decision Making,minimizing the need for human input
+                                                      Rule-Based Decision Making minimizing the need for human input.
                                                    </span>
                                                    
                                                </div>
@@ -87,7 +87,7 @@ function BizMgnt() {
                                                </div>
                                                <div>
                                                    <span className="font-semibold  text-dark">
-                                                     Digital Document Management,reducing paperwork and manual handling
+                                                     Digital Document Management reducing paperwork and manual handling
                                                    </span>
                                                    
                                                </div>

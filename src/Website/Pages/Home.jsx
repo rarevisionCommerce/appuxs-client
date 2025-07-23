@@ -6,11 +6,12 @@ import Technologies from "../Components/Technologies.jsx";
 import Estimate from "../Components/Estimate.jsx";
 import "../../App.css";
 import CTA from "../Components/CTA.jsx";
+import Header from "../Components/Header.jsx";
 
 function Home() {
   return (
     <main className="overflow-hidden">
-      <Hero />
+       <Hero />
       <Services />
       <Projects />
       <CTA/>
