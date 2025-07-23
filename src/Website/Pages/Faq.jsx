@@ -2,6 +2,8 @@ import React, { useState, useEffect } from "react";
 import '../../App.css';
 import Footer from "../Components/Footer.jsx";
 import QuikeLinks from "../Components/QuikeLinks.jsx";
+import { ChevronDown } from "lucide-react";
+import CTA from "../Components/CTA.jsx";
 
 const FAQ = () => {
   //Open and close question functionality
@@ -81,39 +83,94 @@ const FAQ = () => {
   };
 
   //Smooth Faq div article slide-in animation
-  useEffect(() => {
-    const div = document.getElementById('FaqArticle');
-    div.classList.add('slide-faq');
-  }, []);
+  
 
   return (<>
 
     <div className=" " >
       {/**top bg div*/}
-      <div className=" bg-primary bg-center px-4 md:px-16 py-28 text-lg ">
-        {/**Faq article sliding div */}
-        <div id="FaqArticle" >
-          <h1 className="text-4xl font-semibold mb-6 text-white">Frequently Asked Questions</h1>
-          <p className="bg-yellow-400 text-slate-900 p-5 rounded-tr-3xl text-xl w-full md:w-1/3" >
-            Do you have any inquiries about our working and operations.Read the answers to frequently asked questions to help you make a decision and gain a better understanding. Understanding a problem is half-way solving it!🙂
-          </p>
-        </div>
+       <header className="relative py-5  bg-slate-800 overflow-hidden">
+  {/* Animated Background Elements */}
+  <div className="absolute inset-0">
+    <div className="absolute top-20 left-10 w-72 h-72 bg-yellow-400/10 rounded-full blur-3xl animate-pulse"></div>
+    <div className="absolute top-40 right-20 w-96 h-96 bg-amber-600/10 rounded-full blur-3xl animate-pulse delay-1000"></div>
+    <div className="absolute bottom-20 left-1/3 w-64 h-64 bg-yellow-400/5 rounded-full blur-3xl animate-pulse delay-2000"></div>
+  </div>
+
+  {/* Main Content */}
+  <div className="relative z-10 flex flex-col justify-center gap-3 items-center px-4 pt-16">
+   
+    {/* Main Title Section */}
+    <div className="flex items-center flex-col gap-3  max-w-5xl">
+      <div className="">
+ 
+        <span className="inline-flex gap-2 items-center px-4 py-2 bg-secondary/20 text-secondary rounded-full text-sm font-semibold backdrop-blur-sm border border-yellow-400/30 ">
+         <div className="bg-secondary h-2 w-2 rounded-full"></div> Expert Answers & Solutions
+        </span>
       </div>
+     
+      <h1 className="text-2xl lg:text-4xl font-bold text-white leading-tight">
+        Frequently Asked <span className="text-yellow-400">Questions</span>
+      </h1>
+     
+      <div className="w-28 lg:ml-[-80px] h-1 bg-gradient-to-r from-transparent rounded-2xl to-yellow-400  "></div>
+     
+      <p className="lg:text-lg text-light leading-relaxed max-w-3xl mx-auto">
+        Get instant answers to common questions about our <strong>software development services</strong>, 
+        project timelines, <em>pricing models</em>, and <em>technical expertise</em>. Everything you need 
+        to know about partnering with Isosoft for your next digital transformation project.
+      </p>
+     
+      {/* SEO Meta Elements */}
+      <div className="hidden">
+        <span itemProp="description">
+          Comprehensive FAQ section for Isosoft software development company. Find answers about web development, 
+          mobile app development, pricing, project timelines, technical stack, contracts, and maintenance services.
+        </span>
+        <span itemProp="keywords">
+          software development FAQ, web development questions, mobile app development cost, project timeline, 
+          technical stack, contract signing, maintenance support, Kenya software company FAQ
+        </span>
+        <span itemProp="name">Isosoft Software Development FAQ</span>
+        <span itemProp="headline">Frequently Asked Questions - Software Development Services</span>
+        <span itemProp="about">
+          Common questions and expert answers about custom software development, web applications, 
+          mobile apps, business solutions, and technical support services
+        </span>
+        <span itemProp="audience">
+          Business owners, entrepreneurs, startups, and companies seeking custom software development solutions
+        </span>
+        <meta name="description" content="Get answers to frequently asked questions about Isosoft's software development services, pricing, timelines, technical stack, and project processes. Expert solutions for your business needs." />
+        <meta name="keywords" content="software development FAQ, web development questions, mobile app costs, project timeline, technical expertise, contract process, maintenance support" />
+        <meta property="og:title" content="FAQ - Software Development Services | Isosoft" />
+        <meta property="og:description" content="Find answers to common questions about our software development services, project processes, pricing models, and technical expertise." />
+        <meta property="og:type" content="website" />
+        <meta name="twitter:card" content="summary" />
+        <meta name="twitter:title" content="Software Development FAQ | Isosoft Solutions" />
+        <meta name="twitter:description" content="Comprehensive answers to questions about custom software development, web apps, mobile development, and business solutions." />
+      </div>
+    </div>
+   
+  </div> 
+
+</header>
       <div className="bg-gray-100 md:px-20 px-2 py-8 rounded-lg   ">
 
         {faqs.map((faq, index) => (
-          <div key={index} className="mb-4 flex flex-col items-center justify-center  sm:ml-6 ">
+          <div key={index} onClick={() => handleToggle(index)} className="mb-4 flex flex-col  border border-secondary/50  py-2  rounded-xl  sm:ml-6 ">
             {/**Question */}
             <div
-              onClick={() => handleToggle(index)}
-              className=" flex justify-between items-center w-full md:w-2/3  md:text-lg font-semibold px-3 py-3 bg-white hover:bg-yellow-200 rounded-lg focus:outline-none"
+              
+              className=" flex justify-between items-center w-full  md:text-lg font-semibold px-3 py-2  rounded-xl focus:outline-none  "
             >
               <div className="w-[350px] sm:w-full " >{faq.question} </div>
-              <div className=" rounded-full text-2xl w-10 flex  place-content-center bg-yellow-400 border-2 border-slate-900 h-10 "><span>{openIndex === index ? '-' : '+'}</span>  </div>
+              {/**Answer */}
+            
+              
+              <ChevronDown className={`text-primary w-6 h-6 mt-2 transition-transform duration-300 ${openIndex === index ? "rotate-180":""}`}  />
             </div>
-            {/**Answer */}
             {openIndex === index && (
-              <p className="mt-2 w-full md:w-2/3 text-gray-700 bg-white p-4 rounded-lg shadow-md">
+              <p className="mt-2 w-full  text-gray-700 border-t border-dark/20 p-4 ">
                 {faq.answer}
               </p>
             )}
@@ -124,7 +181,7 @@ const FAQ = () => {
 
     </div>
 
-
+        <CTA/>
     <QuikeLinks />
     
   </>);
