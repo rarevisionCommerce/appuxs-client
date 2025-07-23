@@ -7,6 +7,7 @@ import Estimate from "../Components/Estimate.jsx";
 import "../../App.css";
 import CTA from "../Components/CTA.jsx";
 import Header from "../Components/Header.jsx";
+import QuikeLinks from "../Components/QuikeLinks.jsx";
 
 function Home() {
   return (
@@ -18,6 +19,7 @@ function Home() {
       
       <div id="estimate">
         <Estimate />
+        <QuikeLinks/>
       </div>
     </main>
   );

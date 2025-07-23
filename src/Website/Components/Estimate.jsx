@@ -134,8 +134,7 @@ function Estimate() {
 
         </div>
 
-        <QuikeLinks />
-        <Footer />
+       
     </>);
 
 

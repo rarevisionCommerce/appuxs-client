@@ -153,7 +153,7 @@ const Services = () => {
       <div id="bulksms"><BulkSMS/></div>
 	  <CTA/>
 	  <QuikeLinks/>
-	  <Footer/>
+	  
     </>
   );
 };

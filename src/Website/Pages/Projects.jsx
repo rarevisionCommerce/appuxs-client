@@ -303,7 +303,7 @@ function Projects() {
       </div>
       <CTA/>
       <QuikeLinks/>
-      <Footer/>
+     
     </main>
   );
 }

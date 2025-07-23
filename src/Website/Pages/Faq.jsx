@@ -126,7 +126,7 @@ const FAQ = () => {
 
 
     <QuikeLinks />
-    <Footer />
+    
   </>);
 };
 

@@ -2,10 +2,6 @@ import { ArrowRight } from "lucide-react";
 import React from "react";
 import { FaWhatsapp } from "react-icons/fa";
 import { 
-  FiArrowRight, 
-  FiPhone, 
-  FiMail, 
-  FiMessageCircle,
   FiStar,
   FiUsers,
   FiTrendingUp
@@ -47,7 +43,7 @@ const CTA = () => {
           </p>
 
           {/* Stats Bar */}
-          <div className="grid  grid-cols-3 lg:gap-8 gap-5 max-w-3xl mx-auto mb-2">
+          <div className="grid  grid-cols-3 lg:gap-20 gap-9  max-w-3xl mx-auto mb-2">
             <div className="flex flex-col items-center gap-2">
               <div className="flex items-center justify-center w-10 h-10 bg-yellow-400/20 rounded-full mx-auto ">
                 <FiUsers className="text-2xl text-yellow-400" />

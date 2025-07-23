@@ -85,7 +85,7 @@ function Contacts() {
         </div>
 
         <QuikeLinks />
-        <Footer />
+        
 
     </>);
 }
