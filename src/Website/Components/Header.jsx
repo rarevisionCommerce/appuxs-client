@@ -77,7 +77,7 @@ return (
             <div className={`sm:hidden absolute top-[80px] right-0 w-full bg-yellow-400 text-slate-900 flex flex-col items-center gap-3 font-semibold text-lg transform transition-transform ${menu ? "block" : "hidden"} `} style={{ transition: "transform 0.3s ease, opacity 0.3s ease" }}>
                 <Link onClick={closeMenu} to="/" className='list-none w-full text-center p-4 hover:bg-slate-900 hover:text-white transition-all cursor-pointer'>Home</Link>
 
-                <Link onClick={openDropDown} to="#" className='list-none w-full text-center p-4 hover:bg-slate-900 hover:text-white transition-all cursor-pointer'>Services    </Link>             
+                <Link onClick={openDropDown} to="/Services" className='list-none w-full text-center p-4 hover:bg-slate-900 hover:text-white transition-all cursor-pointer'>Services    </Link>             
 
                 <Link onClick={closeMenu} to="/About" className='list-none w-full text-center p-4 hover:bg-slate-900 hover:text-white transition-all cursor-pointer'>About</Link>
 
