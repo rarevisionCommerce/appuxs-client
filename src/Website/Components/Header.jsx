@@ -103,12 +103,12 @@ function Header() {
 
                     {/* Desktop Auth Buttons */}
                     <div className="hidden sm:flex space-x-3">
-                        <button className="bg-transparent border border-secondary text-secondary hover:bg-secondary hover:text-primary px-4 py-2 rounded-md transition-all duration-300">
+                        <NavLink className="bg-transparent border border-secondary text-secondary hover:bg-secondary hover:text-primary px-4 py-2 rounded-md transition-all duration-300">
                             Login
-                        </button>
-                        <button className="bg-secondary text-primary hover:bg-secondary/90 hover:text-light px-4 py-2 rounded-md transition-all duration-300">
-                            Sign Up
-                        </button>
+                        </NavLink>
+                        <NavLink to="/Project-Estimate" className="bg-secondary text-primary hover:bg-secondary/90 hover:text-light px-4 py-2 rounded-md transition-all duration-300">
+                            Get Started
+                        </NavLink>
                     </div>
                 </section>
             </header>
@@ -177,19 +177,19 @@ function Header() {
                     </NavLink>
 
                     {/* Mobile Auth Buttons */}
-                    <div className="p-4 space-y-3 border-t border-light/20 mt-4">
-                        <button 
+                    <div className="p-4 flex flex-col space-y-3 border-t border-light/20 mt-4">
+                        <NavLink to="/"
                             onClick={closeMenu}
-                            className="w-full bg-transparent border border-light/50 text-secondary hover:bg-primary hover:text-secondary py-2 rounded-md transition-all duration-300"
+                            className="w-full bg-transparent border border-light/50 text-secondary hover:bg-primary hover:text-secondary text-center py-2 rounded-md transition-all duration-300"
                         >
                             Login
-                        </button>
-                        <button 
+                        </NavLink>
+                        <NavLink to="/Project-Estimate" 
                             onClick={closeMenu}
-                            className="w-full bg-secondary text-dark hover:bg-secondary/80  py-2 rounded-md transition-all duration-300"
+                            className="w-full text-center bg-secondary text-dark hover:bg-secondary/80  py-2 rounded-md transition-all duration-300"
                         >
-                            Sign Up
-                        </button>
+                           Get Started
+                        </NavLink>
                     </div>
                 </div>
             </div>

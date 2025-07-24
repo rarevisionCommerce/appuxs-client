@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useForm } from "react-hook-form";
 import { useMutation } from "@tanstack/react-query";
 import { toast } from "react-toastify";
@@ -7,6 +7,47 @@ import EstimatePortrait from "../../assets/EstP.jpg";
 
 function Estimate() {
     const [selectedFile, setSelectedFile] = useState(null);
+    
+    // SEO Meta Tags Effect
+    useEffect(() => {
+        // Set document title
+        document.title = "Get Your Project Estimate | Professional Web & Mobile Development";
+        
+        // Create or update meta tags
+        const metaTags = [
+            { name: "description", content: "Get a free project estimate for web development, mobile apps, and e-commerce solutions. Professional development services with transparent pricing and clear timelines." },
+            { name: "keywords", content: "project estimate, web development, mobile app development, e-commerce, software development, project quote, development cost" },
+            { name: "author", content: "Your Company Name" },
+            { property: "og:title", content: "Get Your Project Estimate | Professional Development Services" },
+            { property: "og:description", content: "Transform your ideas into reality. Get a detailed estimate for your web or mobile development project with professional consultation." },
+            { property: "og:type", content: "website" },
+            { name: "twitter:card", content: "summary_large_image" },
+            { name: "twitter:title", content: "Get Your Project Estimate | Professional Development Services" },
+            { name: "twitter:description", content: "Transform your ideas into reality. Get a detailed estimate for your web or mobile development project." }
+        ];
+
+        metaTags.forEach(tag => {
+            let element = document.querySelector(`meta[${tag.name ? 'name' : 'property'}="${tag.name || tag.property}"]`);
+            if (!element) {
+                element = document.createElement('meta');
+                if (tag.name) element.name = tag.name;
+                if (tag.property) element.setAttribute('property', tag.property);
+                document.head.appendChild(element);
+            }
+            element.content = tag.content;
+        });
+
+        return () => {
+            // Cleanup meta tags when component unmounts
+            metaTags.forEach(tag => {
+                const element = document.querySelector(`meta[${tag.name ? 'name' : 'property'}="${tag.name || tag.property}"]`);
+                if (element) {
+                    document.head.removeChild(element);
+                }
+            });
+            document.title = "Your App"; // Reset to default title
+        };
+    }, []);
     
     const {
         register,
@@ -86,190 +127,298 @@ function Estimate() {
     };
 
     return (
-        <div id="Estimate" className="flex pt-[100px]  min-h-screen">
-            <div className="hidden w-1/3 bg-gradient-to-b from-blue-200 via-blue-200 to-gray-300 lg:flex flex-col gap-y-5 py-16 px-2">
-                <h1 className="text-2xl font-semibold text-primary">Estimate Your Project!</h1>
-                <p className="text-primary">Got an Idea? We can help you realize it.</p>
-                <img src={EstimatePortrait} className="h-72 object-cover rounded-lg" alt="Estimate" />
-            </div>
-            
-            <div className="h-full lg:w-2/3 w-full flex flex-col justify-center items-center px-4">
-                <h1 className="text-primary text-2xl font-semibold mb-6">Estimate Your Project</h1>
-
-                <form 
-                    onSubmit={handleSubmit(onSubmit)} 
-                    className="bg-light border border-gray-300 rounded-lg flex flex-col md:px-6 px-4 py-6 w-full max-w-4xl"
-                >
-                    {/* Name Field */}
-                    <div className="flex flex-col mt-5 gap-y-1">
-                        <label className="text-primary font-medium">Name*</label>
-                        <input 
-                            type="text" 
-                            {...register("name", { 
-                                required: "Name is required",
-                                minLength: { value: 2, message: "Name must be at least 2 characters" }
-                            })}
-                            className={`p-3 border outline-none rounded-md transition-colors ${
-                                errors.name ? 'border-red-500' : 'border-gray-300 focus:border-secondary'
-                            }`}
-                            placeholder="Enter your full name"
-                        />
-                        {errors.name && <span className="text-red-500 text-sm">{errors.name.message}</span>}
-                    </div>
-
-                    {/* Email Field */}
-                    <div className="flex flex-col mt-5 gap-y-1">
-                        <label className="text-primary font-medium">Email*</label>
-                        <input 
-                            type="email" 
-                            {...register("email", { 
-                                required: "Email is required",
-                                pattern: {
-                                    value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
-                                    message: "Invalid email address"
-                                }
-                            })}
-                            className={`p-3 border outline-none rounded-md transition-colors ${
-                                errors.email ? 'border-red-500' : 'border-gray-300 focus:border-secondary'
-                            }`}
-                            placeholder="Enter your email address"
-                        />
-                        {errors.email && <span className="text-red-500 text-sm">{errors.email.message}</span>}
-                    </div>
-
-                    {/* Phone Number Field */}
-                    <div className="flex flex-col mt-5 gap-y-1">
-                        <label className="text-primary font-medium">Phone Number*</label>
-                        <input 
-                            type="tel" 
-                            {...register("phoneNumber", { 
-                                required: "Phone number is required",
-                                pattern: {
-                                    value: /^\+254[0-9]{9}$/,
-                                    message: "Phone number must start with +254 followed by 9 digits"
-                                }
-                            })}
-                            placeholder="e.g. +254712345678" 
-                            className={`p-3 border outline-none rounded-md transition-colors ${
-                                errors.phoneNumber ? 'border-red-500' : 'border-gray-300 focus:border-secondary'
-                            }`}
-                        />
-                        {errors.phoneNumber && <span className="text-red-500 text-sm">{errors.phoneNumber.message}</span>}
-                    </div>
-
-                    {/* Project Type Selection */}
-                    <div className="py-4">
-                        <h2 className="text-lg font-semibold text-primary mb-3">What type is your project?*</h2>
-                        <div className="grid md:grid-cols-2 gap-3">
-                            {['Web Development', 'Mobile App', 'Business and E-commerce', 'Other'].map((type) => (
-                                <label key={type} className="flex items-center gap-2 cursor-pointer hover:bg-gray-50 p-2 rounded">
-                                    <input 
-                                        type="radio" 
-                                        value={type}
-                                        {...register("projectType", { required: "Please select a project type" })}
-                                        className="w-4 h-4 text-secondary border-gray-300 focus:ring-secondary"
-                                    />
-                                    <span className="text-primary">{type}</span>
-                                </label>
-                            ))}
+        <div id="Estimate" className="flex flex-col  min-h-screen bg-slate-50">
+            {/* Left Side Panel */}
+            <header className=" pt-32 bg-slate-800 flex flex-col lg:flex-row gap-5 p-6">
+                <header className="lg:w-1/3 w-full">
+                    <h1 className="lg:text-2xl text-xl font-bold text-yellow-400 mb-4 leading-tight">
+                        Transform Your Vision Into Reality
+                    </h1>
+                    <p className="text-slate-300 mb-6  leading-relaxed">
+                        Get a comprehensive project estimate tailored to your unique requirements. Our expert team analyzes your vision and provides detailed insights into development scope, timeline, and investment needed.
+                    </p>
+                    <div className="mt-3 bg-secondary/20 backdrop-blur-sm border border-secondary/30 hover:bg-secondary/30 transition-all duration-300 rounded-full px-6 py-3 text-center">                     
+                           
+                            <div className="text-secondary gap-2 inline-flex items-center"> <div className="bg-secondary font-semibold rounded-full p-1"></div>Weigh Your Vission </div>
+                                             
+                            
                         </div>
-                        {errors.projectType && <span className="text-red-500 text-sm">{errors.projectType.message}</span>}
-                    </div>
-
-                    {/* Idea Description */}
-                    <div className="flex flex-col mt-5 gap-y-1">
-                        <label className="text-primary font-medium">Briefly Illustrate your Idea*</label>
-                        <textarea 
-                            {...register("ideaDescription", { 
-                                required: "Project description is required",
-                                minLength: { value: 20, message: "Description must be at least 20 characters" }
-                            })}
-                            className={`p-3 border outline-none rounded-md h-32 resize-vertical transition-colors ${
-                                errors.ideaDescription ? 'border-red-500' : 'border-gray-300 focus:border-secondary'
-                            }`}
-                            placeholder="Describe your project idea in detail..."
-                        />
-                        {errors.ideaDescription && <span className="text-red-500 text-sm">{errors.ideaDescription.message}</span>}
-                    </div>
-
-                    {/* Budget Selection */}
-                    <div className="py-4">
-                        <h2 className="text-lg font-semibold text-primary mb-3">Select amount in your budget*</h2>
-                        <div className="grid md:grid-cols-2 gap-3">
-                            {['Less than Ksh 100k', 'Ksh 100k-Ksh 250k', 'Above Ksh 250k', 'Other price'].map((budget) => (
-                                <label key={budget} className="flex items-center gap-2 cursor-pointer hover:bg-gray-50 p-2 rounded">
-                                    <input 
-                                        type="radio" 
-                                        value={budget}
-                                        {...register("budget", { required: "Please select a budget range" })}
-                                        className="w-4 h-4 text-secondary border-gray-300 focus:ring-secondary"
-                                    />
-                                    <span className="text-primary">{budget}</span>
-                                </label>
-                            ))}
-                        </div>
-                        {errors.budget && <span className="text-red-500 text-sm">{errors.budget.message}</span>}
-                    </div>
-
-                    {/* Project Timeline Selection */}
-                    <div className="py-4">
-                        <h2 className="text-lg font-semibold text-primary mb-3">What is your expected project timeline?*</h2>
-                        <div className="grid md:grid-cols-2 gap-3">
-                            {['Less than 2 months', '2-4 months', '4-6 months', 'Over 6 months'].map((timeline) => (
-                                <label key={timeline} className="flex items-center gap-2 cursor-pointer hover:bg-gray-50 p-2 rounded">
-                                    <input 
-                                        type="radio" 
-                                        value={timeline}
-                                        {...register("projectTimeline", { required: "Please select a timeline" })}
-                                        className="w-4 h-4 text-secondary border-gray-300 focus:ring-secondary"
-                                    />
-                                    <span className="text-primary">{timeline}</span>
-                                </label>
-                            ))}
-                        </div>
-                        {errors.projectTimeline && <span className="text-red-500 text-sm">{errors.projectTimeline.message}</span>}
-                    </div>
-
-                    {/* File Upload */}
-                    <div className="flex flex-col mt-5 gap-y-1">
-                        <label className="text-primary font-medium">Upload Document (Optional)</label>
-                        <div className="relative">
-                            <input 
-                                type="file" 
-                                accept=".pdf,.doc,.docx"
-                                onChange={handleFileChange}
-                                className="block w-full text-sm text-primary file:mr-4 file:py-2 file:px-4 file:rounded-md file:border-0 file:text-sm file:font-semibold file:bg-secondary file:text-primary hover:file:bg-tertiary transition-colors"
-                            />
-                            <p className="text-sm text-gray-500 mt-1">
-                                Supported formats: PDF, DOC, DOCX (Max: 10MB)
+                </header>    
+                    <div className="space-y-4 mb-8">
+                        <div className="flex items-start space-x-3">
+                            <div className="w-2 h-2 bg-yellow-400 rounded-full mt-2 flex-shrink-0"></div>
+                            <p className="text-slate-300 text-sm">
+                                <span className="font-semibold text-white">Detailed Analysis:</span> We examine every aspect of your project requirements
                             </p>
                         </div>
-                        {selectedFile && (
-                            <div className="mt-2 p-2 bg-gray-100 rounded-md">
-                                <span className="text-sm text-primary">Selected: {selectedFile.name}</span>
-                            </div>
-                        )}
+                        <div className="flex items-start space-x-3">
+                            <div className="w-2 h-2 bg-yellow-400 rounded-full mt-2 flex-shrink-0"></div>
+                            <p className="text-slate-300 text-sm">
+                                <span className="font-semibold text-white">Transparent Pricing:</span> Clear breakdown of costs with no hidden fees
+                            </p>
+                        </div>
+                        <div className="flex items-start space-x-3">
+                            <div className="w-2 h-2 bg-yellow-400 rounded-full mt-2 flex-shrink-0"></div>
+                            <p className="text-slate-300 text-sm">
+                                <span className="font-semibold text-white">Professional Consultation:</span> Expert guidance throughout your project journey
+                            </p>
+                        </div>
+                    </div>
+                    <div>
+                        <img 
+                        src={EstimatePortrait} 
+                        className="w-full h-64 object-cover rounded-lg shadow-lg border-2 border-yellow-400" 
+                        alt="Professional project estimation consultation" 
+                    />
+                    </div>
+                    
+                </header>
+            
+            
+            {/* Right Side Form */}
+            <div className="h-full  w-full flex flex-col justify-start items-center p-6">
+                <div className="w-full max-w-6xl">
+                    {/* Header Section */}
+                    <div className="text-center mb-8">
+                        <h1 className="text-slate-800 text-xl font-bold mb-3">Get Your Project Estimate</h1>
+                        <p className="text-slate-600 text-lg max-w-2xl mx-auto leading-relaxed">
+                            Share your project vision with us and receive a detailed estimate that covers scope, timeline, and investment. 
+                            Filling this form is 100% free!
+                        </p>
                     </div>
 
-                    {/* Submit Button */}
-                    <div className="flex items-center justify-center mt-8">
-                        <button 
-                            type="submit"
-                            disabled={isSubmitting || createEstimateMutation.isPending}
-                            className="bg-secondary text-primary px-8 py-3 rounded-md hover:bg-tertiary hover:text-light font-semibold transition-colors disabled:opacity-50 disabled:cursor-not-allowed min-w-[120px]"
-                        >
-                            {isSubmitting || createEstimateMutation.isPending ? (
-                                <div className="flex items-center justify-center gap-2">
-                                    <div className="w-4 h-4 border-2 border-primary border-t-transparent rounded-full animate-spin"></div>
-                                    Submitting...
+                   
+
+                    <div className="bg-white border border-slate-200 rounded-xl shadow-lg p-6 w-full">
+                        <div onSubmit={handleSubmit(onSubmit)}>
+                        {/* Personal Information Section */}
+                        <div className="mb-8">
+                            <h3 className="text-xl font-semibold text-slate-800 mb-4 pb-2 border-b border-slate-200">
+                                Personal/Organisation Information
+                            </h3>
+                            
+                            <div className="grid md:grid-cols-2 gap-4">
+                                {/* Name Field */}
+                                <div className="flex flex-col">
+                                    <label className="text-slate-700 font-medium mb-1 text-sm">Full Name*</label>
+                                    <input 
+                                        type="text" 
+                                        {...register("name", { 
+                                            required: "Name is required",
+                                            minLength: { value: 2, message: "Name must be at least 2 characters" }
+                                        })}
+                                        className={`p-3 border outline-none rounded-lg transition-all duration-200 text-sm ${
+                                            errors.name 
+                                                ? 'border-red-400 bg-red-50 focus:border-red-500' 
+                                                : 'border-slate-300 focus:border-yellow-400 focus:bg-slate-50'
+                                        }`}
+                                        placeholder="Enter your full name"
+                                    />
+                                    {errors.name && <span className="text-red-500 text-xs mt-1">{errors.name.message}</span>}
                                 </div>
-                            ) : (
-                                'Submit Estimate'
-                            )}
-                        </button>
-                    </div>
-                </form>
+
+                                {/* Phone Number Field */}
+                                <div className="flex flex-col">
+                                    <label className="text-slate-700 font-medium mb-1 text-sm">Phone Number*</label>
+                                    <input 
+                                        type="tel" 
+                                        {...register("phoneNumber", { 
+                                            required: "Phone number is required",
+                                            pattern: {
+                                                value: /^\+254[0-9]{9}$/,
+                                                message: "Phone number must start with +254 followed by 9 digits"
+                                            }
+                                        })}
+                                        placeholder="e.g. +254712345678" 
+                                        className={`p-3 border outline-none rounded-lg transition-all duration-200 text-sm ${
+                                            errors.phoneNumber 
+                                                ? 'border-red-400 bg-red-50 focus:border-red-500' 
+                                                : 'border-slate-300 focus:border-yellow-400 focus:bg-slate-50'
+                                        }`}
+                                    />
+                                    {errors.phoneNumber && <span className="text-red-500 text-xs mt-1">{errors.phoneNumber.message}</span>}
+                                </div>
+                            </div>
+
+                            {/* Email Field */}
+                            <div className="flex flex-col mt-4">
+                                <label className="text-slate-700 font-medium mb-1 text-sm">Email Address*</label>
+                                <input 
+                                    type="email" 
+                                    {...register("email", { 
+                                        required: "Email is required",
+                                        pattern: {
+                                            value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
+                                            message: "Invalid email address"
+                                        }
+                                    })}
+                                    className={`p-3 border outline-none rounded-lg transition-all duration-200 text-sm ${
+                                        errors.email 
+                                            ? 'border-red-400 bg-red-50 focus:border-red-500' 
+                                            : 'border-slate-300 focus:border-yellow-400 focus:bg-slate-50'
+                                    }`}
+                                    placeholder="Enter your email address"
+                                />
+                                {errors.email && <span className="text-red-500 text-xs mt-1">{errors.email.message}</span>}
+                            </div>
+                        </div>
+
+                        {/* Project Details Section */}
+                        <div className="mb-8 grid">
+                            <h3 className="text-xl font-semibold text-slate-800 mb-4 pb-2 border-b border-slate-200">
+                                Project Details
+                            </h3>
+                            <div className="grid lg:grid-cols-2  gap-10">
+                                  {/* Project Type Selection */}
+                            <div className="mb-6">
+                                <h4 className="text-lg font-medium text-slate-700 mb-3">What type is your project?*</h4>
+                                <div className="grid grid-cols-2 lg:grid-cols-1  gap-3">
+                                    {['Web Development', 'Mobile App', 'Business and E-commerce', 'Other'].map((type) => (
+                                        <label key={type} className="flex items-center gap-3 cursor-pointer hover:bg-slate-50 p-3 rounded-lg border border-slate-200 transition-all duration-200">
+                                            <input 
+                                                type="radio" 
+                                                value={type}
+                                                {...register("projectType", { required: "Please select a project type" })}
+                                                className="w-4 h-4 text-yellow-400 border-slate-300 focus:ring-yellow-400 focus:ring-2"
+                                            />
+                                            <span className="text-slate-700 font-medium text-sm">{type}</span>
+                                        </label>
+                                    ))}
+                                </div>
+                                {errors.projectType && <span className="text-red-500 text-xs mt-2">{errors.projectType.message}</span>}
+                            </div>
+
+                            {/* Idea Description */}
+                            <div className="flex flex-col mb-6">
+                                <label className="text-slate-700 font-medium mb-1 text-sm">Describe Your Project Vision*</label>
+                                <p className="text-slate-500  mb-2">
+                                    Provide detailed information about your project goals, target audience, key features, and any specific requirements.
+                                </p>
+                                <textarea 
+                                    {...register("ideaDescription", { 
+                                        required: "Project description is required",
+                                        minLength: { value: 20, message: "Description must be at least 20 characters" }
+                                    })}
+                                    className={`p-3 border outline-none rounded-lg h-32 resize-vertical transition-all duration-200 text-sm ${
+                                        errors.ideaDescription 
+                                            ? 'border-red-400 bg-red-50 focus:border-red-500' 
+                                            : 'border-slate-300 focus:border-yellow-400 focus:bg-slate-50'
+                                    }`}
+                                    placeholder="Describe your project idea, objectives, target users, core features, and any technical requirements you have in mind..."
+                                />
+                                {errors.ideaDescription && <span className="text-red-500 text-xs mt-1">{errors.ideaDescription.message}</span>}
+                            </div>       
+                            </div>
+
+                           
+                        </div>
+
+                        {/* Budget and Timeline Section */}
+                        <div className="mb-8">
+                            <h3 className="text-xl font-semibold text-slate-800 mb-4 pb-2 border-b border-slate-200">
+                                Budget & Timeline
+                            </h3>
+
+                            <div className="grid md:grid-cols-2 gap-8">
+                                {/* Budget Selection */}
+                                <div>
+                                    <h4 className="text-lg font-medium text-slate-700 mb-3">Select your budget range*</h4>
+                                    <div className="space-y-3">
+                                        {['Less than Ksh 100k', 'Ksh 100k-Ksh 250k', 'Above Ksh 250k', 'Other price'].map((budget) => (
+                                            <label key={budget} className="flex items-center gap-3 cursor-pointer hover:bg-slate-50 p-3 rounded-lg border border-slate-200 transition-all duration-200">
+                                                <input 
+                                                    type="radio" 
+                                                    value={budget}
+                                                    {...register("budget", { required: "Please select a budget range" })}
+                                                    className="w-4 h-4 text-yellow-400 border-slate-300 focus:ring-yellow-400 focus:ring-2"
+                                                />
+                                                <span className="text-slate-700 font-medium text-sm">{budget}</span>
+                                            </label>
+                                        ))}
+                                    </div>
+                                    {errors.budget && <span className="text-red-500 text-xs mt-2">{errors.budget.message}</span>}
+                                </div>
+
+                                {/* Project Timeline Selection */}
+                                <div>
+                                    <h4 className="text-lg font-medium text-slate-700 mb-3">Expected project timeline?*</h4>
+                                    <div className="space-y-3">
+                                        {['Less than 2 months', '2-4 months', '4-6 months', 'Over 6 months'].map((timeline) => (
+                                            <label key={timeline} className="flex items-center gap-3 cursor-pointer hover:bg-slate-50 p-3 rounded-lg border border-slate-200 transition-all duration-200">
+                                                <input 
+                                                    type="radio" 
+                                                    value={timeline}
+                                                    {...register("projectTimeline", { required: "Please select a timeline" })}
+                                                    className="w-4 h-4 text-yellow-400 border-slate-300 focus:ring-yellow-400 focus:ring-2"
+                                                />
+                                                <span className="text-slate-700 font-medium text-sm">{timeline}</span>
+                                            </label>
+                                        ))}
+                                    </div>
+                                    {errors.projectTimeline && <span className="text-red-500 text-xs mt-2">{errors.projectTimeline.message}</span>}
+                                </div>
+                            </div>
+                        </div>
+
+                        {/* File Upload Section */}
+                        <div className="mb-8">
+                            <h3 className="text-xl font-semibold text-slate-800 mb-4 pb-2 border-b border-slate-200">
+                                Additional Documentation
+                            </h3>
+                            
+                            <div className="flex flex-col">
+                                <label className="text-slate-700 font-medium mb-2 text-sm">Upload Supporting Documents (Optional)</label>
+                                <p className="text-slate-500 text-xs mb-3">
+                                    Upload any relevant documents such as project requirements, wireframes, design mockups, or technical specifications.
+                                </p>
+                                <div className="relative">
+                                    <input 
+                                        type="file" 
+                                        accept=".pdf,.doc,.docx"
+                                        onChange={handleFileChange}
+                                        className="block w-full text-sm text-slate-700 file:mr-4 file:py-2 file:px-4 file:rounded-lg file:border-0 file:text-sm file:font-medium file:bg-yellow-400 file:text-slate-800 hover:file:bg-yellow-500 transition-all duration-200 border border-slate-300 rounded-lg p-3"
+                                    />
+                                    <p className="text-xs text-slate-500 mt-2">
+                                        Supported formats: PDF, DOC, DOCX • Maximum file size: 20MB
+                                    </p>
+                                </div>
+                                {selectedFile && (
+                                    <div className="mt-3 p-3 bg-slate-100 rounded-lg border border-slate-200">
+                                        <div className="flex items-center justify-between">
+                                            <span className="text-sm text-slate-700 font-medium">📄 {selectedFile.name}</span>
+                                            <span className="text-xs text-slate-500">{(selectedFile.size / 1024 / 1024).toFixed(2)} MB</span>
+                                        </div>
+                                    </div>
+                                )}
+                            </div>
+                        </div>
+
+                        {/* Submit Button */}
+                        <div className="flex items-center justify-center pt-4">
+                            <button 
+                                type="submit"
+                                onClick={handleSubmit(onSubmit)}
+                                disabled={isSubmitting || createEstimateMutation.isPending}
+                                className="bg-yellow-400 text-slate-800 px-8 py-3 rounded-lg hover:bg-yellow-500 font-semibold transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed min-w-[160px] transform hover:scale-105 focus:ring-4 focus:ring-yellow-300"
+                            >
+                                {isSubmitting || createEstimateMutation.isPending ? (
+                                    <div className="flex items-center justify-center gap-2">
+                                        <div className="w-4 h-4 border-2 border-slate-800 border-t-transparent rounded-full animate-spin"></div>
+                                        Submitting...
+                                    </div>
+                                ) : (
+                                    'Get My Estimate'
+                                )}
+                            </button>
+                        </div>
+
+                        <p className="text-center text-slate-500 text-xs mt-4">
+                            We'll review your submission and get back to you within 24 hours with a detailed project estimate.
+                        </p>
+                        </div>
+                </div>
             </div>
+        </div>
         </div>
     );
 }

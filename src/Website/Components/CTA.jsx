@@ -6,6 +6,7 @@ import {
   FiUsers,
   FiTrendingUp
 } from "react-icons/fi";
+import { NavLink } from "react-router-dom";
 
 const CTA = () => {
   return (
@@ -71,7 +72,7 @@ const CTA = () => {
 
         {/* CTA Cards Grid */}
         <div className="flex justify-center items-center lg:gap-20 gap-3 ">
-			<button className="p-3 bg-secondary hover:scale-105  rounded-lg font-semibold items-center inline-flex gap-2 ">Get Started <ArrowRight/> </button>
+			<NavLink to="/Project-Estimate" className="p-3 bg-secondary hover:scale-105  rounded-lg font-semibold items-center inline-flex gap-2 ">Get Started <ArrowRight/> </NavLink>
 			<button className="bg-light/20  opacity-50 p-3 border-2 hover:border-green-500 hover:text-green-500 border-light text-light rounded-lg inline-flex hover:scale-105  items-center gap-3"> <FaWhatsapp/> WhatsApp</button>
 		</div>
         {/* Trust Indicators */}

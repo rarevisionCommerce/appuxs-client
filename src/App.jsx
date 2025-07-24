@@ -31,6 +31,7 @@ function App() {
         <Route exact path="/" element={<Home/>} />
         <Route path="/Faq" element={<Faq/>} />
         <Route path="/Contacts" element={<Contacts/>} />
+        <Route path="/Project-Estimate" element={<Estimate/>} />
         <Route path="/About" element={<About/>} />
         <Route path="/Bulk-SMS-Intergration" element={<BulkSMS/>} />
         <Route path="/Web-Development" element={<WebDev/>} />

@@ -78,7 +78,7 @@ function Contacts() {
             <div className='min-h-screen  '>
                 
                 {/* Hero Header Section */}
-                <header className="relative py-16 bg-gradient-to-br from-primary via-dark to-primary overflow-hidden">
+                <header className="relative py-14 bg-gradient-to-br from-primary via-dark to-primary overflow-hidden">
                     {/* Animated Background Elements */}
                     <div className="absolute inset-0">
                         <div className="absolute top-7 left-5 w-48 h-48 bg-secondary/5 rounded-full blur-3xl animate-pulse"></div>
@@ -125,18 +125,18 @@ function Contacts() {
                 </header>
 
                 {/* Main Contact Section */}
-                <div className='container mx-auto px-4 py-16'>
-                    <div className='grid lg:grid-cols-2 gap-12 max-w-7xl mx-auto'>
+                <div className='px-3 md:px-8 py-6 lg:py-16 bg-gradient-to-b from-gray-50 via-slate-50 to bg-gray-100'>
+                    <div className='grid lg:grid-cols-2 gap-12 '>
                         
                         {/* Contact Form */}
                         <div className='flex flex-col gap-3 '>
                             
 
-                            <form onSubmit={handleSubmit(onSubmit)} className='rounded-3xl shadow-md border border-gray-50 p-8 lg:p-10 hover:shadow-3xl transition-all duration-500'>
+                            <form onSubmit={handleSubmit(onSubmit)} className='rounded-3xl shadow-md  p-4 lg:p-10 hover:shadow-3xl bg-white transition-all duration-500'>
                                 <div className="space-y-2  mb-6">
                                 <div className="flex gap-3 items-center justify-start">
                                     <div className="bg-gradient-to-br p-2 from-secondary to-secondary/80 rounded-full flex items-center  ">
-                                    <Send className="w-6 h-6 text-primary" />
+                                    <Send className="w-5 h-5 text-primary" />
                                 </div>
                                 <h2 className='text-lg lg:text-xl font-bold text-primary mb-3'>Send us a Message</h2>
                                 </div>
@@ -291,11 +291,11 @@ function Contacts() {
                         {/* Contact Information */}
                         <div className='space-y-8'>
                             {/* Contact Details Card */}
-                            <div className="bg-white rounded-3xl shadow-md border border-gray-100 p-8 hover:shadow-3xl transition-all duration-500">
-                                <div className="mb-3 space-y-2">
+                            <div className="bg-white rounded-3xl shadow-md border border-gray-100 p-5 space-y-3 lg:p-8 hover:shadow-3xl transition-all duration-500">
+                                <div className=" space-y-2">
                                     <div className="flex gap-2 items-center justify-start">
-                                        <div className=" bg-gradient-to-br p-2 from-primary to-dark rounded-full">
-                                        <Phone className="w-6 h-6 text-secondary" />
+                                        <div className=" bg-secondary p-2 rounded-full">
+                                        <Phone className="w-5 h-5 text-primary" />
                                     </div>
                                     <h2 className='text-lg lg:text-xl font-bold text-primary '>Contact Information</h2>    
                                     </div>
@@ -305,10 +305,10 @@ function Contacts() {
                                     </p>
                                 </div>
 
-                                <div className=''>
+                                <div className='flex flex-col gap-3'>
                                     {/* Phone Numbers */}
-                                    <a href="tel:+254706181387" className='flex hover:translate-x-2 transition-all duration-300items-center gap-4 p-4 rounded-2xl '>
-                                        <div className="w-12 h-12 border border-primary rounded-xl flex items-center justify-center ">
+                                    <a href="tel:+254706181387" className='flex hover:translate-x-2 transition-all duration-300 items-center gap-4  rounded-2xl '>
+                                        <div className="p-2 border border-primary rounded-lg flex items-center justify-center ">
                                             <Phone className='w-6 h-6 text-primary'/>
                                         </div>
                                         <div>
@@ -317,8 +317,8 @@ function Contacts() {
                                         </div>
                                     </a>
 
-                                    <a href="wa.me:+254706181387" className='flex items-center gap-4 p-4 rounded-2xl  hover:translate-x-2 transition-all duration-300'>
-                                        <div className="w-12 h-12 border border-green-600 rounded-xl flex items-center justify-center">
+                                    <a href="wa.me:+254706181387" className='flex items-center gap-4  rounded-2xl  hover:translate-x-2 transition-all duration-300'>
+                                        <div className="p-2 border border-green-600 rounded-lg flex items-center justify-center">
                                             <FaWhatsapp className='w-6 h-6 text-green-600'/>
                                         </div>
                                         <div>
@@ -328,8 +328,8 @@ function Contacts() {
                                     </a>
 
                                     {/* Email */}
-                                    <div className='flex items-center gap-4 p-4  rounded-2xl hover:translate-x-2 transition-all duration-300'>
-                                        <div className="w-12 h-12 border border-red-800 rounded-xl flex items-center justify-center">
+                                    <div className='flex items-center gap-4   rounded-2xl hover:translate-x-2 transition-all duration-300'>
+                                        <div className="p-2 border border-red-800 rounded-lg flex items-center justify-center">
                                             <Mail className='w-6 h-6 text-red-800' />
                                         </div>
                                         <div>
@@ -341,8 +341,8 @@ function Contacts() {
                                     </div>
 
                                     {/* Location */}
-                                    <div className='flex items-center gap-4 p-4 b transition-all hover:translate-x-2 duration-300'>
-                                        <div className="w-12 h-12 border border-blue-600 rounded-xl flex items-center justify-center">
+                                    <div className='flex items-center gap-4  transition-all hover:translate-x-2 duration-300'>
+                                        <div className="p-2 border border-blue-600 rounded-lg flex items-center justify-center">
                                             <MapPin className='w-6 h-6 text-blue-600' />
                                         </div>
                                         <div>
@@ -352,8 +352,8 @@ function Contacts() {
                                     </div>
 
                                     {/* Business Hours */}
-                                    <div className='flex items-center gap-4 p-4  rounded-2xl hover:translate-x-2 transition-all duration-300'>
-                                        <div className="w-12 h-12 border-secondary border rounded-xl flex items-center justify-center">
+                                    <div className='flex items-center gap-4   rounded-2xl hover:translate-x-2 transition-all duration-300'>
+                                        <div className="p-2 border-secondary border rounded-lg flex items-center justify-center">
                                             <Clock className='w-6 h-6 text-secondary' />
                                         </div>
                                         <div>
@@ -370,10 +370,10 @@ function Contacts() {
 
                     {/* Google Maps Placeholder */}
                     <div className="mt-10 max-w-7xl mx-auto">
-                        <div className="bg-white rounded-3xl shadow-sm border border-gray-100 p-6 hover:shadow-3xl transition-all duration-500">
+                        <div className="bg-white rounded-3xl shadow-sm border border-gray-100 md:p-6 py-4 px-2 hover:shadow-md transition-all duration-500">
                             <div className="items-center justify-center flex gap-2 mb-4">
                                 <div className="bg-gradient-to-br p-2 from-secondary to-secondary/80 rounded-full flex items-center justify-center ">
-                                    <MapPin className="w-8 h-8 text-primary" />
+                                    <MapPin className="w-7 h-7 text-primary" />
                                 </div>
                                 <h2 className="text-lg lg:text-xl font-bold text-primary ">Our Location</h2>
                                 

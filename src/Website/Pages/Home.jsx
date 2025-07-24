@@ -18,7 +18,7 @@ function Home() {
       <CTA/>
       
       <div id="estimate">
-        <Estimate />
+        <Technologies />
         <QuikeLinks/>
       </div>
     </main>

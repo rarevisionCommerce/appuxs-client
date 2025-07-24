@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Link } from 'react-scroll';
 import Hero from "../../assets/Dev2.jpg";
 import { CheckCircle, Clock, Cpu, Verified } from "lucide-react";
+import { NavLink } from "react-router-dom";
 
 // Typing animation texts
 const texts = ["Web Development", "AU/AX Design", "Mobile App Development", "Business Automation", "Bulk SMS Integration"];
@@ -98,18 +99,18 @@ function HeroSection() {
               to="projects" 
               smooth={true} 
               duration={1000} 
-              className="bg-secondary hover:bg-secondary transition-colors duration-300 px-7 py-2 text-primary font-semibold rounded-lg text-center cursor-pointer shadow-lg hover:shadow-xl transform hover:-translate-y-1"
+              className="bg-secondary hover:bg-secondary transition-colors duration-300 px-7 py-2 text-primary font-semibold rounded-lg text-center cursor-pointer shadow-lg hover:shadow-lg transform hover:-translate-y-1"
             >
               View Projects
             </Link>
-            <Link 
-              to="estimate" 
+            <NavLink to="/Project-Estimate" 
+               
               smooth={true} 
               duration={1000}
               className="bg-transparent border-2 border-secondary hover:bg-secondary hover:text-primary transition-all duration-300 px-7 py-2 text-secondary font-semibold rounded-lg text-center cursor-pointer shadow-lg hover:shadow-xl transform hover:-translate-y-1"
             >
               Get Estimate
-            </Link>
+            </NavLink>
           </div>
         </div>
 
