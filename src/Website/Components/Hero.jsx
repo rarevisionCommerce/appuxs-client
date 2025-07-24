@@ -98,7 +98,7 @@ function HeroSection() {
               to="projects" 
               smooth={true} 
               duration={1000} 
-              className="bg-secondary hover:bg-secondary transition-colors duration-300 px-6 py-2 text-primary font-semibold rounded-lg text-center cursor-pointer shadow-lg hover:shadow-xl transform hover:-translate-y-1"
+              className="bg-secondary hover:bg-secondary transition-colors duration-300 px-7 py-2 text-primary font-semibold rounded-lg text-center cursor-pointer shadow-lg hover:shadow-xl transform hover:-translate-y-1"
             >
               View Projects
             </Link>
@@ -106,7 +106,7 @@ function HeroSection() {
               to="estimate" 
               smooth={true} 
               duration={1000}
-              className="bg-transparent border-2 border-secondary hover:bg-secondary hover:text-primary transition-all duration-300 px-6 py-2 text-secondary font-semibold rounded-lg text-center cursor-pointer shadow-lg hover:shadow-xl transform hover:-translate-y-1"
+              className="bg-transparent border-2 border-secondary hover:bg-secondary hover:text-primary transition-all duration-300 px-7 py-2 text-secondary font-semibold rounded-lg text-center cursor-pointer shadow-lg hover:shadow-xl transform hover:-translate-y-1"
             >
               Get Estimate
             </Link>

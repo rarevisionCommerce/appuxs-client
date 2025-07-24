@@ -1,7 +1,9 @@
 import Header from "./Website/Components/Header.jsx"
 import Home from "./Website/Pages/Home.jsx"
+import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { Routes, Route, Router } from 'react-router-dom';
-import { MantineProvider } from '@mantine/core';
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import "@mantine/core/styles.css";
 import "@mantine/dates/styles.css";
 import Faq from "./Website/Pages/Faq.jsx"
@@ -20,9 +22,11 @@ import useScrollToTop from "./Website/Components/ScrollToTop.jsx"
 
 function App() {
   useScrollToTop()
-  return (<> 
 
-  <Header />
+  const queryClient = new QueryClient()
+  return (<> 
+   <QueryClientProvider client={queryClient} >
+     <Header />
       <Routes>
         <Route exact path="/" element={<Home/>} />
         <Route path="/Faq" element={<Faq/>} />
@@ -38,7 +42,23 @@ function App() {
         <Route path="/Services" element={<Services/>} />
       </Routes>
 
+        <ToastContainer
+        position="top-center"
+        autoClose={5000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+        theme="colored"
+        toastClassName="top-[53px]"
+               
+      />
 
+   </QueryClientProvider>
+ 
        
           
         
