@@ -1,4 +1,3 @@
-import React from "react";
 import { Link } from "react-scroll";
 import BizMgnt from "./BizMgnt";
 import BulkSMS from "./BulkSMS";
@@ -6,8 +5,6 @@ import MobileApp from "./MobileApp";
 import WebDesign from "./WebDesign";
 import WebDev from "./WebDev";
 import CTA from "../Components/CTA";
-import QuikeLinks from "../Components/QuikeLinks";
-import Footer from "../Components/Footer";
 
 const Services = () => {
   return (

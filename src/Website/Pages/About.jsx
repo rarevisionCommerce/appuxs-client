@@ -4,8 +4,6 @@ import Clients from "../../assets/Clients.jpg";
 import Partners from "../../assets/Partners.jpg"
 import React, { useEffect } from 'react';
 import '../../App.css';
-import Footer from "../Components/Footer.jsx"
-import QuikeLinks from "../Components/QuikeLinks.jsx";
 import Quality from "../../assets/Quality.jpg"
 import { 
     Lightbulb, 

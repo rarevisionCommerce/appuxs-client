@@ -1,7 +1,4 @@
-import Footer from "../Components/Footer";
-import QuikeLinks from "../Components/QuikeLinks";
 import Portrait from "../../assets/WebDevPortrait.jpg";
-
 import { Users, Zap, Smartphone, MousePointer } from "lucide-react";
 import { Rating } from "@mantine/core";
 

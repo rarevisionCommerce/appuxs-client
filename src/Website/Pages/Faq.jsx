@@ -1,7 +1,5 @@
-import React, { useState, useEffect } from "react";
+import React, { useState} from "react";
 import '../../App.css';
-import Footer from "../Components/Footer.jsx";
-import QuikeLinks from "../Components/QuikeLinks.jsx";
 import { ChevronDown } from "lucide-react";
 import CTA from "../Components/CTA.jsx";
 

@@ -1,7 +1,6 @@
-import { Users, Zap, Smartphone, MousePointer, Sparkles, TrendingUp, Verified, CheckCircle, Settings, Settings2, Brain, BrainCircuit, BrainIcon, Paperclip } from "lucide-react";
+import { Settings, Settings2,BrainIcon, Paperclip } from "lucide-react";
 import { Rating } from "@mantine/core";
 import Portrait from "../../assets/BizMgtBg.jpg";
-import { FcDocument } from "react-icons/fc";
 
 function BizMgnt() {
     return (<>

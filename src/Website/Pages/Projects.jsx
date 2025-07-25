@@ -2,8 +2,7 @@ import Spring from "../../assets/Spring.jpg"
 import Lemka from "../../assets/Lemka.jpg"
 import Bafrica from "../../assets/Bafrica.jpg"
 import Agape from "../../assets/agape1.jpg"
-import { Link, animateScroll as scroll } from 'react-scroll'
-import React, { useState, useEffect, useRef } from 'react';
+import  { useState, useEffect, useRef } from 'react';
 import { 
   ArrowRight, 
   ExternalLink, 
@@ -16,8 +15,6 @@ import {
   TrendingUp
 } from 'lucide-react';
 import CTA from "../Components/CTA";
-import QuikeLinks from "../Components/QuikeLinks"
-import Footer from "../Components/Footer";
 
 // Counter hook for animated numbers
 const useCounter = (end, duration = 2000, start = 0) => {

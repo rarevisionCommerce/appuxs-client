@@ -1,17 +1,8 @@
-import Footer from "../Components/Footer";
-import QuikeLinks from "../Components/QuikeLinks";
 import Portrait from "../../assets/MobileAppBg.jpg";
-import React, { useEffect } from "react";
-import { Users, Zap, Smartphone, MousePointer, Sparkles,Shield, TrendingUp, Verified, CheckCircle, TimerIcon } from "lucide-react";
+import { Users, Zap,Shield,TimerIcon } from "lucide-react";
 import { Rating } from "@mantine/core";
 
-
-
-function MobileApp() {
-
-
-
-    
+function MobileApp() {   
 
     return (<main className="">
         {/**Top bg div  */}

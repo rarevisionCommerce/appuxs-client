@@ -2,8 +2,7 @@ import { useForm } from "react-hook-form";
 import { axiosPublic } from "../../api/axios.jsx";
 import { useMutation } from "@tanstack/react-query";
 import { toast } from "react-toastify";
-import {Phone,Mail,MapPin,Clock,MessageCircle,Send,Instagram,Twitter,Facebook,Linkedin,Github,Youtube,Users,Code,   Smartphone} from "lucide-react";
-import QuikeLinks from "../Components/QuikeLinks.jsx";
+import {Phone,Mail,MapPin,Clock,MessageCircle,Send,Instagram,Facebook,Linkedin,Github,Users} from "lucide-react";
 import GoogleMap from "../Components/GoogleMap.jsx";
 import { FaWhatsapp } from "react-icons/fa";
 

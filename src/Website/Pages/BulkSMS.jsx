@@ -1,4 +1,4 @@
-import { Users, Zap, Smartphone, MousePointer, Sparkles, TrendingUp, Verified, CheckCircle, Clock2Icon, MessageCircleCode, CheckCheckIcon } from "lucide-react";
+import { Users,CheckCircle, Clock2Icon, MessageCircleCode} from "lucide-react";
 import { Rating } from "@mantine/core";
 import Portrait from "../../assets/BulkBG.jpg";
 

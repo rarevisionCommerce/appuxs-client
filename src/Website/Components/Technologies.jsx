@@ -17,7 +17,6 @@ import Capacitor from "../../assets/Capacitor.jpg"
 import Rest from "../../assets/Rest.jpg"
 import Bm from "../../assets/Bm.jpg"
 import "../../App.css"
-import React, { useEffect, useState } from "react"
 
 function Technologies() {
    

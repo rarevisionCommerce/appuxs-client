@@ -1,5 +1,5 @@
 import Portrait from "../../assets/AuAxBg.jpg";
-import { Users, Zap, Smartphone, MousePointer, Sparkles, TrendingUp, Verified, CheckCircle } from "lucide-react";
+import { Users,Sparkles, TrendingUp, CheckCircle } from "lucide-react";
 import { Rating } from "@mantine/core";
 
 function WebDesign() { 

@@ -1,15 +1,13 @@
 import Logo from "../../assets/Logo.png";
 import { Link } from 'react-router-dom';
 import { 
-    FaFacebookF, 
-    FaTwitter, 
+    FaFacebookF,    
     FaInstagram, 
-    FaLinkedinIn, 
-    FaYoutube,
+    FaLinkedinIn,    
     FaGithub, 
     FaWhatsapp
 } from 'react-icons/fa';
-import { ChevronRight, Mail, MapIcon, MapPin, Phone } from "lucide-react";
+import { ChevronRight, Mail,  MapPin, Phone } from "lucide-react";
 
 function Footer() {
     return (
