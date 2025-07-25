@@ -5,7 +5,7 @@ import { toast, ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import useLogin from './hooks/useLogin';
 import useAuth from './hooks/useAuth';
-import Secure from "./assets/security.jpg"
+import Secure from "./assets/Security.jpg"
 import Header from './Website/Components/Header';
 
 const Login = () => {
