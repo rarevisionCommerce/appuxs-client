@@ -217,7 +217,7 @@ function About() {
                 </div>
             </div>
 
-            <QuikeLinks />
+           
            
         </div>
     );

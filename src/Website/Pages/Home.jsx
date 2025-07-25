@@ -19,7 +19,7 @@ function Home() {
       
       <div id="estimate">
         <Technologies />
-        <QuikeLinks/>
+       
       </div>
     </main>
   );

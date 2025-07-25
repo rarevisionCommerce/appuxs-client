@@ -103,8 +103,7 @@ function HeroSection() {
             >
               View Projects
             </Link>
-            <NavLink to="/Project-Estimate" 
-               
+            <NavLink to="/Project-Estimate"                
               smooth={true} 
               duration={1000}
               className="bg-transparent border-2 border-secondary hover:bg-secondary hover:text-primary transition-all duration-300 px-7 py-2 text-secondary font-semibold rounded-lg text-center cursor-pointer shadow-lg hover:shadow-xl transform hover:-translate-y-1"

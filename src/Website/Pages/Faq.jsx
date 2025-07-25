@@ -182,7 +182,7 @@ const FAQ = () => {
     </div>
 
         <CTA/>
-    <QuikeLinks />
+    
     
   </>);
 };

@@ -1,27 +1,159 @@
 import Logo from "../../assets/Logo.png";
-import React from "react";
-import Instagram from "../../assets/Instagram.jpg";
-import Mail from "../../assets/Mail.jpg";
+import { Link } from 'react-router-dom';
+import { 
+    FaFacebookF, 
+    FaTwitter, 
+    FaInstagram, 
+    FaLinkedinIn, 
+    FaYoutube,
+    FaGithub, 
+    FaWhatsapp
+} from 'react-icons/fa';
+import { ChevronRight, Mail, MapIcon, MapPin, Phone } from "lucide-react";
 
 function Footer() {
-
     return (
-        <div className="bg-slate-950 py-1 flex justify-around items-center  relative bottom-0 right-0 left-0">
+        <>
+            <div className="md:grid-cols-2 lg:grid-cols-4 grid bg-slate-900 gap-2 sm:gap-8 p-6">
+                {/* Logo and Description */}
+                <div className=" w-full border-light/20 border-b lg:border-none md:mb-0">
+                    <div className="mb-4">
+                        <img src={Logo} className="h-14 mb-4" alt="Logo" />
+                        <p className="text-light text-sm leading-relaxed">
+                            Your reliable partner in software development services.
+                        </p>
+                    </div>
+                </div>
 
-            <div className=" flex  text-white text-xl items-center">
-                <img className="h-14 " src={Logo} />
+                
+                {/* Contact Info */}
+                <div className="flex flex-col gap-3  w-full py-3 border-light/20 border-b lg:border-none  md:mb-0">
+                     <header className="flex flex-col gap-2">
+                     <h1 className=" text-light  text-lg font-semibold rounded-tr-2xl rounded-bl-2xl ">
+                        Get In Touch
+                    </h1>
+                    <div className="h-1 w-20 bg-gradient-to-r from-transparent to-secondary  "></div>
+                </header>
+                <div className="flex flex-col gap-3">
+                    <p className="text-light text-sm inline-flex gap-2 items-center  ">
+                       <MapPin className="h-6 w-6 text-secondary " />  Spur Mall, Kimbo Juja</p>
+                    <a 
+                        target="_blank" 
+                        href="https://mail.google.com/mail/u/0/#inbox" 
+                        className="text-light text-sm inline-flex items-center gap-2 "
+                        rel="noopener noreferrer"
+                    >
+                        <Mail className="h-6 w-6 text-secondary " /> info@isosoft.com
+                    </a>
+                    <a className="text-light text-sm inline-flex gap-2 items-center "> 
+                        <Phone className="h-6 w-6 text-secondary " /> Call +254706181387</a>
+                </div>                   
+                         <button className="text-light text-sm inline-flex items-center gap-2 bg-green-500 p-3 rounded-lg max-w-44 mt-2 transition-all duration-200 hover:scale-110 "> <FaWhatsapp/> Chat on WhatsApp</button>                    
+                   
+                </div>
 
+                {/* Quick Links */}
+                <div className="flex flex-col gap-3 py-3 border-light/20 border-b lg:border-none w-full  md:mb-0">
+                <header className="flex flex-col gap-2">
+                     <h1 className=" text-light  text-lg font-semibold rounded-tr-2xl rounded-bl-2xl ">
+                        Quick Links
+                    </h1>
+                    <div className="h-1 w-20 bg-gradient-to-r from-transparent to-secondary  "></div>
+                </header>
+                <div className="flex flex-col gap-3">
+                    <Link to="/" className="text-light group inline-flex gap-2 items-center hover:text-secondary text-sm transition-colors duration-300 ">
+                    <ChevronRight className="group-hover:translate-x-1 h-4 w-4 text-secondary transition-all duration-300"/>Home
+                    </Link>
+                    <Link to="/Services" className="text-light group inline-flex gap-2 items-center hover:text-secondary text-sm transition-colors duration-300 ">
+                       <ChevronRight className="group-hover:translate-x-1 h-4 w-4 text-secondary transition-all duration-300"/>  Services
+                    </Link>
+                    <Link to="/About" className="text-light group inline-flex gap-2 items-center hover:text-secondary text-sm transition-colors duration-300 ">
+                      <ChevronRight className="group-hover:translate-x-1 h-4 w-4 text-secondary transition-all duration-300"/>   About
+                    </Link>
+                    <Link to="/Projects" className="text-light group inline-flex gap-2 items-center hover:text-secondary text-sm transition-colors duration-300 ">
+                      <ChevronRight className="group-hover:translate-x-1 h-4 w-4 text-secondary transition-all duration-300"/>   Portfolio
+                    </Link>
+                    
+                    <Link to="/Faq" className="text-light group inline-flex gap-2 items-center hover:text-secondary text-sm transition-colors duration-300 ">
+                       <ChevronRight className="group-hover:translate-x-1 h-4 w-4 text-secondary transition-all duration-300"/>  FAQ
+                    </Link>                   
+                </div>             
+                    
+                </div>
+
+
+                {/* Social Media Section */}
+                <div className="flex flex-col gap-3 py-3  w-full ">
+                   <header className="flex flex-col gap-2">
+                     <h1 className=" text-light  text-lg font-semibold rounded-tr-2xl rounded-bl-2xl ">
+                       Follow Us
+                    </h1>
+                    <div className="h-1 w-20 bg-gradient-to-r from-transparent to-secondary  "></div>
+                </header>
+                <div className="flex md:flex-col  gap-3">
+                     <a 
+                        href="https://www.facebook.com" 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                        className="flex items-center gap-3 text-light group"
+                        aria-label="Facebook"
+                    >
+                        <div className="bg-blue-600 p-2 rounded-full group-hover:scale-110 transition-all duration-200">
+                            <FaFacebookF size={16} />
+                        </div>
+                        <span className="text-sm hidden md:block ">Facebook</span>
+                    </a>
+                    
+                    <a 
+                        href="https://www.instagram.com/gachora_kimani?igsh=Z2M2Mm92aW00ZWk5" 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                       className="flex items-center gap-3 text-light group"
+                        aria-label="Instagram"
+                    >
+                        <div className="bg-pink-600 p-2 rounded-full group-hover:scale-110 transition-all duration-200">
+                            <FaInstagram size={16} />
+                        </div>
+                        <span className="text-sm hidden md:block ">Instagram</span>
+                    </a>
+                    <a 
+                        href="https://www.linkedin.com" 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                        className="flex items-center gap-3 text-light group"
+                        aria-label="LinkedIn"
+                    >
+                       <div className="bg-blue-600 p-2 rounded-full group-hover:scale-110 transition-all duration-200">
+                            <FaLinkedinIn size={16} />
+                        </div>
+                        <span className="text-sm hidden md:block ">LinkedIn</span>
+                    </a>
+                    
+                    <a 
+                        href="https://www.github.com" 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                       className="flex items-center gap-3 text-light group"
+                        aria-label="GitHub"
+                    >
+                       <div className="bg-gray-600 p-2 rounded-full group-hover:scale-110 transition-all duration-200">
+                            <FaGithub size={16} />
+                        </div>
+                        <span className="text-sm hidden md:block ">GitHub</span>
+                    </a>
+                </div>
+                   
+                </div>
             </div>
-            <div className="hidden  sm:flex  gap-x-4">
-                <a href="https://www.instagram.com/gachora_kimani?igsh=Z2M2Mm92aW00ZWk5" ><img src={Instagram} className="h-8 rounded-full" /></a>
-                <a><img src={Instagram} className="h-8 rounded-full" /></a>
-                <a target="blank" href="https://mail.google.com/mail/u/0/#inbox" ><img src={Mail} className="h-8 rounded-full" /> </a>
 
+            {/* Copyright Section */}
+            <div className="bg-primary text-center py-5">
+                <p className="text-white text-xs">
+                 Copyright   &copy; {new Date().getFullYear()} Isosoft. All rights reserved.
+                </p>
             </div>
-            <p className="text-center text-white"> All Rights Reserved! {new Date().getFullYear()}&copy;</p>
-
-        </div>
+        </>
     );
-};
+}
 
-export default Footer
+export default Footer;

@@ -18,6 +18,7 @@ import MobileApp from "./Website/Pages/MobileApp.jsx";
 import Projects from "./Website/Pages/Projects.jsx";
 import Estimate from "./Website/Components/Estimate.jsx";
 import useScrollToTop from "./Website/Components/ScrollToTop.jsx"
+import Footer from "./Website/Components/Footer.jsx";
 
 
 function App() {
@@ -42,7 +43,7 @@ function App() {
         <Route path="/Estimate" element={<Estimate/>} />
         <Route path="/Services" element={<Services/>} />
       </Routes>
-
+<Footer/>
         <ToastContainer
         position="top-center"
         autoClose={5000}

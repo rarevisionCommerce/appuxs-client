@@ -390,7 +390,7 @@ function Contacts() {
                 </div>
             </div>
 
-            <QuikeLinks />
+            
         </>
     );
 }

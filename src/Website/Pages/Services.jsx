@@ -152,7 +152,7 @@ const Services = () => {
       <div id="bizmgnt"><BizMgnt/></div>
       <div id="bulksms"><BulkSMS/></div>
 	  <CTA/>
-	  <QuikeLinks/>
+	  
 	  
     </>
   );

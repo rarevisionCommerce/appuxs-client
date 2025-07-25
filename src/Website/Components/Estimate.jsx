@@ -129,7 +129,7 @@ function Estimate() {
     return (
         <div id="Estimate" className="flex flex-col  min-h-screen bg-slate-50">
             {/* Left Side Panel */}
-            <header className=" pt-32 bg-slate-800 flex flex-col lg:flex-row gap-5 p-6">
+            <header className=" pt-28 bg-slate-800 flex flex-col lg:flex-row gap-5 p-6">
                 <header className="lg:w-1/3 w-full">
                     <h1 className="lg:text-2xl text-xl font-bold text-yellow-400 mb-4 leading-tight">
                         Transform Your Vision Into Reality
@@ -176,7 +176,7 @@ function Estimate() {
             
             
             {/* Right Side Form */}
-            <div className="h-full  w-full flex flex-col justify-start items-center p-6">
+            <div className="h-full  w-full flex flex-col justify-start items-center px-3 py-6">
                 <div className="w-full max-w-6xl">
                     {/* Header Section */}
                     <div className="text-center mb-8">
@@ -225,9 +225,9 @@ function Estimate() {
                                         {...register("phoneNumber", { 
                                             required: "Phone number is required",
                                             pattern: {
-                                                value: /^\+254[0-9]{9}$/,
-                                                message: "Phone number must start with +254 followed by 9 digits"
-                                            }
+                                                    value: /^[\+]?[0-9][\d]{0,15}$/,
+                                                    message: "Please enter a valid phone number"
+                                                }
                                         })}
                                         placeholder="e.g. +254712345678" 
                                         className={`p-3 border outline-none rounded-lg transition-all duration-200 text-sm ${
@@ -268,11 +268,11 @@ function Estimate() {
                             <h3 className="text-xl font-semibold text-slate-800 mb-4 pb-2 border-b border-slate-200">
                                 Project Details
                             </h3>
-                            <div className="grid lg:grid-cols-2  gap-10">
+                            <div className="grid lg:grid-cols-2  lg:gap-10">
                                   {/* Project Type Selection */}
                             <div className="mb-6">
                                 <h4 className="text-lg font-medium text-slate-700 mb-3">What type is your project?*</h4>
-                                <div className="grid grid-cols-2 lg:grid-cols-1  gap-3">
+                                <div className="grid grid-cols-1  gap-3">
                                     {['Web Development', 'Mobile App', 'Business and E-commerce', 'Other'].map((type) => (
                                         <label key={type} className="flex items-center gap-3 cursor-pointer hover:bg-slate-50 p-3 rounded-lg border border-slate-200 transition-all duration-200">
                                             <input 
@@ -367,7 +367,7 @@ function Estimate() {
                             </h3>
                             
                             <div className="flex flex-col">
-                                <label className="text-slate-700 font-medium mb-2 text-sm">Upload Supporting Documents (Optional)</label>
+                                <label className="text-slate-700 font-medium mb-2 text-sm">Upload Supporting Documents <span className="text-green-500 font-semibold  ">(Optional)</span></label>
                                 <p className="text-slate-500 text-xs mb-3">
                                     Upload any relevant documents such as project requirements, wireframes, design mockups, or technical specifications.
                                 </p>
@@ -399,7 +399,7 @@ function Estimate() {
                                 type="submit"
                                 onClick={handleSubmit(onSubmit)}
                                 disabled={isSubmitting || createEstimateMutation.isPending}
-                                className="bg-yellow-400 text-slate-800 px-8 py-3 rounded-lg hover:bg-yellow-500 font-semibold transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed min-w-[160px] transform hover:scale-105 focus:ring-4 focus:ring-yellow-300"
+                                className="bg-secondary text-dark px-8 py-3 rounded-lg hover:bg-yellow-500 font-semibold transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed min-w-[160px] transform hover:scale-105 focus:ring-4 focus:ring-yellow-300"
                             >
                                 {isSubmitting || createEstimateMutation.isPending ? (
                                     <div className="flex items-center justify-center gap-2">
@@ -407,7 +407,7 @@ function Estimate() {
                                         Submitting...
                                     </div>
                                 ) : (
-                                    'Get My Estimate'
+                                    'Submit My Estimate'
                                 )}
                             </button>
                         </div>
