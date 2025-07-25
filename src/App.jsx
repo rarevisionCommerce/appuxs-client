@@ -20,6 +20,15 @@ import Estimate from "./Website/Components/Estimate.jsx";
 import useScrollToTop from "./Website/Components/ScrollToTop.jsx"
 import Footer from "./Website/Components/Footer.jsx";
 
+//admin and auth components
+import Login from "./Login.jsx";
+import PersistLogin from './hooks/PersistLogin.jsx';
+import RequireAuth from './admin-Dashboard/RequireAuth.jsx'; 
+import AdminDashboard from "./admin-Dashboard/AdminDash.jsx";
+import EstimatesDash from './admin-Dashboard/components/estimates/EstimatesDash.jsx';
+import MessagesDash from './admin-Dashboard/components/messages/MessagesDash.jsx';
+
+
 
 function App() {
   useScrollToTop()
@@ -30,6 +39,7 @@ function App() {
      <Header />
       <Routes>
         <Route exact path="/" element={<Home/>} />
+        <Route exact path="/Login" element={<Login/>} />
         <Route path="/Faq" element={<Faq/>} />
         <Route path="/Contacts" element={<Contacts/>} />
         <Route path="/Project-Estimate" element={<Estimate/>} />
@@ -42,8 +52,21 @@ function App() {
         <Route path="/Projects" element={<Projects/>} />
         <Route path="/Estimate" element={<Estimate/>} />
         <Route path="/Services" element={<Services/>} />
+
+        <Route element={<PersistLogin />}>
+                <Route element={<RequireAuth  />}>
+                  <Route path="/admin-dashboard" element={<AdminDashboard />}>
+                    {/* Default route for admin dashboard */}
+                    <Route index element={<EstimatesDash />} />
+                    <Route path="Estimates" element={<EstimatesDash />} />                 
+                    <Route path="Messages" element={<MessagesDash />} />          
+                                      
+                  </Route>
+                </Route>
+              </Route>
       </Routes>
 <Footer/>
+
         <ToastContainer
         position="top-center"
         autoClose={5000}

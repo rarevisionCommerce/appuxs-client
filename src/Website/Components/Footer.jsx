@@ -1,5 +1,5 @@
 import Logo from "../../assets/Logo.png";
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import { 
     FaFacebookF,    
     FaInstagram, 
@@ -10,9 +10,16 @@ import {
 import { ChevronRight, Mail,  MapPin, Phone } from "lucide-react";
 
 function Footer() {
-    return (
+    const location = useLocation();
+  const { pathname } = location;
+
+   
+        return (
         <>
-            <div className="md:grid-cols-2 lg:grid-cols-4 grid bg-slate-900 gap-2 sm:gap-8 p-6">
+            <div className={`md:grid-cols-2 lg:grid-cols-4 grid bg-slate-900 gap-2 sm:gap-8 p-6 ${
+        (pathname.includes("admin-dashboard") || pathname.includes("Login")) &&
+        "hidden"
+      }`} >
                 {/* Logo and Description */}
                 <div className=" w-full border-light/20 border-b lg:border-none md:mb-0">
                     <div className="mb-4">
@@ -152,6 +159,7 @@ function Footer() {
             </div>
         </>
     );
-}
+    }
+   
 
 export default Footer;

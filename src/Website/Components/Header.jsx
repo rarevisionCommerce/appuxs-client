@@ -102,10 +102,8 @@ function Header() {
                     </nav>
 
                     {/* Desktop Auth Buttons */}
-                    <div className="hidden sm:flex space-x-3">
-                        <NavLink className="bg-transparent border border-secondary text-secondary hover:bg-secondary hover:text-primary px-4 py-2 rounded-md transition-all duration-300">
-                            Login
-                        </NavLink>
+                    <div className="hidden sm:flex ">
+                        
                         <NavLink to="/Project-Estimate" className="bg-secondary text-primary hover:bg-secondary/90 hover:text-light px-4 py-2 rounded-md transition-all duration-300">
                             Get Started
                         </NavLink>
@@ -114,7 +112,7 @@ function Header() {
             </header>
 
             {/* Mobile Menu */}
-            <div className={`fixed top-0 left-0  w-3/4 bg-slate-900 text-light z-50 transform transition-transform duration-300 ease-in-out sm:hidden ${
+            <div className={`fixed top-0 left-0   w-3/4 bg-slate-900 text-light z-50 transform transition-transform duration-300 ease-in-out sm:hidden ${
                 isMenuOpen ? 'translate-x-0' : '-translate-x-full'
             }`}>
                 {/* Mobile Menu Header */}
@@ -178,12 +176,7 @@ function Header() {
 
                     {/* Mobile Auth Buttons */}
                     <div className="p-4 flex flex-col space-y-3 border-t border-light/20 mt-4">
-                        <NavLink to="/"
-                            onClick={closeMenu}
-                            className="w-full bg-transparent border border-light/50 text-secondary hover:bg-primary hover:text-secondary text-center py-2 rounded-md transition-all duration-300"
-                        >
-                            Login
-                        </NavLink>
+                        
                         <NavLink to="/Project-Estimate" 
                             onClick={closeMenu}
                             className="w-full text-center bg-secondary text-dark hover:bg-secondary/80  py-2 rounded-md transition-all duration-300"
