@@ -62,7 +62,7 @@ function Header() {
                     onClick={closeMenu}
                 />
             )}
-                <section className="max-w-7xl mx-auto px-3 flex justify-between items-center">
+                <section className="container mx-auto px-3 flex justify-between items-center">
                     {/* Logo Section */}
                     <div className="text-xl flex items-center gap-3">
                         <img src={Logo} className="h-14" alt="Logo" />

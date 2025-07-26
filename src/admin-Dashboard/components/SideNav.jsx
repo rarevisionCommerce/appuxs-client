@@ -182,9 +182,9 @@ function SideNav({ activeView }) {
               <button
                 onClick={handleLogout}
                 className={`
-                  w-full flex items-center rounded-lg text-left
-                  transition-all duration-200 group relative
-                  ${isOpen ? 'px-4 py-3 space-x-3' : 'px-2 py-3 justify-center'}
+                  w-full relative flex items-center rounded-lg text-left
+                  transition-all duration-200 group 
+                  ${isOpen ? 'px-2 py-3 space-x-3' : 'px-2 py-3 justify-center'}
                   text-gray-300 hover:text-white hover:bg-red-600
                 `}
                 title={!isOpen ? 'Logout' : ''}
@@ -223,7 +223,7 @@ function SideNav({ activeView }) {
               </div>
             ) : (
               // Collapsed Profile
-              <div className="flex justify-center">
+              <div className="flex fixed bottom-24 justify-center">
                 <div className="w-8 h-8 bg-gradient-to-r from-blue-500 to-blue-600 rounded-full flex items-center justify-center shadow-md">
                   <span className="text-xs font-bold">{userInfo.initials}</span>
                 </div>
