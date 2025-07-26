@@ -1,12 +1,29 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { useQuery } from '@tanstack/react-query';
 import { Calculator,  ChevronRight, ChevronLeft, MessageCircle, LogOut } from 'lucide-react';
 import  useAuth  from '../../hooks/useAuth';
+import useAxiosPrivate from '../../hooks/useAxiosPrivate';
 
 function SideNav({ activeView }) {
   const [isOpen, setIsOpen] = useState(false);
   const navigate = useNavigate();
-  const { logout } = useAuth();
+  const { logout, auth } = useAuth(); // Get auth to access current user info
+  const axios = useAxiosPrivate();
+
+  // Get current user data from auth context
+  const currentUser = auth?.user || auth?.username || null;
+
+  const getUser = useQuery({
+    queryKey : ["users", currentUser],
+    queryFn : async() => {
+      if (!currentUser) return null;
+      const response = await axios.get(`/users/${currentUser}`)
+      return response.data
+    },
+    enabled: !!currentUser, // Only run query if we have a current user
+    staleTime: 5 * 60 * 1000, 
+  })
   
   const navigationItems = [
     { id: 'estimates', label: 'Project Estimates', icon: Calculator, path: '/admin-dashboard/Estimates' },
@@ -33,6 +50,27 @@ function SideNav({ activeView }) {
     setIsOpen(!isOpen);
   };
 
+  // Get user display info
+  const getUserDisplayInfo = () => {
+    if (getUser.data) {
+      return {
+        name: getUser.data.username || getUser.data.name || 'User',
+        initials: (getUser.data.username || getUser.data.name || 'U').substring(0, 2).toUpperCase()
+      };
+    } else if (currentUser) {
+      return {
+        name: currentUser,
+        initials: currentUser.substring(0, 2).toUpperCase()
+      };
+    }
+    return {
+      name: 'User',
+      initials: 'U'
+    };
+  };
+
+  const userInfo = getUserDisplayInfo();
+
   return (
     <>
       <div className="relative">
@@ -56,7 +94,7 @@ function SideNav({ activeView }) {
         {/* Overlay for mobile */}
         {isOpen && (
           <div 
-            className="fixed inset-0 bg-black bg-opacity-50 z-40 lg:hidden"
+            className="fixed inset-0 bg-black bg-opacity-50 z-20 lg:hidden"
             onClick={() => setIsOpen(false)}
           />
         )}
@@ -174,20 +212,20 @@ function SideNav({ activeView }) {
 
             {isOpen ? (
               // Expanded Profile
-              <div className="flex items-center space-x-3">
+              <div className="flex fixed bottom-24 items-center space-x-3">
                 <div className="w-10 h-10 bg-gradient-to-r from-blue-500 to-blue-600 rounded-full flex items-center justify-center shadow-md">
-                  <span className="text-sm font-bold">AD</span>
+                  <span className="text-sm font-bold">{userInfo.initials}</span>
                 </div>
                 <div className="flex-1">
-                  <p className="text-sm font-medium">Admin User</p>
-                  <p className="text-xs text-gray-400">Administrator</p>
+                  <p className="text-sm font-medium">User</p>
+                  <p className="text-xs text-gray-400">{userInfo.name}</p>
                 </div>
               </div>
             ) : (
               // Collapsed Profile
               <div className="flex justify-center">
                 <div className="w-8 h-8 bg-gradient-to-r from-blue-500 to-blue-600 rounded-full flex items-center justify-center shadow-md">
-                  <span className="text-xs font-bold">AD</span>
+                  <span className="text-xs font-bold">{userInfo.initials}</span>
                 </div>
               </div>
             )}

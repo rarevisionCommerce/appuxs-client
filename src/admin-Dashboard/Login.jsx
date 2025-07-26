@@ -3,15 +3,16 @@ import { LogIn, User, Lock, Eye, EyeOff } from 'lucide-react';
 import { useForm } from 'react-hook-form';
 import { toast, ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import useLogin from './hooks/useLogin';
-import useAuth from './hooks/useAuth';
-import Secure from "./assets/Security.jpg"
-import Header from './Website/Components/Header';
+import useLogin from '../hooks/useLogin';
+import useAuth from '../hooks/useAuth';
+import Secure from "../assets/Security.jpg"
+
 
 const Login = () => {
   const { persist, setPersist } = useAuth();
   const { login, isLoading, error, clearError } = useLogin();
   const [showPassword, setShowPassword] = useState(false);
+  const [hasShownToast, setHasShownToast] = useState(false);
   
   const {
     register,
@@ -38,7 +39,7 @@ const Login = () => {
   }, []);
 
   useEffect(() => {
-    if (error) {
+    if (error && !hasShownToast) {
       // Show error toast for unauthorized or other login errors
       if (error.toLowerCase().includes('unauthorized') || 
           error.toLowerCase().includes('invalid') || 
@@ -48,29 +49,40 @@ const Login = () => {
       } else {
         toast.error(`Login failed: ${error}`);
       }
-      clearError();
+      setHasShownToast(true);
     }
-  }, [error, clearError]);
+  }, [error, hasShownToast]);
 
-  // Clear errors when user starts typing
+  // Clear errors and toast flags when user starts typing
   useEffect(() => {
     if (watchedValues.username || watchedValues.password) {
-      if (error) clearError();
+      if (error) {
+        clearError();
+        setHasShownToast(false);
+      }
     }
   }, [watchedValues.username, watchedValues.password, clearError, error]);
 
   const onSubmit = async (data) => {
     try {
+      // Reset toast flag before attempting login
+      setHasShownToast(false);
+      
       const result = await login(data.username, data.password);
       
-      // Check if login was successful
-      if (result?.success || !error) {
+      // Only show success toast if login was actually successful and no error exists
+      if (result && result.success && !error) {
         toast.success(`Welcome back, ${data.username}!`);
         reset();
+      } else if (result && !result.success) {
+        // Handle case where result exists but success is false
+        // Don't show success toast, let the error handling above deal with it
+        console.log('Login failed:', result.message || 'Unknown error');
       }
     } catch (loginError) {
-      // Handle login errors
+      // Handle login errors - don't show success toast
       console.error('Login failed:', loginError);
+      // The useEffect above will handle showing the error toast
     }
   };
 
@@ -267,6 +279,21 @@ const Login = () => {
           </div>
         </div>
       </div>
+      
+      {/* Toast Container */}
+      <ToastContainer 
+        position="top-center"
+        autoClose={5000}
+        theme='colored'
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+        toastClassName={"top-16"}
+      />
     </>
   );
 };

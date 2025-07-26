@@ -1,4 +1,4 @@
-import { Calculator, Clock, DollarSign, Download, Mail, Pen, Phone } from "lucide-react";
+import { Calculator, Clock, DollarSign, Download, Mail, Pen, Phone, Eye } from "lucide-react";
 import useEstimatesQuery from "./useEstimatesQuery"
 
 function EstimateCard({ estimate, onEdit, onDelete, isDeleting }) {
@@ -48,20 +48,53 @@ function EstimateCard({ estimate, onEdit, onDelete, isDeleting }) {
     }
   }
 
-  const getBudgetColor = (budget) => {
-    const budgetLower = budget?.toLowerCase() || '';
-    if (budgetLower.includes('10000') || budgetLower.includes('high')) return 'text-green-600 bg-green-50';
-    if (budgetLower.includes('5000') || budgetLower.includes('medium')) return 'text-blue-600 bg-blue-50';
-    return 'text-primary ';
-  }
-
-  const getTimelineColor = (timeline) => {
-    const timelineLower = timeline?.toLowerCase() || '';
-    if (timelineLower.includes('urgent') || timelineLower.includes('asap')) return 'text-red-600 bg-red-50';
-    if (timelineLower.includes('month')) return 'text-primary';
-    return 'text-primary ';
-  }
-
+/*  const handleOpenDocument = () => {
+    if (estimate.documentPath) {
+      const fileName = estimate.originalFileName || '';
+      const fileExtension = fileName.split('.').pop()?.toLowerCase();
+      
+      // Create a temporary link element
+      const link = document.createElement('a');
+      link.href = estimate.documentPath;
+      link.target = '_blank';
+      link.rel = 'noopener noreferrer';
+      
+      // Set download attribute to empty to force browser to try opening instead of downloading
+      if (['pdf', 'jpg', 'jpeg', 'png', 'gif', 'txt', 'html'].includes(fileExtension)) {
+        // For files that browsers can display, open directly
+        link.removeAttribute('download');
+      } else if (['doc', 'docx', 'xls', 'xlsx', 'ppt', 'pptx'].includes(fileExtension)) {
+        // For Office documents, try different approaches
+        try {
+          // Method 1: Try Office Online if it's a public URL
+          if (estimate.documentPath.startsWith('http')) {
+            const officeOnlineUrl = `https://view.officeapps.live.com/op/embed.aspx?src=${encodeURIComponent(estimate.documentPath)}`;
+            window.open(officeOnlineUrl, '_blank', 'noopener,noreferrer');
+            return;
+          }
+        } catch (error) {
+          console.log('Office Online not available, trying direct open');
+        }
+        
+        // Method 2: Direct open (will prompt user to choose app)
+        link.removeAttribute('download');
+      }
+      
+      // Add click event and trigger
+      document.body.appendChild(link);
+      
+      try {
+        link.click();
+      } catch (error) {
+        console.error('Error opening document:', error);
+        // Fallback: try window.open
+        window.open(estimate.documentPath, '_blank', 'noopener,noreferrer');
+      } finally {
+        document.body.removeChild(link);
+      }
+    }
+  } */
+ 
   return (
     <div className="group bg-white rounded-md shadow-lg hover:shadow-lg transition-all duration-300
       transform overflow-hidden border border-gray-100 relative">
@@ -121,11 +154,11 @@ function EstimateCard({ estimate, onEdit, onDelete, isDeleting }) {
                <Calculator className="h-4 w-4"/>
               Project Type
             </h4>
-            <p className="text-blue-900 font-medium capitalize">{estimate.projectType}</p>
+            <p className="text-primary font-medium capitalize">{estimate.projectType}</p>
           </div>
 
-          <div className={`p-4 rounded-lg border ${getBudgetColor(estimate.budget)}`}>
-            <h4 className="text-sm font-semibold mb-2 flex items-center">
+          <div className={`p-4 rounded-lg border `}>
+            <h4 className="text-sm font-semibold text-primary mb-2 flex items-center">
               <DollarSign className="h-4 w-4"/>
               Budget Range
             </h4>
@@ -134,7 +167,7 @@ function EstimateCard({ estimate, onEdit, onDelete, isDeleting }) {
         </div>
 
         {/* Timeline */}
-        <div className={`p-4 rounded-lg border ${getTimelineColor(estimate.projectTimeline)}`}>
+        <div className={`p-4 rounded-lg border `}>
           <h4 className="text-sm font-semibold mb-2 gap-1 flex items-center">
                <Clock className="h-4 w-4"/>
             Project Timeline
@@ -166,12 +199,22 @@ function EstimateCard({ estimate, onEdit, onDelete, isDeleting }) {
               <span className="text-primary font-medium">
                 {estimate.originalFileName || 'Document.pdf'}
               </span>
-              <button
-                onClick={handleDownloadDocument}
-                className="px-3 py-1 bg-secondary  text-sm rounded hover:bg-yellow-300 transition-colors"
-              >
-                Download
-              </button>
+              <div className="flex gap-2">
+                {/**<button
+                  onClick={handleOpenDocument}
+                  className="px-3 py-1 bg-blue-500 text-white text-sm rounded hover:bg-blue-600 transition-colors flex items-center gap-1"
+                >
+                  <Eye className="h-3 w-3"/>
+                  Open
+                </button> */}
+                
+                <button
+                  onClick={handleDownloadDocument}
+                  className="px-3 py-1 bg-secondary  text-sm rounded hover:bg-yellow-300 transition-colors"
+                >
+                  Download
+                </button>
+              </div>
             </div>
           </div>
         )}

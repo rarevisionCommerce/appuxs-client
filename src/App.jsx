@@ -21,7 +21,7 @@ import useScrollToTop from "./Website/Components/ScrollToTop.jsx"
 import Footer from "./Website/Components/Footer.jsx";
 
 //admin and auth components
-import Login from "./Login.jsx";
+import Login from './admin-Dashboard/Login.jsx';
 import PersistLogin from './hooks/PersistLogin.jsx';
 import RequireAuth from './admin-Dashboard/RequireAuth.jsx'; 
 import AdminDashboard from "./admin-Dashboard/AdminDash.jsx";
@@ -57,7 +57,7 @@ function App() {
                 <Route element={<RequireAuth  />}>
                   <Route path="/admin-dashboard" element={<AdminDashboard />}>
                     {/* Default route for admin dashboard */}
-                    <Route index element={<EstimatesDash />} />
+                    <Route index element={<MessagesDash />} />
                     <Route path="Estimates" element={<EstimatesDash />} />                 
                     <Route path="Messages" element={<MessagesDash />} />          
                                       

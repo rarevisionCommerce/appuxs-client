@@ -17,6 +17,7 @@ import Capacitor from "../../assets/Capacitor.jpg"
 import Rest from "../../assets/Rest.jpg"
 import Bm from "../../assets/Bm.jpg"
 import "../../App.css"
+import { NavLink } from "react-router-dom"
 
 function Technologies() {
    
@@ -99,10 +100,10 @@ function Technologies() {
                                 <p> MongoDB</p>
                             </div>
 
-                            <div className="flex justify-start gap-2 ml-4 items-center mt-3">
+                            <NavLink to="/Login" className="flex justify-start gap-2 ml-4 items-center mt-3">
                                 <img src={TypeScript} className="h-10 w-10 bg-gray-400" />
                                 <p> Cassandra</p>
-                            </div>
+                            </NavLink>
 
 
                         </div>

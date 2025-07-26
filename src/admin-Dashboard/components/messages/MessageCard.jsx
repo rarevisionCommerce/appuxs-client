@@ -1,3 +1,4 @@
+import { Mail, Phone, User } from "lucide-react";
 import  useMessagesQuery  from "./useMessagesQuery"
 
 function MessageCard({ message, onEdit, onDelete, isDeleting }) {
@@ -43,8 +44,8 @@ function MessageCard({ message, onEdit, onDelete, isDeleting }) {
       {/* Sender Section */}
       <div className="p-6">
         <div className="flex justify-between items-start ">
-          <h3 className="text  text-slate-900 transition-colors duration-300">
-            From: {message.name}
+          <h3 className="text-slate-900 inline-flex items-center gap-2 font-semibold transition-colors duration-300">
+            <User className="h-5 w-5" /> {message.name}
           </h3>
           {message.seen ? 
             <span className="px-2 py-1 bg-green-200 text-green-700 text-xs rounded-full">
@@ -54,9 +55,15 @@ function MessageCard({ message, onEdit, onDelete, isDeleting }) {
             </span>
           }
         </div>
-        <div className="mb-2">
-          Email: {message.email}
+        <div className="flex lg:flex-row py-2 flex-col gap-2">
+            <div className="inline-flex gap-2 bg-gray-100 rounded-md p-1 items-center">
+          <Mail className="h-5 w-5"/> {message.email}
         </div>
+        <div className=" inline-flex gap-2 bg-gray-100 rounded-md p-1 items-center">
+          <Phone className="h-5 w-5"/> {message.phoneNumber}
+        </div>
+        </div>
+        
 
         {/* Message Content Section */}
         <div className="mb-4">
