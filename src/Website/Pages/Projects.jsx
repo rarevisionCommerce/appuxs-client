@@ -66,17 +66,17 @@ const AnimatedCounter = ({ end, duration, suffix = "", prefix = "", icon: Icon }
   
   return (
     <div ref={ref} className="group">
-      <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20 hover:bg-white/15 transition-all duration-300 hover:scale-105 hover:shadow-2xl">
+      <div className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/20 hover:bg-gradient-to-br hover:from-white/20 hover:to-white/10 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:border-yellow-400/30">
         <div className="flex items-center justify-center ">
-          <div className="bg-yellow-400/20 p-3 rounded-full group-hover:bg-yellow-400/30 transition-colors duration-300">
-            <Icon className="w-6 h-6 text-yellow-400" />
+          <div className="bg-gradient-to-br from-yellow-400/20 to-yellow-500/20 p-3 rounded-full group-hover:from-yellow-400/30 group-hover:to-yellow-500/30 transition-all duration-300 group-hover:scale-110 group-hover:rotate-6">
+            <Icon className="w-6 h-6 text-yellow-400 group-hover:text-yellow-300 transition-colors duration-300" />
           </div>
         </div>
         <div className="flex flex-col justify-center items-center">
-          <div className="text-xl md:text-2xl font-bold text-yellow-400 mb-1">
+          <div className="text-xl md:text-2xl font-bold text-yellow-400 mb-1 group-hover:text-yellow-300 transition-colors duration-300">
             {prefix}{count}{suffix}
           </div>
-          <div className="text-gray-300 text-sm  text-nowrap font-medium">
+          <div className="text-gray-300 text-sm text-nowrap font-medium group-hover:text-gray-200 transition-colors duration-300">
             {end === 20 && "Projects Delivered"}
             {end === 150 && "Working Hours"}
             {end === 500 && "Client Meetings"}
@@ -94,33 +94,33 @@ const ProjectCard = ({ image, title, description, link, layout = "standard" }) =
 
   if (layout === "featured") {
     return (
-      <div 
-        className="bg-white lg:ml-20  rounded-3xl max-w-5xl overflow-hidden shadow-md transition-all duration-500 group border border-gray-100" >
+      <div className="bg-gradient-to-br from-white to-gray-50/50 lg:ml-20 rounded-3xl max-w-5xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 group border border-gray-100 hover:border-yellow-200" >
         <div className="flex flex-col lg:flex-row h-full justify-center items-center">
           <div className="w-full lg:w-1/2 relative overflow-hidden">
             <img 
               src={image} 
               alt={title}
-              className="object-cover h-64 w-full transition-transform duration-700 "
+              className="object-cover h-64 w-full transition-transform duration-700 group-hover:scale-110"
             />
             <div className="absolute inset-0 bg-gradient-to-r from-transparent to-black/20 group-hover:to-black/30 transition-all duration-500" />
+            <div className="absolute inset-0 bg-gradient-to-br from-yellow-400/0 via-transparent to-purple-500/0 group-hover:from-yellow-400/10 group-hover:to-purple-500/10 transition-all duration-700" />
           </div>
           <div className="lg:w-1/2 p-8 flex flex-col justify-center">
             <div className="space-y-4">
               <h3 className="text-xl font-bold text-gray-800 group-hover:text-yellow-500 transition-colors duration-300">
                 {title}
               </h3>
-              <p className="text-gray-600 leading-relaxed text-sm">
+              <p className="text-gray-600 leading-relaxed text-sm group-hover:text-gray-700 transition-colors duration-300">
                 {description}
               </p>
               <a 
                 href={link} 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 bg-gradient-to-r from-yellow-400 to-yellow-500 text-white px-6 py-3 rounded-lg font-semibold  transition-all duration-300 hover:scale-105 hover:shadow-lg group/btn"
+                className="inline-flex items-center gap-2 bg-gradient-to-r from-yellow-400 to-yellow-500 hover:from-yellow-500 hover:to-yellow-600 text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300 hover:scale-105 hover:shadow-lg group/btn"
               >
                 <span>Visit Project</span>
-                <ExternalLink className="w-4 h-4 transition-transform duration-300 group-hover/btn:translate-x-1" />
+                <ExternalLink className="w-4 h-4 transition-transform duration-300 group-hover/btn:translate-x-1 group-hover/btn:rotate-12" />
               </a>
             </div>
           </div>
@@ -130,17 +130,17 @@ const ProjectCard = ({ image, title, description, link, layout = "standard" }) =
   }
 
   return (
-    <div 
-      className="bg-white rounded-3xl overflow-hidden shadow-sm  transition-all duration-500 group border border-gray-100">
+    <div className="bg-gradient-to-br from-white to-gray-50/50 rounded-3xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-500 group border border-gray-100 hover:border-yellow-200 hover:-translate-y-2">
       <div className="relative overflow-hidden">
         <img 
           src={image} 
           alt={title}
-          className="w-full h-64 object-cover transition-transform duration-700"
+          className="w-full h-64 object-cover transition-transform duration-700 group-hover:scale-110"
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent   " />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent group-hover:from-black/30 transition-all duration-500" />
+        <div className="absolute inset-0 bg-gradient-to-br from-yellow-400/0 via-transparent to-purple-500/0 group-hover:from-yellow-400/10 group-hover:to-purple-500/10 transition-all duration-700" />
         <div className="absolute top-4 right-4 opacity-0 group-hover:opacity-100 transition-all duration-300 transform translate-y-2 group-hover:translate-y-0">
-          <div className="bg-white/90 backdrop-blur-sm rounded-full p-2">
+          <div className="bg-white/90 backdrop-blur-sm rounded-full p-2 hover:bg-white transition-colors duration-300">
             <ExternalLink className="w-4 h-4 text-yellow-500" />
           </div>
         </div>
@@ -150,17 +150,17 @@ const ProjectCard = ({ image, title, description, link, layout = "standard" }) =
         <h3 className="text-xl font-bold text-gray-800 group-hover:text-yellow-600 transition-colors duration-300">
           {title}
         </h3>
-        <p className="text-gray-600 leading-relaxed">
+        <p className="text-gray-600 leading-relaxed group-hover:text-gray-700 transition-colors duration-300">
           {description}
         </p>
         <a 
           href={link} 
           target="_blank" 
           rel="noopener noreferrer"
-          className="inline-flex items-center gap-2 bg-gradient-to-r from-yellow-400 to-yellow-500 text-white px-6 py-3 rounded-lg font-semibold  transition-all duration-300 hover:scale-105 hover:shadow-lg group/btn w-full justify-center"
+          className="inline-flex items-center gap-2 bg-gradient-to-r from-yellow-400 to-yellow-500 hover:from-yellow-500 hover:to-yellow-600 text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300 hover:scale-105 hover:shadow-lg group/btn w-full justify-center"
         >
           <span>Visit Project</span>
-          <ExternalLink className="w-4 h-4 transition-transform duration-300 group-hover/btn:translate-x-1" />
+          <ExternalLink className="w-4 h-4 transition-transform duration-300 group-hover/btn:translate-x-1 group-hover/btn:rotate-12" />
         </a>
       </div>
     </div>
@@ -206,27 +206,34 @@ function Projects() {
   return (
     <main className="flex flex-col">
       {/* Hero Section */}
-      <div className="relative pt-28 flex items-center justify-center bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 overflow-hidden">
-        {/* Animated background elements */}
+      <section className="relative pt-28 flex items-center justify-center bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 overflow-hidden">
+        {/* Enhanced animated background elements */}
         <div className="absolute inset-0">
           <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-yellow-400/10 rounded-full blur-3xl animate-pulse" />
           <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-blue-500/5 rounded-full blur-3xl animate-pulse delay-700" />
           <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-full h-full bg-gradient-to-r from-transparent via-yellow-400/5 to-transparent rotate-12" />
+          
+          {/* Additional modern elements */}
+          <div className="absolute top-20 right-1/3 w-32 h-32 bg-purple-500/5 rounded-full blur-2xl animate-bounce delay-300" />
+          <div className="absolute bottom-20 left-2/3 w-48 h-48 bg-green-500/5 rounded-full blur-3xl animate-pulse delay-1500" />
+          
+          {/* Floating particles */}
+          
         </div>
 
-        <div className="relative z-10 w-full max-w-7xl mx-auto px-4 lg:px-8">
+        <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8 xl:px-12">
           <div className="grid lg:grid-cols-2 gap-6 items-center">
             
             {/* Content Section */}
-            <div className="lg:space-y-8 space-y-5  lg:py-2  ">
+            <div className="lg:space-y-8 space-y-5 lg:py-2">
               <div className="space-y-4">
                 <div className="flex items-center gap-2 text-yellow-400">
-                  <Sparkles className="w-5 h-5" />
+                  <Sparkles className="w-5 h-5 animate-pulse" />
                   <span className="text-sm font-semibold tracking-wider uppercase">Our Portfolio</span>
                 </div>
                 
                 <h1 className="text-xl lg:text-4xl font-bold text-white leading-tight">
-                  Our <span className="text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 to-yellow-500">Projects</span>
+                  Our <span className="text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 via-yellow-300 to-yellow-500 ">Projects</span>
                 </h1>
                 
                 <p className="md:text-lg text-gray-300 leading-relaxed max-w-2xl">
@@ -236,7 +243,7 @@ function Projects() {
 
               <button 
                 onClick={scrollToProjects}
-                className="group inline-flex items-center gap-3 bg-gradient-to-r from-yellow-400 to-yellow-500 text-white px-8 py-4 rounded-lg font-semibold md:text-lg hover:from-yellow-500 hover:to-yellow-600 transition-all duration-300 hover:scale-105 hover:shadow-2xl"
+                className="group inline-flex items-center gap-3 bg-gradient-to-r from-yellow-400 to-yellow-500 hover:from-yellow-500 hover:to-yellow-600 text-white px-8 py-4 rounded-lg font-semibold md:text-lg transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-yellow-500/25"
               >
                 <span>Explore Our Work</span>
                 <ArrowRight className="w-5 h-5 transition-transform duration-300 group-hover:translate-x-1" />
@@ -247,7 +254,7 @@ function Projects() {
             <div className="lg:pl-10 pb-3">
               <div className="text-center mb-8">
                 <h2 className="text-2xl font-bold text-white mb-2 flex items-center justify-center gap-2">
-                  <TrendingUp className="w-8 h-8 text-yellow-400" />
+                  <TrendingUp className="w-8 h-8 text-yellow-400 animate-pulse" />
                   Our Impact
                 </h2>
                 <p className="text-gray-400">Delivering excellence through innovation</p>
@@ -262,16 +269,16 @@ function Projects() {
             </div>
           </div>
         </div>
-      </div>
+      </section>
 
       {/* Projects Section */}
-      <div id="projects" className="py-20 bg-gradient-to-b from-gray-50 to-white">
-        <div className="max-w-7xl mx-auto px-4 lg:px-8">
+      <section id="projects" className="py-20 bg-gradient-to-b from-gray-50 via-white to-gray-50/50">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 xl:px-12">
           
           {/* Section Header */}
           <div className="text-center mb-16">
             <div className="flex items-center justify-center gap-2 text-yellow-500 mb-4">
-              <Building2 className="w-6 h-6" />
+              <Building2 className="w-6 h-6 animate-pulse" />
               <span className="text-sm font-semibold tracking-wider uppercase">Portfolio Showcase</span>
             </div>
             <h2 className="text-2xl lg:text-3xl font-bold text-gray-900 mb-6">
@@ -297,10 +304,9 @@ function Projects() {
             </div>
           </div>
         </div>
-      </div>
-      <CTA/>
+      </section>
       
-     
+      <CTA/>
     </main>
   );
 }

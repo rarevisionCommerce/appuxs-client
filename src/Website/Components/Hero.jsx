@@ -55,11 +55,11 @@ function HeroSection() {
   }, [currentText, isDeleting, loopNum, typingSpeed, currentIndex]);
 
   return (
-    <section className="min-h-screen bg-primary bg-homeBg aspect-auto bg-cover bg-center bg-no-repeat py-2 relative">
+    <section className="min-h-screen  bg-primary bg-homeBg aspect-auto bg-cover bg-center bg-no-repeat py-2 ">
       {/* Overlay for better text readability */}
       <div className="absolute inset-0 bg-primary/70"></div>
       
-      <div className="relative z-10 flex flex-col lg:flex-row items-center justify-between lg:mb-6 pt-12 lg:px-16 px-3 max-w-7xl mx-auto">
+      <div className="relative z-10 flex flex-col lg:flex-row items-center justify-between lg:mb-6 pt-12 lg:px-16 px-3 max-w-7xl ">
         
         {/* Left Content */}
         <div className="flex-1 lg:pr-12 mb-12">

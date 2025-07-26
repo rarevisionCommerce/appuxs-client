@@ -7,7 +7,7 @@ import CTA from "../Components/CTA.jsx";
 
 function Home() {
   return (
-    <main className="overflow-hidden">
+    <main className=" ">
        <Hero />
       <Services />
       <Projects />

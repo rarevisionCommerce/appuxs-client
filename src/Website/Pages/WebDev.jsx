@@ -17,8 +17,7 @@ function WebDev() {
                             src={Portrait} 
                             alt="Web Development Professional"
                             className=" h-full object-cover rounded-2xl shadow-sm" 
-                        />
-                        
+                        />                        
                     </div>
                 </div>
 
