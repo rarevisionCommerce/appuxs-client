@@ -7,8 +7,34 @@ import {
   Smartphone,
   Database,
   Cloud,
-  Briefcase
+  Briefcase,
+  Settings
 } from 'lucide-react';
+import { 
+    FaReact, 
+    FaNodeJs, 
+    FaGitAlt, 
+    FaGithub, 
+    FaAws
+} from "react-icons/fa";
+import { 
+    SiTailwindcss, 
+    SiMysql, 
+    SiPostgresql, 
+    SiMongodb,
+    SiExpress,
+    SiAngular,
+    SiNativescript,
+    SiCapacitor,
+    SiRender,
+    SiVuedotjs,
+    SiDjango,
+    SiFlutter,
+    SiOracle,
+    SiGithub,
+    SiDocker,
+    SiAwsamplify
+} from "react-icons/si";
 
 // Simulating your imported images - replace these with your actual imports
 const FrontEnd = "https://images.unsplash.com/photo-1633356122544-f134324a6cee?w=400&h=200&fit=crop";
@@ -32,9 +58,9 @@ const TechStackDropdown = () => {
       icon: <Code className="w-6 h-6" />,
       image: FrontEnd,
       technologies: [
-        { name: 'React JS', description: 'Modern JavaScript library for building user interfaces' },
-        { name: 'Tailwind CSS', description: 'Utility-first CSS framework for rapid UI development' },
-        { name: 'TypeScript', description: 'Typed superset of JavaScript for better development' }
+        { name: 'React JS',Icon:<FaReact className='h-7 w-7 text-blue-400'/> , description: 'Modern JavaScript library for building user interfaces' },
+        { name: 'Tailwind CSS',Icon:<SiTailwindcss className='h-7 w-7 text-cyan-500'/> , description: 'Utility-first CSS framework for rapid UI development' },
+        { name: 'Vue Js',Icon:<SiVuedotjs className='h-7 w-7 text-green-400'/> , description: 'A utility first js framework that ease interfaces development ' }
       ]
     },
     {
@@ -43,8 +69,11 @@ const TechStackDropdown = () => {
       icon: <Server className="w-6 h-6" />,
       image: BackEnd,
       technologies: [
-        { name: 'Node.js', description: 'JavaScript runtime built on Chrome\'s V8 JavaScript engine' },
-        { name: 'RESTful API', description: 'Architectural style for designing networked applications' }
+        { name: 'Node.js',Icon:<FaNodeJs className='h-7 w-7 text-green-500'/> , description: 'JavaScript runtime built on Chrome\'s V8 JavaScript engine' },
+         { name: 'Express Js',Icon:<SiExpress className='h-7 w-7 text-green-500'/> , description: 'A Node Js framework that helps build web servers with ease' },
+         { name: 'Django',Icon:<SiDjango className='h-7 w-7 text-green-500'/> , description: 'A Python framework that build  fast web backend servers' },
+        { name: 'RESTful API',Icon:<Settings className='h-7 w-7 text-slate-800'/> , description: 'Architectural style for designing networked applications' }
+       
       ]
     },
     {
@@ -53,8 +82,9 @@ const TechStackDropdown = () => {
       icon: <Smartphone className="w-6 h-6" />,
       image: MobileStack,
       technologies: [
-        { name: 'React Native', description: 'Framework for building native mobile apps using React' },
-        { name: 'Capacitor', description: 'Cross-platform native runtime for web apps' }
+        { name: 'React Native',Icon:<FaReact className='h-7 w-7 text-blue-400'/>,  description: 'Framework for building native mobile apps using React' },
+        { name: 'Capacitor',Icon:<SiCapacitor className='h-7 w-7 text-blue-600'/>, description: 'Cross-platform native runtime for web apps' },
+        { name: 'Flutter',Icon:<SiFlutter className='h-7 w-7 text-blue-600'/>, description: 'Cross-platform native runtime for web apps' }
       ]
     },
     {
@@ -63,9 +93,10 @@ const TechStackDropdown = () => {
       icon: <Database className="w-6 h-6" />,
       image: DBMS,
       technologies: [
-        { name: 'MySQL', description: 'Popular open-source relational database' },
-        { name: 'MongoDB', description: 'Document-oriented NoSQL database' },
-        { name: 'Cassandra', description: 'Distributed NoSQL database for big data' }
+        { name: 'MySQL',Icon:<SiMysql className='h-7 w-7 text-blue-600'/>,  description: 'Popular open-source relational database' },
+        { name: 'MongoDB',Icon:<SiMongodb className='h-7 w-7 text-green-600'/>,  description: 'Document-oriented NoSQL database' },
+        { name: 'PostgreSQL',Icon:<SiPostgresql className='h-7 w-7 text-blue-700'/>,  description: ' open source object-relational SQL database system' },
+        { name: 'Oracle',Icon:<SiOracle className='h-7 w-7 text-red-500'/>, description: 'Distributed NoSQL database for big data' }
       ]
     },
     {
@@ -74,21 +105,13 @@ const TechStackDropdown = () => {
       icon: <Cloud className="w-6 h-6" />,
       image: IAC,
       technologies: [
-        { name: 'GitHub', description: 'Version control and collaboration platform' },
-        { name: 'Docker', description: 'Containerization platform for applications' },
-        { name: 'AWS', description: 'Cloud computing services and infrastructure' }
+        { name: 'GitHub',Icon:<SiGithub className='h-7 w-7 text-slate-700'/>,  description: 'Version control and collaboration platform' },
+        { name: 'Docker',Icon:<SiDocker className='h-7 w-7 text-blue-500'/>,  description: 'Containerization platform for applications' },
+        { name: 'Render',Icon:<SiRender className='h-7 w-7 text-purple-500'/>,  description: 'Offers cloud hosting for web services, static sites, and databases' },
+        { name: 'AWS',Icon:<FaAws className='h-7 w-7 text-sky-600'/>,  description: 'Cloud computing services and infrastructure' }
       ]
     },
-    {
-      id: 'business',
-      title: 'Business Tools',
-      icon: <Briefcase className="w-6 h-6" />,
-      image: Bm,
-      technologies: [
-        { name: 'Python', description: 'Versatile programming language for data analysis' },
-        { name: 'JavaScript', description: 'Programming language for web development' }
-      ]
-    }
+    
   ];
 
   // Split categories into rows for large screens
@@ -98,7 +121,7 @@ const TechStackDropdown = () => {
   const renderTechCard = (category) => (
     <div 
       key={category.id}
-      className="rounded-xl shadow-lg transition-all duration-300 hover:shadow-2xl bg-white"
+      className="rounded-xl shadow-sm transition-all duration-300 hover:shadow-md bg-white"
     >
       {/* Category Header */}
       <div 
@@ -203,13 +226,13 @@ const TechStackDropdown = () => {
               <div 
                 key={index}
                 className="flex-1 min-w-[250px] p-4 rounded-lg transition-all duration-300 hover:shadow-md"
-                style={{ backgroundColor: '#f1f5f9' }}
+                
               >
                 <div className="flex items-start gap-3">
                   <div 
-                    className="w-3 h-3 rounded-full mt-2 flex-shrink-0"
-                    style={{ backgroundColor: '#facc15' }}
-                  ></div>
+                    className=""
+                    
+                  >{tech.Icon}  </div>
                   <div>
                     <h4 
                       className="font-semibold text-lg mb-2"
@@ -232,7 +255,7 @@ const TechStackDropdown = () => {
       </div>
     );
   };
-
+{/**my new keyboard typed this one and now the mouse is in control */}
   return (
     <div className="min-h-screen py-16 px-4" style={{ backgroundColor: '#f1f5f9' }} id="stck">
       <div className="container mx-auto">
@@ -240,7 +263,8 @@ const TechStackDropdown = () => {
         <div className=" mb-12">
          <h2 className="text-2xl lg:text-4xl font-bold text-slate-800 mb-3 ">
             Tech <span className="text-yellow-500">Stack</span>
-          </h2>
+          </h2> 
+
           <div className="h-[5px] rounded-full w-28 mb-3 bg-gradient-to-r from-transparent to-dark"></div>
         </div>
 

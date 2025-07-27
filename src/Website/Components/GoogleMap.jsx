@@ -3,7 +3,7 @@ const GoogleMap = ({ location = "Kirinyaga Rd, Nairobi County, Kenya" }) => {
   const mapSrc = `https://maps.google.com/maps?width=100%25&height=400&hl=en&q=${encodeURIComponent(location)}&t=&z=14&ie=UTF8&iwloc=&output=embed`;
   
   return (
-    <div style={{ width: '100%', height: '100%' }}>
+    <div className="w-full h-full">
       <iframe
         width="100%"
         height="100%"

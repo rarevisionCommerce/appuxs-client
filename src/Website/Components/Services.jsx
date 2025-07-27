@@ -1,10 +1,12 @@
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, FileQuestion } from "lucide-react";
+import { FaCcVisa, FaReceipt, FaSimCard } from "react-icons/fa";
 import { 
   FiMonitor, 
   FiSmartphone, 
   FiMessageSquare,
   FiSettings,
-  FiLayers
+  FiLayers,
+  FiBriefcase
 } from "react-icons/fi";
 import { NavLink } from "react-router-dom";
 
@@ -95,10 +97,70 @@ function ServicesSection() {
               <div className="w-12 h-1 bg-yellow-500 mx-auto mt-4 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
             </div>
           </div>
+          {/* Bulk SMS */}
+          <div className="group bg-white  p-3 shadow-md  transition-all duration-300 transform hover:-translate-y-2 border border-slate-200 hover:border-yellow-500/50 md:col-span-2 lg:col-span-1">
+            <div className="text-center">
+              <div className="w-12 h-12 mx-auto mb-2 bg-secondary rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                <FaSimCard className="text-3xl text-white" />
+              </div>
+              <h3 className="md:text-lg text-sm font-semibold text-slate-800 group-hover:text-yellow-600 transition-colors duration-300">
+                Mpesa intergration
+              </h3>
+              <div className="w-12 h-1 bg-yellow-500 mx-auto mt-4 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+            </div>
+          </div>
+          {/**Payment gateways */}
+          <div className="group bg-white  p-3 shadow-md  transition-all duration-300 transform hover:-translate-y-2 border border-slate-200 hover:border-yellow-500/50 md:col-span-2 lg:col-span-1">
+            <div className="text-center">
+              <div className="w-12 h-12 mx-auto mb-2 bg-secondary rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                <FaCcVisa className="text-3xl text-white" />
+              </div>
+              <h3 className="md:text-lg text-sm font-semibold text-slate-800 group-hover:text-yellow-600 transition-colors duration-300">
+                Card  Payments 
+              </h3>
+              <div className="w-12 h-1 bg-yellow-500 mx-auto mt-4 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+            </div>
+          </div>
+          {/* Bulk SMS */}
+          <div className="group bg-white  p-3 shadow-md  transition-all duration-300 transform hover:-translate-y-2 border border-slate-200 hover:border-yellow-500/50 md:col-span-2 lg:col-span-1">
+            <div className="text-center">
+              <div className="w-12 h-12 mx-auto mb-2 bg-secondary rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                <FaReceipt className="text-3xl text-white" />
+              </div>
+              <h3 className="md:text-lg text-sm font-semibold text-slate-800 group-hover:text-yellow-600 transition-colors duration-300">
+                POS Installation
+              </h3>
+              <div className="w-12 h-1 bg-yellow-500 mx-auto mt-4 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+            </div>
+          </div>
+          <div className="group bg-white  p-3 shadow-md  transition-all duration-300 transform hover:-translate-y-2 border border-slate-200 hover:border-yellow-500/50 md:col-span-2 lg:col-span-1">
+            <div className="text-center">
+              <div className="w-12 h-12 mx-auto mb-2 bg-secondary rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                <FiBriefcase className="text-3xl text-white" />
+              </div>
+              <h3 className="md:text-lg text-sm font-semibold text-slate-800 group-hover:text-yellow-600 transition-colors duration-300">
+                E-Commerce  systems
+              </h3>
+              <div className="w-12 h-1 bg-yellow-500 mx-auto mt-4 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+            </div>
+          </div>
+          <div className="group bg-white  p-3 shadow-md  transition-all duration-300 transform hover:-translate-y-2 border border-slate-200 hover:border-yellow-500/50 md:col-span-2 lg:col-span-1">
+            <div className="text-center">
+              <div className="w-12 h-12 mx-auto mb-2 bg-secondary rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                <FileQuestion className="text-3xl text-white" />
+              </div>
+              <h3 className="md:text-lg text-sm font-semibold text-slate-800 group-hover:text-yellow-600 transition-colors duration-300">
+                Software Consultation
+              </h3>
+              <div className="w-12 h-1 bg-yellow-500 mx-auto mt-4 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+            </div>
+          </div>
+          {/* Bulk SMS */}
+          
 
         </div>
 
-        {/* Bottom decorative line */}
+       
         <div className="flex  mt-16">
           <NavLink to="/Services" className="bg-primary inline-flex items-center hover:-translate-y-1 gap-2 p-3 rounded-lg text-light font-semibold">More Details <ArrowRight/> </NavLink>
         </div>

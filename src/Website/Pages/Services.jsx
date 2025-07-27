@@ -1,10 +1,15 @@
 import { Link } from "react-scroll";
-import BizMgnt from "./BizMgnt";
-import BulkSMS from "./BulkSMS";
-import MobileApp from "./MobileApp";
-import WebDesign from "./WebDesign";
-import WebDev from "./WebDev";
+import BizMgnt from "../Components/BizMgnt";
+import BulkSMS from "../Components/BulkSMS";
+import MobileApp from "../Components/MobileApp";
+import WebDesign from "../Components/WebDesign";
+import WebDev from "../Components/WebDev";
 import CTA from "../Components/CTA";
+import PaymentGateways from "../Components/PaymentGateWays";
+import POS from "../Components/POS";
+import Ecommerse from "../Components/Ecommerse";
+import SoftwareConsultation from "../Components/SoftwareConsultation";
+
 
 const Services = () => {
   return (
@@ -73,14 +78,14 @@ const Services = () => {
                 </h3>
                 
                 {/* Service Links Grid */}
-                <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 p-2 gap-3">
+                <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-4 p-2 gap-3">
                   
                   <Link
                     to="webdev"
                     smooth={true}
                     offset={-50}
                     duration={800}
-                    className="group flex flex-col items-center p-2 sm:p-3 text-sm md:text-[16px] rounded-lg cursor-pointer backdrop-blur-sm hover:scale-105 bg-gradient-to-br from-blue-600 to-blue-700 hover:from-blue-500 hover:to-blue-600 text-light duration-300 font-semibold shadow-lg hover:shadow-xl transition-all transform hover:-translate-y-1"
+                    className="group flex flex-col items-center p-3 text-sm md:text-[16px] rounded-lg cursor-pointer backdrop-blur-sm hover:scale-105 bg-gradient-to-br from-blue-600 to-blue-700 hover:from-blue-500 hover:to-blue-600 text-light duration-300 font-semibold shadow-lg hover:shadow-xl transition-all transform hover:-translate-y-1"
                   >
                     Web Development
                   </Link>
@@ -90,7 +95,7 @@ const Services = () => {
                     smooth={true}
                     offset={-50}
                     duration={800}
-                    className="group flex flex-col items-center sm:p-3 p-2 rounded-lg text-sm md:text-[16px] cursor-pointer backdrop-blur-sm hover:scale-105 bg-gradient-to-br from-purple-600 to-purple-700 hover:from-purple-500 hover:to-purple-600 text-light duration-300 font-semibold shadow-lg hover:shadow-xl transition-all transform hover:-translate-y-1"
+                    className="group flex flex-col items-center p-3  rounded-lg text-sm md:text-[16px] cursor-pointer backdrop-blur-sm hover:scale-105 bg-gradient-to-br from-purple-600 to-purple-700 hover:from-purple-500 hover:to-purple-600 text-light duration-300 font-semibold shadow-lg hover:shadow-xl transition-all transform hover:-translate-y-1"
                   >
                     Web Design
                   </Link>
@@ -114,6 +119,33 @@ const Services = () => {
                   >
                     Bulk SMS
                   </Link>
+                  <Link
+                    to="payment"
+                    offset={-50}
+                    smooth={true}
+                    duration={800}
+                    className="group flex flex-col items-center p-3 rounded-lg text-sm md:text-[16px] cursor-pointer backdrop-blur-sm hover:scale-105 bg-fuchsia-600 text-light duration-300 font-semibold shadow-lg hover:shadow-xl transition-all transform hover:-translate-y-1"
+                  >
+                  Payment Gateways
+                  </Link>
+                  <Link
+                    to="pos"
+                    offset={-50}
+                    smooth={true}
+                    duration={800}
+                    className="group flex flex-col items-center p-3 rounded-lg text-sm md:text-[16px] cursor-pointer backdrop-blur-sm hover:scale-105 bg-orange-500 hover:from-red-500 hover:to-red-600 text-light duration-300 font-semibold shadow-lg hover:shadow-xl transition-all transform hover:-translate-y-1"
+                  >
+                    POS Installation
+                  </Link>
+                  <Link
+                    to="ecommerse"
+                    offset={-50}
+                    smooth={true}
+                    duration={800}
+                    className="group flex flex-col items-center p-3 rounded-lg text-sm md:text-[16px] cursor-pointer backdrop-blur-sm hover:scale-105 bg-secondary hover:from-red-500 hover:to-red-600 text-light duration-300 font-semibold shadow-lg hover:shadow-xl transition-all transform hover:-translate-y-1"
+                  >
+                    E-Commerce
+                  </Link>
 
                   <Link
                     to="bizmgnt"
@@ -122,7 +154,16 @@ const Services = () => {
                     duration={800}
                     className="group flex flex-col text-nowrap items-center p-3 rounded-lg cursor-pointer text-sm md:text-[16px] backdrop-blur-sm hover:scale-105 bg-gradient-to-br from-green-600 to-green-700 hover:from-green-500 hover:to-green-600 text-light duration-300 font-semibold shadow-lg hover:shadow-xl transition-all transform hover:-translate-y-1"
                   >
-                    Business Solutions
+                    Business Automation
+                  </Link>
+                  <Link
+                    to="consultation"
+                    smooth={true}
+                    offset={-50}
+                    duration={800}
+                    className="group flex flex-col text-nowrap items-center p-3 rounded-lg cursor-pointer text-sm md:text-[16px] backdrop-blur-sm hover:scale-105 bg-lime-500 hover:from-green-500 hover:to-green-600 text-light duration-300 font-semibold shadow-lg hover:shadow-xl transition-all transform hover:-translate-y-1"
+                  >
+                    IT Consultation
                   </Link>
 
                 </div>
@@ -134,12 +175,7 @@ const Services = () => {
               <div className="absolute -bottom-4 -left-4 w-8 h-8 border-b-2 border-l-2 border-yellow-400/90 rounded-bl-lg animate-pulse delay-400"></div>
               <div className="absolute -bottom-4 -right-4 w-8 h-8 border-b-2 border-r-2 border-yellow-400/80 rounded-br-lg animate-pulse delay-600"></div>
               
-              {/* Additional modern decorative dots */}
-              <div className="absolute -top-2 left-1/2 transform -translate-x-1/2 flex space-x-1">
-                <div className="w-2 h-2 bg-yellow-400/60 rounded-full animate-ping"></div>
-                <div className="w-2 h-2 bg-yellow-400/40 rounded-full animate-ping delay-300"></div>
-                <div className="w-2 h-2 bg-yellow-400/60 rounded-full animate-ping delay-600"></div>
-              </div>
+             
             </div>
           </div>
         </div>
@@ -161,6 +197,18 @@ const Services = () => {
         </section>
         <section id="bulksms" className="scroll-mt-16">
           <BulkSMS/>
+        </section>
+        <section id="payment" className="scroll-mt-16">
+          <PaymentGateways/>
+        </section>
+        <section id="pos" className="scroll-mt-16">
+          <POS/>
+        </section>
+        <section id="ecommerse" className="scroll-mt-16">
+          <Ecommerse/>
+        </section>
+        <section id="consultation" className="scroll-mt-16">
+          <SoftwareConsultation/>
         </section>
         <section className="scroll-mt-16">
           <CTA/>

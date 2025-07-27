@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { useForm } from "react-hook-form";
 import { useMutation } from "@tanstack/react-query";
 import { toast } from "react-toastify";
-import {axiosPublic} from "../../api/axios"; // Update with your axios config path
+import axiosPublic from "../../api/axios"; // Update with your axios config path
 import EstimatePortrait from "../../assets/EstP.jpg";
 
 function Estimate() {
