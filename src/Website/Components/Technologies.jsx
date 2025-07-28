@@ -257,7 +257,7 @@ const TechStackDropdown = () => {
 {/**my new keyboard typed this one and now the mouse is in control */}
   return (
     <div className="min-h-screen py-16 px-4" style={{ backgroundColor: '#f1f5f9' }} id="stck">
-      <div className="container mx-auto">
+      <div className="">
         {/* Header */}
         <div className=" mb-12">
          <h2 className="text-2xl lg:text-4xl font-bold text-slate-800 mb-3 ">

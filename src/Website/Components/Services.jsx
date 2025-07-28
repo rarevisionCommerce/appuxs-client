@@ -13,7 +13,7 @@ import { NavLink } from "react-router-dom";
 function ServicesSection() {
   return (
     <section className="bg-gradient-to-b from-slate-100 via-slate-50 to-white py-10">
-      <div className="container mx-auto lg:px-6 px-2">
+      <div className="lg:px-6 px-2">
         
         {/* Section Header */}
         <div className="mb-10">

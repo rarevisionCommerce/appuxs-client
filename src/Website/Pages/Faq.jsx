@@ -153,9 +153,9 @@ const FAQ = () => {
           <div className="container mx-auto px-4 sm:px-6 lg:px-8 xl:px-12 py-8">
             <div className="max-w-4xl mx-auto">
               {faqs.map((faq, index) => (
-                <div key={index} onClick={() => handleToggle(index)} className="mb-4 flex flex-col border border-secondary/50 py-2 rounded-xl hover:border-secondary/70 transition-colors duration-300 bg-white/50 hover:bg-white/80 backdrop-blur-sm shadow-sm hover:shadow-md">
+                <div key={index} onClick={() => handleToggle(index)} className="mb-4 flex flex-col border border-secondary/50 py-2 rounded-xl hover:border-secondary/70 transition-colors duration-300  backdrop-blur-sm ">
                   {/**Question */}
-                  <div className="flex justify-between items-center w-full md:text-lg font-semibold px-3 py-2 rounded-xl focus:outline-none cursor-pointer">
+                  <div className="flex justify-between items-center w-full text-sm md:text-lg font-semibold px-3 py-2 rounded-xl focus:outline-none cursor-pointer">
                     <div className="flex-1 pr-4 text-left break-words">{faq.question}</div>
                     {/**Answer */}
                     <ChevronDown className={`text-primary w-6 h-6 flex-shrink-0 transition-transform duration-300 ${openIndex === index ? "rotate-180" : ""}`} />

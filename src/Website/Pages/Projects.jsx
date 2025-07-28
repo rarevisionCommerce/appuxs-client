@@ -120,7 +120,7 @@ const ProjectCard = ({ image, title, description, link, layout = "standard" }) =
                 href={link} 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 bg-gradient-to-r from-yellow-400 to-yellow-500  text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300 group/btn"
+                className="inline-flex items-center gap-2 border border-dark/10 hover:bg-gradient-to-r from-yellow-400 to-yellow-500  text-dark px-6 py-3 rounded-lg font-semibold transition-all duration-300 group/btn"
               >
                 <span>Visit Project</span>
                 <ExternalLink className="w-4 h-4 transition-transform duration-300 group-hover/btn:translate-x-1 group-hover/btn:rotate-12" />
@@ -133,7 +133,7 @@ const ProjectCard = ({ image, title, description, link, layout = "standard" }) =
   }
 
   return (
-    <div className="bg-gradient-to-br from-white to-gray-50/50 rounded-3xl overflow-hidden transition-all duration-500 group border border-dark/10 hover:border-yellow-200 hover:-translate-y-1">
+    <div className="bg-gradient-to-br from-white to-gray-50/50 rounded-lg overflow-hidden transition-all duration-500 group border border-dark/10 hover:border-yellow-200 hover:-translate-y-1">
       <div className="relative overflow-hidden">
         <img 
           src={image} 
@@ -160,7 +160,7 @@ const ProjectCard = ({ image, title, description, link, layout = "standard" }) =
           href={link} 
           target="_blank" 
           rel="noopener noreferrer"
-          className="inline-flex items-center gap-2 bg-gradient-to-r from-yellow-400 to-yellow-500  text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300  hover:shadow-sm group/btn w-full justify-center"
+          className="inline-flex items-center border border-dark/10 gap-2 hover:bg-gradient-to-r from-yellow-400 to-yellow-500  text-dark px-6 py-3 rounded-lg font-semibold transition-all duration-300  hover:shadow-sm group/btn w-full justify-center"
         >
           <span>Visit Project</span>
           <ExternalLink className="w-4 h-4 transition-transform duration-300 group-hover/btn:translate-x-1 group-hover/btn:rotate-12" />
@@ -182,7 +182,7 @@ function Projects() {
     {
       image: Febwin,
       title: "Febwin Property Management",
-      description: "A Kenyan Property managment Agency that offers services like Renting premium properties, Selling people's dream homes, and aid in booking amazing holiday stays and BnB experiences across Kenya's most beautiful locations.",
+      description: "A Kenyan Property managment Agency that offers services like Renting premium properties, Selling  homes, and aid in booking amazing holiday stays and BnB experiences across Kenya's most beautiful locations.",
       link: "https://febwin.co.ke/"
     },
     {

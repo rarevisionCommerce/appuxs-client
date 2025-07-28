@@ -2,8 +2,6 @@ import Realizing from "../../assets/Realizing2.jpg";
 import Culture from "../../assets/Culture2.jpg";
 import Clients from "../../assets/Clients.jpg";
 import Partners from "../../assets/Partners.jpg"
-import React, { useEffect } from 'react';
-import '../../App.css';
 import Quality from "../../assets/Quality.jpg"
 import { 
     Lightbulb, 
@@ -17,15 +15,8 @@ import {
 } from 'lucide-react';
 
 function About() {
-    // About Article slide in functionality
-    useEffect(() => {
-        const div = document.getElementById('AboutArticle');
-        if (div) {
-            div.classList.add('slide-about');
-        }
-    }, []);
-
-    return (
+   
+       return (
         <div className="min-h-screen">
             {/* Hero Section */}
             <section className="relative bg-gradient-to-br from-slate-900 via-slate-800 to-gray-900 overflow-hidden">

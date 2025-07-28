@@ -25,7 +25,7 @@ function ProjectsSection() {
 
   return (
     <section id="projects" className="bg-slate-100 py-10">
-      <div className="container mx-auto md:px-6 px-2 ">
+      <div className=" md:px-6 px-2 ">
         
         {/* Section Header */}
         <div className="mb-7">
@@ -86,7 +86,7 @@ function ProjectsSection() {
           <div className="relative">
             
             {/* Main Image Container */}
-            <div className="relative w-full h-96 rounded-2xl overflow-hidden shadow-2xl">
+            <div className="relative w-full h-96 rounded-2xl overflow-hidden shadow-lg">
               
               {/* Images */}
               <div className="relative w-full h-full">
@@ -123,7 +123,7 @@ function ProjectsSection() {
               {/* Overlay */}
               <div className="absolute inset-0 bg-gradient-to-t from-slate-900/30 to-transparent"></div>
 
-              {/* Dots Indicator */}
+              {/* Pagination Indicator */}
               <div className="absolute bottom-6 left-1/2 transform -translate-x-1/2">
                 <div className="flex space-x-2">
                   <button
