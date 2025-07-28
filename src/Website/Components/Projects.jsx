@@ -25,7 +25,7 @@ function ProjectsSection() {
 
   return (
     <section id="projects" className="bg-slate-100 py-10">
-      <div className="max-w-7xl mx-auto md:px-6 px-2 ">
+      <div className="container mx-auto md:px-6 px-2 ">
         
         {/* Section Header */}
         <div className="mb-7">

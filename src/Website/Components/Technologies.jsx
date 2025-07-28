@@ -163,27 +163,26 @@ const TechStackDropdown = () => {
             : 'max-h-0 opacity-0'
         }`}
       >
-        <div className="p-6 space-y-4">
+        <div className="p-3 space-y-4">
           {category.technologies.map((tech, index) => (
             <div 
               key={index}
-              className="flex items-start gap-4 p-4 rounded-lg transition-all duration-300 hover:shadow-md"
-              style={{ backgroundColor: '#f1f5f9' }}
+              className="flex items-start gap-4 bg-light/50 p-4 rounded-lg transition-all duration-300 hover:shadow-sm"
+              
             >
               <div 
-                className="w-3 h-3 rounded-full mt-2 flex-shrink-0"
-                style={{ backgroundColor: '#facc15' }}
-              ></div>
+                className=""               
+              >{tech.Icon}</div>
               <div>
                 <h4 
-                  className="font-semibold text-lg mb-1"
-                  style={{ color: '#1e293b' }}
+                  className="font-semibold text-lg"
+                  
                 >
                   {tech.name}
                 </h4>
                 <p 
-                  className="text-sm leading-relaxed"
-                  style={{ color: '#64748b' }}
+                  className="text-sm text-dark leading-relaxed"
+                 
                 >
                   {tech.description}
                 </p>

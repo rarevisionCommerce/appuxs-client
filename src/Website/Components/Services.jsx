@@ -150,7 +150,7 @@ function ServicesSection() {
                 <FileQuestion className="text-3xl text-white" />
               </div>
               <h3 className="md:text-lg text-sm font-semibold text-slate-800 group-hover:text-yellow-600 transition-colors duration-300">
-                Software Consultation
+                IT Consultation
               </h3>
               <div className="w-12 h-1 bg-yellow-500 mx-auto mt-4 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
             </div>

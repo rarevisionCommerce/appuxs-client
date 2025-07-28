@@ -1,7 +1,10 @@
 import Spring from "../../assets/Spring.jpg"
 import Lemka from "../../assets/Lemka.jpg"
 import Bafrica from "../../assets/Bafrica.jpg"
-import Agape from "../../assets/agape1.jpg"
+import Agape from "../../assets/Agape.PNG"
+import Pearl from "../../assets/Pearl.PNG"
+import Febwin from "../../assets/Febwin.PNG"
+import Isosales from "../../assets/Isosales.PNG"
 import  { useState, useEffect, useRef } from 'react';
 import { 
   ArrowRight, 
@@ -94,20 +97,20 @@ const ProjectCard = ({ image, title, description, link, layout = "standard" }) =
 
   if (layout === "featured") {
     return (
-      <div className="bg-gradient-to-br from-white to-gray-50/50 lg:ml-20 rounded-3xl max-w-5xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 group border border-gray-100 hover:border-yellow-200" >
+      <div className="bg-gradient-to-br from-white to-gray-50/50  rounded-xl container overflow-hidden   transition-all duration-500 group border border-dark/10 hover:border-yellow-200" >
         <div className="flex flex-col lg:flex-row h-full justify-center items-center">
           <div className="w-full lg:w-1/2 relative overflow-hidden">
             <img 
               src={image} 
               alt={title}
-              className="object-cover h-64 w-full transition-transform duration-700 group-hover:scale-110"
+              className="object-cover h-64 w-full transition-transform duration-700 "
             />
             <div className="absolute inset-0 bg-gradient-to-r from-transparent to-black/20 group-hover:to-black/30 transition-all duration-500" />
             <div className="absolute inset-0 bg-gradient-to-br from-yellow-400/0 via-transparent to-purple-500/0 group-hover:from-yellow-400/10 group-hover:to-purple-500/10 transition-all duration-700" />
           </div>
           <div className="lg:w-1/2 p-8 flex flex-col justify-center">
             <div className="space-y-4">
-              <h3 className="text-xl font-bold text-gray-800 group-hover:text-yellow-500 transition-colors duration-300">
+              <h3 className="text-xl font-bold text-gray-800 group-hover:text-secondary transition-colors duration-300">
                 {title}
               </h3>
               <p className="text-gray-600 leading-relaxed text-sm group-hover:text-gray-700 transition-colors duration-300">
@@ -117,7 +120,7 @@ const ProjectCard = ({ image, title, description, link, layout = "standard" }) =
                 href={link} 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 bg-gradient-to-r from-yellow-400 to-yellow-500 hover:from-yellow-500 hover:to-yellow-600 text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300 hover:scale-105 hover:shadow-lg group/btn"
+                className="inline-flex items-center gap-2 bg-gradient-to-r from-yellow-400 to-yellow-500  text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300 group/btn"
               >
                 <span>Visit Project</span>
                 <ExternalLink className="w-4 h-4 transition-transform duration-300 group-hover/btn:translate-x-1 group-hover/btn:rotate-12" />
@@ -130,12 +133,12 @@ const ProjectCard = ({ image, title, description, link, layout = "standard" }) =
   }
 
   return (
-    <div className="bg-gradient-to-br from-white to-gray-50/50 rounded-3xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-500 group border border-gray-100 hover:border-yellow-200 hover:-translate-y-2">
+    <div className="bg-gradient-to-br from-white to-gray-50/50 rounded-3xl overflow-hidden transition-all duration-500 group border border-dark/10 hover:border-yellow-200 hover:-translate-y-1">
       <div className="relative overflow-hidden">
         <img 
           src={image} 
           alt={title}
-          className="w-full h-64 object-cover transition-transform duration-700 group-hover:scale-110"
+          className="w-full h-64 object-cover transition-transform duration-700 "
         />
         <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent group-hover:from-black/30 transition-all duration-500" />
         <div className="absolute inset-0 bg-gradient-to-br from-yellow-400/0 via-transparent to-purple-500/0 group-hover:from-yellow-400/10 group-hover:to-purple-500/10 transition-all duration-700" />
@@ -147,7 +150,7 @@ const ProjectCard = ({ image, title, description, link, layout = "standard" }) =
       </div>
       
       <div className="p-6 space-y-4">
-        <h3 className="text-xl font-bold text-gray-800 group-hover:text-yellow-600 transition-colors duration-300">
+        <h3 className="text-xl font-bold text-gray-800 group-hover:text-secondary transition-colors duration-300">
           {title}
         </h3>
         <p className="text-gray-600 leading-relaxed group-hover:text-gray-700 transition-colors duration-300">
@@ -157,7 +160,7 @@ const ProjectCard = ({ image, title, description, link, layout = "standard" }) =
           href={link} 
           target="_blank" 
           rel="noopener noreferrer"
-          className="inline-flex items-center gap-2 bg-gradient-to-r from-yellow-400 to-yellow-500 hover:from-yellow-500 hover:to-yellow-600 text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300 hover:scale-105 hover:shadow-lg group/btn w-full justify-center"
+          className="inline-flex items-center gap-2 bg-gradient-to-r from-yellow-400 to-yellow-500  text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300  hover:shadow-sm group/btn w-full justify-center"
         >
           <span>Visit Project</span>
           <ExternalLink className="w-4 h-4 transition-transform duration-300 group-hover/btn:translate-x-1 group-hover/btn:rotate-12" />
@@ -169,31 +172,57 @@ const ProjectCard = ({ image, title, description, link, layout = "standard" }) =
 
 function Projects() {
   const projects = [
+    
+    {
+      image: Pearl,
+      title: "Pearl Apartments",
+      description: "An Accomodation platform that offers Executive rooms feature premium amenities such as spacious layouts, high-end furnishings, and exclusive access to executive lounges.",
+      link: "https://pearlapartments.co.ke/"
+    },
+    {
+      image: Febwin,
+      title: "Febwin Property Management",
+      description: "A Kenyan Property managment Agency that offers services like Renting premium properties, Selling people's dream homes, and aid in booking amazing holiday stays and BnB experiences across Kenya's most beautiful locations.",
+      link: "https://febwin.co.ke/"
+    },
+    {
+      image: Isosales,
+      title: "Isosales POS",
+      description: "Tap into efficiency with tapNserve, the modern POS system built for bars and restaurants. From streamlined inventory management to seamless payment integrations, our platform handles it all.",
+      link: "https://isosalespos.isosoftwares.com/"
+    },
     {
       image: Lemka,
       title: "Lemka Real Estate Management",
       description: "Comprehensive solution designed to automate and streamline real estate operations. Features property listing management, lead management, contract management and more with a user-friendly interface.",
       link: "#"
     },
-    {
-      image: Bafrica, 
-      title: "Builders Africa Platform",
-      description: "O2O industrial Internet platform for global real estate, engineering, building materials, equipment and design industry chain connecting businesses worldwide.",
-      link: "#"
-    },
+    
+    
     {
       image: Spring,
       title: "Springs Hotel Management",
       description: "Comprehensive solution designed to streamline hotel operations. Features front-desk management, room management, booking management, and complete hospitality solutions.",
       link: "#"
     },
+    
+    
+    
+    {
+      image: Bafrica, 
+      title: "Builders Africa Platform",
+      description: "O2O industrial Internet platform for global real estate, engineering, building materials, equipment and design industry chain connecting businesses worldwide.",
+      link: "#",
+      
+    },
     {
       image: Agape,
-      title: "Agape Writing Services",
+      title: "Agape Smart Solutions",
       description: "Ultimate destination for online classes and assignment help. Offering essay writing, expert assignment editing, dissertation writing, and online class assistance.",
-      link: "https://agapewritingservice.com/",
+      link: "https://agapesmartsolutions.com/",
       layout: "featured"
-    }
+    },
+    
   ];
 
   const scrollToProjects = () => {
@@ -273,7 +302,7 @@ function Projects() {
 
       {/* Projects Section */}
       <section id="projects" className="py-20 bg-gradient-to-b from-gray-50 via-white to-gray-50/50">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8 xl:px-12">
+        <div className="container mx-auto px-2 sm:px-3 lg:px-5 xl:px-7">
           
           {/* Section Header */}
           <div className="text-center mb-16">
@@ -281,9 +310,13 @@ function Projects() {
               <Building2 className="w-6 h-6 animate-pulse" />
               <span className="text-sm font-semibold tracking-wider uppercase">Portfolio Showcase</span>
             </div>
-            <h2 className="text-2xl lg:text-3xl font-bold text-gray-900 mb-6">
+            <div className="flex flex-col gap-3 mb-3 items-center justify-start">
+                <h2 className="text-2xl lg:text-3xl font-bold text-gray-900 ">
               Recent <span className="text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 to-yellow-500">Accomplishments</span>
             </h2>
+            
+            </div>
+            
             <p className="md:text-lg text-gray-600 max-w-3xl mx-auto">
               Discover our latest projects that showcase our expertise in delivering cutting-edge solutions across various industries.
             </p>
@@ -293,12 +326,12 @@ function Projects() {
           <div className="space-y-8">
             {/* Featured Project */}
             <div className="mb-12">
-              <ProjectCard {...projects[3]} />
+              <ProjectCard {...projects[6]} />
             </div>
             
             {/* Regular Projects Grid */}
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {projects.slice(0, 3).map((project, index) => (
+            <div className="grid md:grid-cols-2  gap-8">
+              {projects.slice(0, 6).map((project, index) => (
                 <ProjectCard key={index} {...project} />
               ))}
             </div>

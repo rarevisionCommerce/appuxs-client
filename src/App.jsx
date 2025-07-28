@@ -22,6 +22,7 @@ import RequireAuth from './admin-Dashboard/RequireAuth.jsx';
 import AdminDashboard from "./admin-Dashboard/AdminDash.jsx";
 import EstimatesDash from './admin-Dashboard/components/estimates/EstimatesDash.jsx';
 import MessagesDash from './admin-Dashboard/components/messages/MessagesDash.jsx';
+import ChatWithUs from "./Website/Components/ChatWithUs.jsx";
 
 
 
@@ -32,6 +33,7 @@ function App() {
   return (<> 
    <QueryClientProvider client={queryClient} >
      <Header />
+     <ChatWithUs/>
       <Routes>
         <Route exact path="/" element={<Home/>} />
         <Route exact path="/Login" element={<Login/>} />
