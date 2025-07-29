@@ -7,6 +7,14 @@ import GoogleMap from "../Components/GoogleMap.jsx";
 import { FaWhatsapp } from "react-icons/fa";
 
 function Contacts() {
+
+    const openWhatsApp = () => {
+    const phoneNumber = "254706181387";
+    const message = "HELLO! I would like to enquire about something.";
+    const encodedMessage = encodeURIComponent(message);
+    const whatsappURL = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
+    window.open(whatsappURL, "_blank");
+  };
     const {
         register,
         handleSubmit,
@@ -99,13 +107,13 @@ function Contacts() {
                             
                             {/* Main Title */}
                             <div className="text-center max-w-4xl">
-                                <h1 className="text-2xl lg:text-3xl font-bold text-white leading-tight mb-3">
+                                <h1 className="text-2xl lg:text-3xl 2xl:text-4xl font-bold text-white leading-tight mb-3">
                                     Get In <span className="text-secondary bg-gradient-to-r from-secondary to-yellow-300 bg-clip-text text-transparent">Touch</span> With Us
                                 </h1>
                                 
                                 <div className="w-24 h-1 bg-gradient-to-r from-transparent to-secondary mx-auto mb-6 rounded-full"></div>
                                 
-                                <p className="md:text-lg text-light/90 leading-relaxed max-w-3xl mx-auto">
+                                <p className="md:text-lg 2xl:text-xl text-light/90 leading-relaxed container mx-auto">
                                     Ready to transform your ideas into powerful digital solutions? Our expert team 
                                     specializes in <strong className="text-secondary">web development</strong>, 
                                     <strong className="text-secondary"> mobile applications</strong>, and 
@@ -127,10 +135,10 @@ function Contacts() {
                 {/* Main Contact Section */}
                 <section className='bg-gradient-to-b from-gray-50 via-slate-50 to-gray-100'>
                     <div className='container mx-auto px-4 sm:px-6 lg:px-8 xl:px-12 py-6 lg:py-16'>
-                        <div className='grid lg:grid-cols-2 gap-12'>
+                        <div className='grid lg:grid-cols-2 gap-12 2xl:gap-20'>
                             
                             {/* Contact Form */}
-                            <div className='flex flex-col gap-3'>
+                            <div className='flex flex-col container mx-auto gap-3'>
                                 
                                 <form onSubmit={handleSubmit(onSubmit)} className='rounded-3xl shadow-md p-4 lg:p-10 hover:shadow-3xl bg-white transition-all duration-500'>
                                     <div className="space-y-2 mb-6">
@@ -316,12 +324,12 @@ function Contacts() {
                                             </div>
                                         </a>
 
-                                        <a href="wa.me:+254706181387" className='flex items-center gap-4 rounded-2xl hover:translate-x-2 transition-all duration-300'>
+                                        <a onClick={openWhatsApp} className='flex items-center gap-4 rounded-2xl hover:translate-x-2 transition-all duration-300'>
                                             <div className="p-2 border border-green-600 rounded-lg flex items-center justify-center">
                                                 <FaWhatsapp className='w-6 h-6 text-green-600'/>
                                             </div>
                                             <div>
-                                                <p className="font-semibold text-primary">Chat With us</p>
+                                                <p className="font-semibold text-primary">Click to Chat</p>
                                                 <p className="text-gray-600">+254742310701</p>
                                             </div>
                                         </a>

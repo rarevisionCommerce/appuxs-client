@@ -1,4 +1,4 @@
-const GoogleMap = ({ location = "Kirinyaga Rd, Nairobi County, Kenya" }) => {
+const GoogleMap = ({ location = "Kimbo, Kiambu County, Kenya" }) => {
   // This uses Google's basic embed - no API key needed but limited customization
   const mapSrc = `https://maps.google.com/maps?width=100%25&height=400&hl=en&q=${encodeURIComponent(location)}&t=&z=14&ie=UTF8&iwloc=&output=embed`;
   

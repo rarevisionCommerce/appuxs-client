@@ -130,7 +130,7 @@ function Estimate() {
         <div id="Estimate" className="flex flex-col  min-h-screen bg-slate-50">
             {/* Left Side Panel */}
             <header className=" pt-28 bg-slate-800 flex flex-col lg:flex-row gap-5 p-6">
-                <header className="lg:w-1/3 w-full">
+                <header className="container mx-auto">
                     <h1 className="lg:text-2xl text-xl font-bold text-yellow-400 mb-4 leading-tight">
                         Transform Your Vision Into Reality
                     </h1>
@@ -144,7 +144,7 @@ function Estimate() {
                             
                         </div>
                 </header>    
-                    <div className="space-y-4 mb-8">
+                    <div className="space-y-4 container mx-auto mb-8">
                         <div className="flex items-start space-x-3">
                             <div className="w-2 h-2 bg-yellow-400 rounded-full mt-2 flex-shrink-0"></div>
                             <p className="text-slate-300 text-sm">
@@ -164,7 +164,7 @@ function Estimate() {
                             </p>
                         </div>
                     </div>
-                    <div>
+                    <div className="container mx-auto">
                         <img 
                         src={EstimatePortrait} 
                         className="w-full h-64 object-cover rounded-lg shadow-lg border-2 border-yellow-400" 
@@ -177,7 +177,7 @@ function Estimate() {
             
             {/* Right Side Form */}
             <div className="h-full  w-full flex flex-col justify-start items-center px-3 py-6">
-                <div className="w-full max-w-6xl">
+                <div className="container mx-auto">
                     {/* Header Section */}
                     <div className="text-center mb-8">
                         <h1 className="text-slate-800 text-xl font-bold mb-3">Get Your Project Estimate</h1>

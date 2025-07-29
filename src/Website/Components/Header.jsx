@@ -80,7 +80,7 @@ function Header() {
                     </div>
 
                     {/* Desktop Navigation */}
-                    <nav className="hidden sm:flex space-x-4 text-base" aria-label="main">
+                    <nav className="hidden sm:flex space-x-4 2xl:space-x-10 text-base" aria-label="main">
                         <NavLink to="/" className={getNavLinkClass}>
                             Home
                         </NavLink>

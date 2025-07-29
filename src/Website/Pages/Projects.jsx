@@ -317,7 +317,7 @@ function Projects() {
             
             </div>
             
-            <p className="md:text-lg text-gray-600 max-w-3xl mx-auto">
+            <p className="md:text-lg text-gray-600 container mx-auto">
               Discover our latest projects that showcase our expertise in delivering cutting-edge solutions across various industries.
             </p>
           </div>
@@ -330,7 +330,7 @@ function Projects() {
             </div>
             
             {/* Regular Projects Grid */}
-            <div className="grid md:grid-cols-2  gap-8">
+            <div className="grid md:grid-cols-2 2xl:grid-cols-3  gap-8 2xl:gap-14">
               {projects.slice(0, 6).map((project, index) => (
                 <ProjectCard key={index} {...project} />
               ))}

@@ -7,17 +7,14 @@ import CTA from "../Components/CTA.jsx";
 
 function Home() {
   return (
-    <main className=" ">
+    < >
        <Hero />
       <Services />
-      <Projects />
-      <CTA/>
-      
-      <div id="estimate">
-        <Technologies />
-       
-      </div>
-    </main>
+      <Projects/>
+      <CTA/>   
+      <Technologies /> 
+     
+    </>
   );
 }
 

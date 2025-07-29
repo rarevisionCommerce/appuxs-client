@@ -24,8 +24,8 @@ function ProjectsSection() {
   }, []);
 
   return (
-    <section id="projects" className="bg-slate-100 py-10">
-      <div className=" md:px-6 px-2 ">
+    <section id="projects" className="bg-slate-100">
+      <div className="container mx-auto px-2 md:px-6 py-10">
         
         {/* Section Header */}
         <div className="mb-7">
@@ -155,9 +155,7 @@ function ProjectsSection() {
 
             </div>
 
-            {/* Decorative Elements */}
-            <div className="absolute -top-6 -right-6 w-32 h-32 bg-yellow-500/10 rounded-full blur-2xl"></div>
-            <div className="absolute -bottom-6 -left-6 w-24 h-24 bg-amber-600/10 rounded-full blur-2xl"></div>
+            
 
           </div>
 

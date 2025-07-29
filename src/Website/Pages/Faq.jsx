@@ -2,6 +2,7 @@ import React, { useState} from "react";
 import '../../App.css';
 import { ChevronDown } from "lucide-react";
 import CTA from "../Components/CTA.jsx";
+import ProjectsSection from "../Components/Projects.jsx";
 
 const FAQ = () => {
   //Open and close question functionality
@@ -173,7 +174,7 @@ const FAQ = () => {
           </div>
         </section>
       </main>
-
+              
       <CTA/>
     </>
   );

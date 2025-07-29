@@ -48,7 +48,7 @@ const Services = () => {
               
               <div className="w-28 lg:ml-[-80px] h-1 bg-gradient-to-r from-transparent rounded-2xl to-yellow-400"></div>
               
-              <p className="lg:text-lg text-light leading-relaxed max-w-3xl">
+              <p className="lg:text-lg text-light leading-relaxed container mx-auto">
                 Transforming businesses through cutting-edge technology solutions. 
                 We specialize in <strong className="text-yellow-300">custom software development</strong>, delivering  
                 <em className="text-blue-300"> scalable</em> and <em className="text-purple-300">innovative</em> digital experiences that drive growth 
@@ -69,7 +69,7 @@ const Services = () => {
             </div>
 
             {/* Enhanced Glassmorphic Service Navigation */}
-            <div className="relative w-full max-w-6xl mx-auto my-3">
+            <div className="relative w-full  mx-auto my-3">
               {/* Main Navigation Container */}
               <div className="backdrop-blur-lg bg-white/10 border border-white/20 rounded-3xl md:p-4 shadow-2xl hover:shadow-3xl transition-all duration-500 hover:bg-white/15">
                 
@@ -78,7 +78,7 @@ const Services = () => {
                 </h3>
                 
                 {/* Service Links Grid */}
-                <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-4 p-2 gap-3">
+                <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-4 2xl:grid-cols-5 p-2 gap-3">
                   
                   <Link
                     to="webdev"

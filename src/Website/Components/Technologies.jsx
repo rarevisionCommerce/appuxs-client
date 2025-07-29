@@ -256,12 +256,12 @@ const TechStackDropdown = () => {
   };
 {/**my new keyboard typed this one and now the mouse is in control */}
   return (
-    <div className="min-h-screen py-16 px-4" style={{ backgroundColor: '#f1f5f9' }} id="stck">
-      <div className="">
+    <div className=" py-16 px-4 bg-light" id="stck">
+      <div className="container mx-auto">
         {/* Header */}
         <div className=" mb-12">
          <h2 className="text-2xl lg:text-4xl font-bold text-slate-800 mb-3 ">
-            Tech <span className="text-yellow-500">Stack</span>
+            Tech <span className="text-secomdary">Stack</span>
           </h2> 
 
           <div className="h-[5px] rounded-full w-28 mb-3 bg-gradient-to-r from-transparent to-dark"></div>

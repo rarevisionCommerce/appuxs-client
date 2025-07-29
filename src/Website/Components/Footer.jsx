@@ -12,20 +12,31 @@ import { ChevronRight, Mail,  MapPin, Phone } from "lucide-react";
 function Footer() {
     const location = useLocation();
   const { pathname } = location;
+  const openWhatsApp = () => {
+    const phoneNumber = "254706181387";
+    const message = "HELLO! I would like to enquire about something.";
+    const encodedMessage = encodeURIComponent(message);
+    const whatsappURL = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
+    window.open(whatsappURL, "_blank");
+  };
 
    
         return (
-        <>
-            <div className={`md:grid-cols-2 lg:grid-cols-4 grid bg-slate-900 gap-2 sm:gap-8 p-6 ${
+        <div className=" bg-slate-900">
+            <div className={`md:grid-cols-2 container mx-auto lg:grid-cols-4 grid  gap-2 sm:gap-8 p-4 ${
         (pathname.includes("admin-dashboard") || pathname.includes("Login")) &&
         "hidden"
       }`} >
                 {/* Logo and Description */}
-                <div className=" w-full border-light/20 border-b lg:border-none md:mb-0">
+                <div className=" w-full border-light/20 border-b lg:border-none ">
                     <div className="mb-4">
                         <img src={Logo} className="h-14 mb-4" alt="Logo" />
                         <p className="text-light text-sm leading-relaxed">
                             Your reliable partner in software development services.
+                        </p>
+                        <p className="text-green-400 inline-flex items-center gap-2 leading-relaxed">
+                            <div className="h-2 w-2 rounded-full bg-green-500"></div>
+                            20+ Satisfied Customers
                         </p>
                     </div>
                 </div>
@@ -44,16 +55,16 @@ function Footer() {
                        <MapPin className="h-6 w-6 text-secondary " />  Spur Mall, Kimbo Juja</p>
                     <a 
                         target="_blank" 
-                        href="https://mail.google.com/mail/u/0/#inbox" 
+                        href="mailto:info@isosoftware.com" 
                         className="text-light text-sm inline-flex items-center gap-2 "
                         rel="noopener noreferrer"
                     >
                         <Mail className="h-6 w-6 text-secondary " /> info@isosoft.com
                     </a>
-                    <a className="text-light text-sm inline-flex gap-2 items-center "> 
+                    <a href="tel:+254706181387" className="text-light text-sm inline-flex gap-2 items-center "> 
                         <Phone className="h-6 w-6 text-secondary " /> Call +254706181387</a>
                 </div>                   
-                         <button className="text-light text-sm inline-flex items-center gap-2 bg-green-500 p-3 rounded-lg max-w-44 mt-2 transition-all duration-200 hover:scale-110 "> <FaWhatsapp/> Chat on WhatsApp</button>                    
+                         <button onClick={openWhatsApp} className="text-light text-sm inline-flex items-center gap-2 bg-green-500 p-3 rounded-lg max-w-44 mt-2 transition-all duration-200 hover:scale-110 "> <FaWhatsapp/> Chat on WhatsApp</button>                    
                    
                 </div>
 
@@ -157,7 +168,7 @@ function Footer() {
                  Copyright   &copy; {new Date().getFullYear()} Isosoft. All rights reserved.
                 </p>
             </div>
-        </>
+        </div>
     );
     }
    
