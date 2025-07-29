@@ -32,9 +32,15 @@ const FAQ = () => {
       question: "May i see some of your case studies ?",
       answer: <>
         <p>Please check out these links for some typical sample works:</p>
-        <a href="www.lemka.info" className="text-yellow-500 hover:text-yellow-600 transition-colors duration-300 underline">https://www.lemka.info/</a>
-        <p>You can find more about our works at:</p>
-        <a target="blank" href="https://isosoftwares.com/projects" className="text-yellow-500 hover:text-yellow-600 transition-colors duration-300 underline"> https://isosoftwares.com/projects</a>
+        <div className="grid lg:grid-cols-2 gap-2">
+          <a href="https://agapesmartsolutions.com/" className="text-yellow-500 hover:text-yellow-600 transition-colors duration-300 underline">Agape Smart Solutions</a>
+          <a href="https://pearlapartments.co.ke/" className="text-yellow-500 hover:text-yellow-600 transition-colors duration-300 underline">Pearl Apartments</a>
+          <a href="https://febwin.co.ke/" className="text-yellow-500 hover:text-yellow-600 transition-colors duration-300 underline">Febwin Properties</a>
+          
+          <a href="https://isosalespos.isosoftwares.com/" className="text-yellow-500 hover:text-yellow-600 transition-colors duration-300 underline">Isosales Pos</a>
+        </div>
+        
+        
       </>
     },
     {

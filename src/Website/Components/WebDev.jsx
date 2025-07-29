@@ -7,7 +7,7 @@ function WebDev() {
                        
             
             {/* Main Content Section */}
-            <div className="container mx-auto flex flex-col lg:flex-row py-8 sm:py-12 lg:py-16 px-4 sm:px-8 md:px-16 lg:px-8 gap-6  lg:gap-20 2xl:gap-24">
+            <div className="container mx-auto flex flex-col lg:flex-row py-8 sm:py-12 lg:py-16  px-2 lg:gap-20 2xl:gap-24">
                 
                 <div className="w-full order-first  relative lg:w-1/2 p-4  border border-dark/5 flex items-center justify-center   rounded-2xl">
                  <div className="absolute inset-0 bg-gradient-to-br from-secondary/20 via-green-500/20 to-primary/20 rounded-2xl blur-xl transform scale-110"></div>

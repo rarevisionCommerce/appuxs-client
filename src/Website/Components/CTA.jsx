@@ -49,7 +49,7 @@ const CTA = () => {
                 <div className="flex items-center justify-center w-10 h-10 bg-yellow-400/20 rounded-full mx-auto ">
                   <FiUsers className="text-2xl text-yellow-400" />
                 </div>
-                <div className="text-xl font-bold text-light ">500+</div>
+                <div className="text-xl font-bold text-light ">150+</div>
                 <p className="text-light text-nowrap text-sm">Happy Clients</p>
               </div>
               <div className="flex flex-col items-center gap-2">

@@ -1,5 +1,6 @@
-import Realizing from "../../assets/Realizing2.jpg";
-import Culture from "../../assets/Culture2.jpg";
+import { motion } from 'framer-motion';
+import Realizing from "../../assets/img_realizing.jpg";
+import Culture from "../../assets/img_culture.png";
 import Clients from "../../assets/Clients.jpg";
 import Partners from "../../assets/Partners.jpg"
 import Quality from "../../assets/Quality.jpg"
@@ -11,225 +12,408 @@ import {
     CheckCircle,
     Target,
     Award,
-    Shield
+    Shield,
+    MapPin,
+    Calendar,
+    Code,
+    Trophy
 } from 'lucide-react';
+import CTA from '../Components/CTA';
 
 function About() {
-   
-       return (
+    const fadeInUp = {
+        initial: { opacity: 0, y: 60 },
+        animate: { opacity: 1, y: 0 },
+        transition: { duration: 0.6, ease: "easeOut" }
+    };
+
+    const staggerContainer = {
+        animate: {
+            transition: {
+                staggerChildren: 0.2
+            }
+        }
+    };
+
+    return (
         <div className="min-h-screen">
-            {/* Hero Section */}
-            <section className="relative bg-gradient-to-br from-slate-900 via-slate-800 to-gray-900 overflow-hidden">
-                <div className="absolute inset-0 bg-gradient-to-r from-yellow-500/10 to-yellow-400/5"></div>
-                
-                <div className="container mx-auto px-4 sm:px-6 lg:px-8 xl:px-12">
-                    <div className="min-h-[400px] sm:min-h-[450px] lg:min-h-[500px] flex items-center">
-                        <div id="AboutArticle" className="w-full max-w-5xl py-16 sm:py-20 lg:py-24">
-                            <div className="space-y-6 sm:space-y-8">
-                                <h1 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl text-white font-bold leading-tight">
-                                    About Us
-                                </h1>
-                                <div className="bg-gradient-to-r from-yellow-400 to-yellow-500 p-6 sm:p-8 lg:p-10 rounded-2xl shadow-2xl max-w-4xl">
-                                    <p className="text-slate-900 text-base sm:text-lg lg:text-xl leading-relaxed">
-                                        Isosoft is the leading <span className="font-bold text-gray-700">software development</span> company. Founded in early 2019 with a team of professional and enthusiastic Web developers, Mobile developers and UI/UX designers. Following a systematic approach, we intend to deliver the best and most cost-effective software services to our clients.
-                                    </p>
-                                </div>
+            {/* Hero Section - keeping original styling */}
+            <header className="relative py-5 bg-gradient-to-br from-slate-900 via-slate-800 to-gray-900 overflow-hidden">
+                {/* Animated Background Elements */}
+                <div className="absolute inset-0">
+                    <div className="absolute top-20 left-10 w-72 h-72 bg-yellow-400/10 rounded-full blur-3xl animate-pulse"></div>
+                    <div className="absolute top-40 right-20 w-96 h-96 bg-amber-600/10 rounded-full blur-3xl animate-pulse delay-1000"></div>
+                    <div className="absolute bottom-20 left-1/3 w-64 h-64 bg-yellow-400/5 rounded-full blur-3xl animate-pulse delay-2000"></div>
+                </div>
+
+                {/* Main Content */}
+                <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8 xl:px-12">
+                    <div className="flex flex-col justify-center gap-3 items-center pt-16">
+                        {/* Main Title Section */}
+                        <div className="flex items-center flex-col gap-3 max-w-5xl text-center">
+                            <div className="">
+                                <span className="inline-flex gap-2 items-center px-4 py-2 bg-secondary/20 text-secondary rounded-full text-sm font-semibold backdrop-blur-sm border border-yellow-400/30 hover:border-yellow-400/50 transition-colors duration-300">
+                                    <div className="bg-secondary h-2 w-2 rounded-full animate-pulse"></div> Who Are We?
+                                </span>
+                            </div>
+                            
+                            <h1 className="text-2xl lg:text-4xl font-bold text-white leading-tight">
+                                About  <span className="text-yellow-400 bg-gradient-to-r from-yellow-400 to-yellow-300 bg-clip-text text-transparent">  Isosoft</span>
+                            </h1>
+                            
+                            <div className="w-28 lg:ml-[-80px] h-1 bg-gradient-to-r from-transparent rounded-2xl to-yellow-400"></div>
+                            
+                            <p className="lg:text-lg text-light leading-relaxed max-w-3xl mx-auto">
+                                Isosoft is a dedicated software developmment company.Founded in 2020 by a Team of passionate and profesional Software developers,mobile developers and UI/UX designers.Following a systemic approach,we are highly esteemed in delivering the best and most cost effective softaware solutions to our clients.
+                            </p>
+                            <div className="space-x-3">
+                                <span className="inline-flex gap-2 items-center px-4 py-2 bg-secondary/20 text-secondary rounded-full text-sm font-semibold backdrop-blur-sm border border-yellow-400/30 hover:border-yellow-400/50 transition-colors duration-300">
+                                    <div className="bg-secondary h-2 w-2 rounded-full animate-pulse"></div> Integrity 
+                                </span>
+                                <span className="inline-flex gap-2 items-center px-4 py-2 bg-secondary/20 text-secondary rounded-full text-sm font-semibold backdrop-blur-sm border border-yellow-400/30 hover:border-yellow-400/50 transition-colors duration-300">
+                                    <div className="bg-secondary h-2 w-2 rounded-full animate-pulse"></div>Team Work
+                                </span>
+                                <span className="inline-flex gap-2 items-center px-4 py-2 bg-secondary/20 text-secondary rounded-full text-sm font-semibold backdrop-blur-sm border border-yellow-400/30 hover:border-yellow-400/50 transition-colors duration-300">
+                                    <div className="bg-secondary h-2 w-2 rounded-full animate-pulse"></div> Transparency
+                                </span>
+                            </div>
+                            
+                            {/* SEO Meta Elements */}
+                            <div className="hidden">
+                                <span itemProp="description">
+                                    Learn about Isosoft, a leading software development company founded in 2020. Discover our mission, culture, 
+                                    team of expert developers, and commitment to delivering innovative digital solutions for businesses worldwide.
+                                </span>
+                                <span itemProp="keywords">
+                                    about Isosoft, software development company, web development team, mobile app developers, UI/UX designers, 
+                                    Kenya software company, custom software solutions, business applications, digital transformation
+                                </span>
+                                <span itemProp="name">About Isosoft - Software Development Company</span>
+                                <span itemProp="headline">About Isosoft - Transforming Ideas into Digital Solutions</span>
+                                <span itemProp="about">
+                                    Professional software development company specializing in web applications, mobile apps, and custom business solutions. 
+                                    Founded by passionate developers with expertise in modern technologies and systematic development approaches.
+                                </span>
+                                <span itemProp="audience">
+                                    Businesses, startups, entrepreneurs, and organizations seeking reliable software development partners and digital solutions
+                                </span>
+                                <meta name="description" content="Discover Isosoft - a dedicated software development company founded in 2020. Learn about our expert team, innovative solutions, and commitment to transforming business ideas into impactful digital products." />
+                                <meta name="keywords" content="about Isosoft, software development company, web development, mobile apps, UI/UX design, custom software solutions, Kenya developers, business applications" />
+                                <meta property="og:title" content="About Isosoft - Leading Software Development Company" />
+                                <meta property="og:description" content="Founded in 2020 by passionate developers, Isosoft specializes in transforming business ideas into innovative software solutions. Discover our story, values, and expertise." />
+                                <meta property="og:type" content="website" />
+                                <meta name="twitter:card" content="summary_large_image" />
+                                <meta name="twitter:title" content="About Isosoft | Software Development Experts" />
+                                <meta name="twitter:description" content="Learn about our journey, team, and commitment to delivering exceptional software solutions for businesses worldwide." />
                             </div>
                         </div>
                     </div>
-                </div>
-            </section>
+                </div> 
+            </header>
 
             {/* Main Content Sections */}
-            <section className="bg-gradient-to-b from-gray-50 to-white">
-                <div className="container mx-auto px-4 sm:px-6 lg:px-8 xl:px-12">
-                    <div className="py-16 sm:py-20 lg:py-24 space-y-20 sm:space-y-24 lg:space-y-32">
+            <section className="bg-gradient-to-b from-light via-white to-light">
+                <div className="container mx-auto px-2 sm:px-4 lg:px-8 xl:px-2">
+                    <div 
+                        className="py-16 sm:py-10 lg:py-14 space-y-10 sm:space-y-12 lg:space-y-12"
+                        
+                    >
                         
                         {/* Realizing Ideas Section */}
-                        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 xl:gap-16 items-stretch">
+                        <div className="grid grid-cols-1 lg:grid-cols-2 gap-7 lg:gap-8 xl:gap-10 items-stretch"                         
+                        >
                             <div className="order-2 lg:order-1">
-                                <div className="h-full">
+                                <div className="relative h-full group overflow-hidden rounded-3xl">
                                     <img 
                                         src={Realizing} 
-                                        alt="Realizing Ideas"
-                                        className="w-full h-64 sm:h-80 lg:h-full min-h-[300px] object-cover rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-[1.02]" 
+                                        alt="Realizing Ideas - Software Development Process"
+                                        className="w-full h-64 sm:h-80 lg:h-full min-h-[350px] object-cover rounded-3xl shadow-2xl transition-all duration-500 group-hover:scale-105" 
                                     />
+                                    <div className="absolute top-4 right-4 bg-secondary/90 backdrop-blur-sm p-2 rounded-full opacity-0 group-hover:opacity-100 transition-all duration-300">
+                                        <Lightbulb className="w-5 h-5 text-primary" />
+                                    </div>
                                 </div>
                             </div>
                             <div className="order-1 lg:order-2 flex">
-                                <div className="bg-white p-6 sm:p-8 lg:p-10 rounded-2xl shadow-lg border-l-4 border-yellow-400 flex flex-col justify-center h-full hover:shadow-xl transition-shadow duration-300">
-                                    <div className="flex items-center gap-4 mb-6 sm:mb-8">
-                                        <div className="bg-yellow-100 p-3 sm:p-4 rounded-full">
-                                            <Lightbulb className="w-6 h-6 sm:w-8 sm:h-8 text-yellow-600" />
+                                <div className="bg-white p-8 lg:p-10 rounded-3xl  border border-secondary/50 flex flex-col justify-center h-full  transition-all duration-500 hover:-translate-y-2 backdrop-blur-sm">
+                                    <div className="flex items-center gap-6 mb-8">
+                                        <div className="bg-secondary p-4 rounded-2xl shadow-lg">
+                                            <Lightbulb className="w-7 h-7 text-white" />
                                         </div>
-                                        <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-yellow-500">Realizing Ideas</h2>
+                                        <h2 className="text-lg lg:text-2xl font-bold ">
+                                            Realizing Ideas
+                                        </h2>
                                     </div>
-                                    <p className="text-gray-700 text-base sm:text-lg lg:text-xl leading-relaxed">
+                                    <p className="text-primary/80  lg:text-lg leading-relaxed font-medium">
                                         Our mission is to help startups and businesses transform their ideas into real and impactful products. We, well-trained coders in Java, Python, NodeJS, ReactJS, React Native as well as iOS and Android application development, always work to offer you the best software solutions.
                                     </p>
+                                    <div className="mt-6 flex items-center gap-2">
+                                        <div className="w-12 h-1 bg-gradient-to-r from-secondary to-tertiary rounded-full"></div>
+                                        <div className="w-6 h-1 bg-secondary/50 rounded-full"></div>
+                                        <div className="w-3 h-1 bg-secondary/30 rounded-full"></div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
 
                         {/* Our Culture Section */}
-                        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 xl:gap-16 items-stretch">
+                        <div 
+                            className="grid grid-cols-1 lg:grid-cols-2 gap-7 lg:gap-8 xl:gap-10 items-stretch"
+                          
+                        >
                             <div className="flex">
-                                <div className="bg-white p-6 sm:p-8 lg:p-10 rounded-2xl shadow-lg border-l-4 border-yellow-400 flex flex-col justify-center h-full hover:shadow-xl transition-shadow duration-300">
-                                    <div className="flex items-center gap-4 mb-6 sm:mb-8">
-                                        <div className="bg-yellow-100 p-3 sm:p-4 rounded-full">
-                                            <Users className="w-6 h-6 sm:w-8 sm:h-8 text-yellow-600" />
+                                <div className="bg-white p-8 lg:p-12 rounded-3xl border border-secondary/50 flex flex-col justify-center h-full transition-all duration-500 hover:-translate-y-2 backdrop-blur-sm">
+                                    <div className="flex items-center gap-6 mb-8">
+                                        <div className="bg-secondary p-4 rounded-xl ">
+                                            <Users className="w-7 h-7 text-white" />
                                         </div>
-                                        <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-yellow-500">Our Culture</h2>
+                                        <h2 className="text-lg lg:text-2xl font-bold ">
+                                            Our Culture
+                                        </h2>
                                     </div>
-                                    <p className="text-gray-700 text-base sm:text-lg lg:text-xl leading-relaxed">
+                                    <p className="text-primary lg:text-lg leading-relaxed font-medium">
                                         At Isosoft, we believe that a successful product must help clients resolve their business problem, and furthermore, improve their business growth. Impactful products, satisfied customers, developmental businesses are our service roadmap.
                                     </p>
+                                    <div className="mt-6 flex items-center gap-2">
+                                        <div className="w-12 h-1 bg-gradient-to-r from-secondary to-tertiary rounded-full"></div>
+                                        <div className="w-6 h-1 bg-secondary/50 rounded-full"></div>
+                                        <div className="w-3 h-1 bg-secondary/30 rounded-full"></div>
+                                    </div>
                                 </div>
                             </div>
-                            <div className="h-full">
+                            <div className="relative h-full group overflow-hidden rounded-3xl">
                                 <img 
                                     src={Culture} 
-                                    alt="Our Culture"
-                                    className="w-full h-64 sm:h-80 lg:h-full min-h-[300px] object-cover rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-[1.02]" 
+                                    alt="Our Culture - Team Collaboration"
+                                    className="w-full h-64 sm:h-80 lg:h-full min-h-[350px] object-cover rounded-3xl shadow-2xl transition-all duration-500 group-hover:scale-105" 
                                 />
+                                
+                                <div className="absolute top-4 right-4 bg-secondary/90 backdrop-blur-sm p-2 rounded-full opacity-0 group-hover:opacity-100 transition-all duration-300">
+                                    <Users className="w-5 h-5 text-primary" />
+                                </div>
                             </div>
                         </div>
 
                         {/* Our Clients Section */}
-                        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 xl:gap-16 items-stretch">
-                            <div className="order-2 lg:order-1 h-full">
+                        <div 
+                            className="grid grid-cols-1 lg:grid-cols-2 gap-7 lg:gap-8 xl:gap-10 items-stretch"
+                            variants={fadeInUp}
+                        >
+                            <div className="order-2 lg:order-1 relative h-full group overflow-hidden rounded-3xl">
                                 <img 
                                     src={Clients} 
-                                    alt="Our Clients"
-                                    className="w-full h-64 sm:h-80 lg:h-full min-h-[300px] object-cover rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-[1.02]" 
+                                    alt="Our Clients - Business Solutions"
+                                    className="w-full h-64 sm:h-80 lg:h-full min-h-[350px] object-cover rounded-3xl shadow-2xl transition-all duration-500 group-hover:scale-105" 
                                 />
+                               
+                                <div className="absolute top-4 right-4 bg-secondary/90 backdrop-blur-sm p-2 rounded-full opacity-0 group-hover:opacity-100 transition-all duration-300">
+                                    <Building2 className="w-5 h-5 text-light" />
+                                </div>
                             </div>
                             <div className="order-1 lg:order-2 flex">
-                                <div className="bg-white p-6 sm:p-8 lg:p-10 rounded-2xl shadow-lg border-l-4 border-yellow-400 flex flex-col justify-center h-full hover:shadow-xl transition-shadow duration-300">
-                                    <div className="flex items-center gap-4 mb-6 sm:mb-8">
-                                        <div className="bg-yellow-100 p-3 sm:p-4 rounded-full">
-                                            <Building2 className="w-6 h-6 sm:w-8 sm:h-8 text-yellow-600" />
+                                <div className="bg-white p-8 lg:p-10 rounded-3xl  border border-secondary/50 flex flex-col justify-center h-full  transition-all duration-500 hover:-translate-y-2 backdrop-blur-sm">
+                                    <div className="flex items-center gap-6 mb-8">
+                                        <div className="bg-secondary p-4 rounded-2xl shadow-lg">
+                                            <Building2 className="w-7 h-7 text-white" />
                                         </div>
-                                        <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-yellow-500">Our Clients</h2>
+                                        <h2 className="text-lg lg:text-2xl font-bold ">
+                                            Our Clients
+                                        </h2>
                                     </div>
-                                    <p className="text-gray-700 text-base sm:text-lg lg:text-xl leading-relaxed">
+                                    <p className="text-primary  lg:text-lg leading-relaxed font-medium">
                                         We deliver outsourcing solutions to start-ups and businesses in all sectors such as solar energy, finance, logistic, healthcare, media, education, transportation, etc. Clients come to us with their ideas and we helps our clients implement initial ideas step by step to design and build applications (web, mobile, ...).
                                     </p>
+                                    <div className="mt-6 flex items-center gap-2">
+                                        <div className="w-12 h-1 bg-gradient-to-r from-secondary to-tertiary rounded-full"></div>
+                                        <div className="w-6 h-1 bg-secondary/50 rounded-full"></div>
+                                        <div className="w-3 h-1 bg-secondary/30 rounded-full"></div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
 
                         {/* Our Partners Section */}
-                        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 xl:gap-16 items-stretch">
+                        <div 
+                            className="grid grid-cols-1 lg:grid-cols-2 gap-7 lg:gap-8 xl:gap-10 items-stretch"
+                            variants={fadeInUp}
+                        >
                             <div className="flex">
-                                <div className="bg-white p-6 sm:p-8 lg:p-10 rounded-2xl shadow-lg border-l-4 border-yellow-400 flex flex-col justify-center h-full hover:shadow-xl transition-shadow duration-300">
-                                    <div className="flex items-center gap-4 mb-6 sm:mb-8">
-                                        <div className="bg-yellow-100 p-3 sm:p-4 rounded-full">
-                                            <Handshake className="w-6 h-6 sm:w-8 sm:h-8 text-yellow-600" />
+                                <div className="bg-white p-8 lg:p-10 rounded-2xl shadow-sm border border-secondary/50 flex flex-col justify-center h-full  transition-all duration-500 hover:-translate-y-2 backdrop-blur-sm">
+                                    <div className="flex items-center gap-6 mb-8">
+                                        <div className="bg-secondary  p-4 rounded-2xl shadow-lg">
+                                            <Handshake className="w-7 h-7 text-white" />
                                         </div>
-                                        <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-yellow-500">Our Partners</h2>
+                                        <h2 className="text-lg lg:text-2xl font-bold ">
+                                            Our Partners
+                                        </h2>
                                     </div>
-                                    <p className="text-gray-700 text-base sm:text-lg lg:text-xl leading-relaxed">
+                                    <p className="text-primary  lg:text-lg leading-relaxed font-medium">
                                         We are building a long-term and trusted relationship with valuable partners. Here are Isosoft partners:
                                     </p>
+                                    <div className="mt-6 flex items-center gap-2">
+                                        <div className="w-12 h-1 bg-gradient-to-r from-secondary to-tertiary rounded-full"></div>
+                                        <div className="w-6 h-1 bg-secondary/50 rounded-full"></div>
+                                        <div className="w-3 h-1 bg-secondary/30 rounded-full"></div>
+                                    </div>
                                 </div>
                             </div>
-                            <div className="h-full">
+                            <div className="relative h-full group overflow-hidden rounded-3xl">
                                 <img 
                                     src={Partners} 
-                                    alt="Our Partners"
-                                    className="w-full h-64 sm:h-80 lg:h-full min-h-[300px] object-cover rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-[1.02]" 
+                                    alt="Our Partners - Strategic Partnerships"
+                                    className="w-full h-64 sm:h-80 lg:h-full min-h-[350px] object-cover  shadow-sm transition-all duration-500 group-hover:scale-105" 
                                 />
+                                
+                                <div className="absolute top-4 right-4 bg-secondary/90 backdrop-blur-sm p-2 rounded-full opacity-0 group-hover:opacity-100 transition-all duration-300">
+                                    <Handshake className="w-5 h-5 text-primary" />
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </section>
 
-            {/* Why Choose Isosoft Section */}
-            <section className="bg-gradient-to-br from-gray-100 via-gray-50 to-white">
+            {/* Company Stats Section */}
+            <motion.section 
+                className="bg-gradient-to-b from-light  to-light py-6"
+                initial={{ opacity: 0, y: 50 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.8 }}
+            >
                 <div className="container mx-auto px-4 sm:px-6 lg:px-8 xl:px-12">
-                    <div className="py-16 sm:py-20 lg:py-24">
-                        <div className="grid grid-cols-1 xl:grid-cols-3 gap-8 lg:gap-12 xl:gap-16 items-start">
-                            <div className="xl:col-span-2">
-                                <div className="bg-white p-6 sm:p-8 lg:p-10 xl:p-12 rounded-2xl shadow-sm hover:shadow-lg transition-shadow duration-300">
-                                    <div className="flex items-center gap-4 mb-8 sm:mb-10">
-                                        <div className="bg-yellow-100 p-3 sm:p-4 rounded-full">
-                                            <Award className="w-6 h-6 sm:w-8 sm:h-8 text-yellow-600" />
+                    <motion.div 
+                        className="grid grid-cols-2 lg:grid-cols-4 gap-8"
+                        variants={staggerContainer}
+                        initial="initial"
+                        whileInView="animate"
+                        viewport={{ once: true }}
+                    >
+                        <motion.div className="text-center" variants={fadeInUp}>
+                            <div className="bg-primary backdrop-blur-sm p-3 rounded-xl">
+                                <div className="text-xl lg:text-2xl font-bold text-secondary mb-2">20+</div>
+                                <div className="text-light/80 font-medium">Projects Completed</div>
+                            </div>
+                        </motion.div>
+                        <motion.div className="text-center" variants={fadeInUp}>
+                            <div className="bg-primary backdrop-blur-sm p-3 rounded-xl ">
+                                <div className="text-xl lg:text-2xl font-bold text-secondary mb-2">150+</div>
+                                <div className="text-light/80 font-medium">Happy Clients</div>
+                            </div>
+                        </motion.div>
+                        <motion.div className="text-center" variants={fadeInUp}>
+                            <div className="bg-primary backdrop-blur-sm p-3 rounded-xl ">
+                                <div className="text-xl lg:text-2xl font-bold text-secondary mb-2">5+</div>
+                                <div className="text-light/80 font-medium">Years Experience</div>
+                            </div>
+                        </motion.div>
+                        <motion.div className="text-center" variants={fadeInUp}>
+                            <div className="bg-primary backdrop-blur-sm p-3 rounded-xl ">
+                                <div className="text-xl lg:text-2xl  font-bold text-secondary mb-2">10+</div>
+                                <div className="text-light/80 font-medium">Team Members</div>
+                            </div>
+                        </motion.div>
+                    </motion.div>
+                </div>
+            </motion.section>
+
+            {/* Why Choose Isosoft Section */}
+            <section 
+                className="bg-gradient-to-br from-light via-white to-light"        
+            >
+                <div className="container mx-auto p-3  lg:px-4">
+                    
+                        
+                            <div className="xl:col-span-2" >
+                                <div className="bg-white p-4  xl:p-6 rounded-3xl shadow-sm hover:shadow-md transition-all duration-500 border ">
+                                    <div className="flex items-center justify-center gap-6 mb-12">
+                                        <div className="bg-secondary p-2 rounded-xl ">
+                                            <Award className="w-6 h-6 text-white" />
                                         </div>
-                                        <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900">
+                                        <h2 className="text-lg lg:text-2xl text-dark font-bold bt">
                                             Why Choose Isosoft?
                                         </h2>
                                     </div>
                                     
-                                    <div className="grid grid-cols-1 gap-6 sm:gap-8">
-                                        <div className="bg-gradient-to-br from-gray-50 to-gray-100 p-6 rounded-xl shadow-sm hover:shadow-md transition-shadow duration-300">
-                                            <div className="flex items-start gap-4">
-                                                <div className="flex-shrink-0 bg-yellow-100 p-2 sm:p-3 rounded-full">
-                                                    <Target className="w-5 h-5 sm:w-6 sm:h-6 text-yellow-600" />
+                                    <div className="grid lg:grid-cols-2 gap-8">
+                                        <div 
+                                            className=" p-5 rounded-2xl  transition-all duration-300  border border-secondary/60"
+                                            
+                                        >
+                                            <div className="flex items-start gap-6">
+                                                
+                                                <div>
+                                                    <h3 className="md:text-lg inline-flex gap-2 items-center font-bold text-primary mb-3"><div className="p-2 rounded-full bg-secondary">
+                                                    <Target className="w-6 h-6 text-white" />
+                                                </div>Expert Project Management</h3>
+                                                    <p className="text-primary/80 leading-relaxed">
+                                                        Our project managers have extensive expertise with large, complicated projects involving dispersed teams and various vendors.
+                                                    </p>
                                                 </div>
-                                                <p className="text-gray-700 text-sm sm:text-base lg:text-lg leading-relaxed">
-                                                    Our project managers have extensive expertise with large, complicated projects involving dispersed teams and various vendors.
-                                                </p>
                                             </div>
                                         </div>
                                         
-                                        <div className="bg-gradient-to-br from-gray-50 to-gray-100 p-6 rounded-xl shadow-sm hover:shadow-md transition-shadow duration-300">
-                                            <div className="flex items-start gap-4">
-                                                <div className="flex-shrink-0 bg-yellow-100 p-2 sm:p-3 rounded-full">
-                                                    <Users className="w-5 h-5 sm:w-6 sm:h-6 text-yellow-600" />
+                                        <div className=" p-5 rounded-2xl  transition-all duration-300  border border-secondary/60"
+                                        >
+                                            <div className="flex items-start gap-6">
+                                                
+                                                <div>
+                                                    <h3 className="md:text-lg inline-flex gap-2 items-center font-bold text-primary mb-3"> <div className="p-2 rounded-full bg-secondary">
+                                                    <Users className="w-6 h-6 text-white" />
+                                                </div> Senior Talent Pool</h3>
+                                                    <p className="text-primary/80  leading-relaxed">
+                                                        We have an abundance of senior talent and a specialized human resources team to assist you at every stage of development.
+                                                    </p>
                                                 </div>
-                                                <p className="text-gray-700 text-sm sm:text-base lg:text-lg leading-relaxed">
-                                                    We have an abundance of senior talent and a specialized human resources team to assist you at every stage of development.
-                                                </p>
                                             </div>
                                         </div>
                                         
-                                        <div className="bg-gradient-to-br from-gray-50 to-gray-100 p-6 rounded-xl shadow-sm hover:shadow-md transition-shadow duration-300">
-                                            <div className="flex items-start gap-4">
-                                                <div className="flex-shrink-0 bg-yellow-100 p-2 sm:p-3 rounded-full">
-                                                    <Shield className="w-5 h-5 sm:w-6 sm:h-6 text-yellow-600" />
+                                        <div className=" p-5 rounded-2xl  transition-all duration-300  border border-secondary/60"
+                                        >
+                                            <div className="flex items-start gap-6">
+                                                
+                                                <div>
+                                                    <h3 className="md:text-lg inline-flex gap-2 items-center font-bold text-primary mb-3"> <div className="p-2 rounded-full bg-secondary">
+                                                    <Shield className="w-6 h-6 text-white" />
+                                                </div> Transparent Process</h3>
+                                                    <p className="text-primary/80  leading-relaxed">
+                                                        Transparent working process builds trust among employees and partners by making information available for accuracy checks.
+                                                    </p>
                                                 </div>
-                                                <p className="text-gray-700 text-sm sm:text-base lg:text-lg leading-relaxed">
-                                                    Transparent working process builds trust among employees and partners by making information available for accuracy checks.
-                                                </p>
                                             </div>
                                         </div>
                                         
-                                        <div className="bg-gradient-to-br from-gray-50 to-gray-100 p-6 rounded-xl shadow-sm hover:shadow-md transition-shadow duration-300">
-                                            <div className="flex items-start gap-4">
-                                                <div className="flex-shrink-0 bg-yellow-100 p-2 sm:p-3 rounded-full">
-                                                    <CheckCircle className="w-5 h-5 sm:w-6 sm:h-6 text-yellow-600" />
+                                        <div className=" p-5 rounded-2xl  transition-all duration-300  border border-secondary/60"
+                                        >
+                                            <div className="flex items-start gap-6">
+                                                
+                                                <div>
+                                                    <h3 className="md:text-lg inline-flex gap-2 items-center font-bold text-primary mb-3"> <div className="p-2 rounded-full bg-secondary">
+                                                    <CheckCircle className="w-6 h-6 text-white" />
+                                                </div> Cutting-Edge Technology</h3>
+                                                    <p className="text-primary/80  leading-relaxed">
+                                                        Isosoft prioritizes keeping up with trends as part of our software development services to help firms maintain their relevance in their respective, competitive industry.
+                                                    </p>
                                                 </div>
-                                                <p className="text-gray-700 text-sm sm:text-base lg:text-lg leading-relaxed">
-                                                    Isosoft prioritizes keeping up with trends as part of our software development services to help firms maintain their relevance in their respective, competitive industry.
-                                                </p>
                                             </div>
                                         </div>
+                                    </div>
+
+                                    <div className="mt-8 flex items-center gap-3">
+                                        <div className="w-16 h-1 bg-gradient-to-r from-secondary to-tertiary rounded-full"></div>
+                                        <div className="w-8 h-1 bg-secondary/60 rounded-full"></div>
+                                        <div className="w-4 h-1 bg-secondary/40 rounded-full"></div>
                                     </div>
                                 </div>
                             </div>
                             
-                            <div className="xl:col-span-1">
-                                <div className="sticky top-8">
-                                    <div className="relative group overflow-hidden rounded-2xl shadow-sm hover:shadow-md transition-all duration-300">
-                                        <img 
-                                            src={Quality} 
-                                            alt="Quality Assurance"
-                                            className="w-full h-64 sm:h-80 lg:h-96 xl:h-[400px]  transition-transform duration-300 group-hover:scale-105"
-                                        />
-                                        <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                                        <div className="absolute bottom-6 left-6 right-6 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300 transform translate-y-4 group-hover:translate-y-0">
-                                            <h3 className="text-lg font-semibold mb-2">Quality Assurance</h3>
-                                            <p className="text-sm">Delivering excellence in every project</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                            
                         </div>
-                    </div>
-                </div>
+                    
+                <CTA/>
             </section>
+
+            
         </div>
     );
 }
