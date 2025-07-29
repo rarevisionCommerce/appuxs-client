@@ -177,7 +177,7 @@ function ChatWithUs() {
 
               {/* Welcome Message */}
               {showWelcomeMessage && (
-                <div className="relative bg-white rounded-2xl rounded-tl-sm p-4 shadow-sm border border-tertiary/30 max-w-[85%]">
+                <div className="relative bg-white rounded-2xl rounded-tl-sm p-4 shadow-sm border border-dark/12 max-w-[85%]">
                   <div className="flex items-start space-x-3">
                     <div className="w-8 h-8 bg-secondary rounded-full flex items-center justify-center flex-shrink-0">
                       <span className="text-white text-xs font-bold">I</span>
@@ -204,7 +204,7 @@ function ChatWithUs() {
             </div>
 
             {/* Action Button */}
-            <div className="p-3 border-t items-center gap-2 bg-primary/10 flex">
+            <div className="p-3 border-t items-center gap-2 bg-primary/20 flex">
               <input 
                 placeholder="Type a Message" 
                 type="text" 
