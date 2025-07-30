@@ -66,12 +66,12 @@ function About() {
                             <p className="lg:text-lg text-light leading-relaxed max-w-3xl mx-auto">
                                 Isosoft is a dedicated software developmment company.Founded in 2020 by a Team of passionate and profesional Software developers,mobile developers and UI/UX designers.Following a systemic approach,we are highly esteemed in delivering the best and most cost effective softaware solutions to our clients.
                             </p>
-                            <div className="space-x-3">
+                            <div className="gap-1 md:gap-4 flex">
                                 <span className="inline-flex gap-2 items-center px-4 py-2 bg-secondary/20 text-secondary rounded-full text-sm font-semibold backdrop-blur-sm border border-yellow-400/30 hover:border-yellow-400/50 transition-colors duration-300">
                                     <div className="bg-secondary h-2 w-2 rounded-full animate-pulse"></div> Integrity 
                                 </span>
                                 <span className="inline-flex gap-2 items-center px-4 py-2 bg-secondary/20 text-secondary rounded-full text-sm font-semibold backdrop-blur-sm border border-yellow-400/30 hover:border-yellow-400/50 transition-colors duration-300">
-                                    <div className="bg-secondary h-2 w-2 rounded-full animate-pulse"></div>Team Work
+                                    <div className="bg-secondary h-2 w-2 rounded-full animate-pulse"></div>TeamWork
                                 </span>
                                 <span className="inline-flex gap-2 items-center px-4 py-2 bg-secondary/20 text-secondary rounded-full text-sm font-semibold backdrop-blur-sm border border-yellow-400/30 hover:border-yellow-400/50 transition-colors duration-300">
                                     <div className="bg-secondary h-2 w-2 rounded-full animate-pulse"></div> Transparency

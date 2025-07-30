@@ -122,7 +122,7 @@ const ProjectCard = ({ image, title, description, link, layout = "standard" }) =
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 border border-dark/10 hover:bg-gradient-to-r from-yellow-400 to-yellow-500  text-dark px-6 py-3 rounded-lg font-semibold transition-all duration-300 group/btn"
               >
-                <span>Visit Project</span>
+                <span>Visit Website</span>
                 <ExternalLink className="w-4 h-4 transition-transform duration-300 group-hover/btn:translate-x-1 group-hover/btn:rotate-12" />
               </a>
             </div>
@@ -162,7 +162,7 @@ const ProjectCard = ({ image, title, description, link, layout = "standard" }) =
           rel="noopener noreferrer"
           className="inline-flex items-center border border-dark/10 gap-2 hover:bg-gradient-to-r from-yellow-400 to-yellow-500  text-dark px-6 py-3 rounded-lg font-semibold transition-all duration-300  hover:shadow-sm group/btn w-full justify-center"
         >
-          <span>Visit Project</span>
+          <span>Visit Website</span>
           <ExternalLink className="w-4 h-4 transition-transform duration-300 group-hover/btn:translate-x-1 group-hover/btn:rotate-12" />
         </a>
       </div>

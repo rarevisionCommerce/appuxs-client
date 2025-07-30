@@ -167,7 +167,7 @@ function Estimate() {
                     <div className="container mx-auto">
                         <img 
                         src={EstimatePortrait} 
-                        className="w-full h-64 object-cover rounded-lg shadow-lg border-2 border-yellow-400" 
+                        className="w-full h-64 object-cover rounded-lg shadow-lg " 
                         alt="Professional project estimation consultation" 
                     />
                     </div>
@@ -189,7 +189,7 @@ function Estimate() {
 
                    
 
-                    <div className="bg-white border border-slate-200 rounded-xl shadow-lg p-6 w-full">
+                    <div className="bg-white border border-slate-200 rounded-xl shadow-sm p-6 w-full">
                         <div onSubmit={handleSubmit(onSubmit)}>
                         {/* Personal Information Section */}
                         <div className="mb-8">
