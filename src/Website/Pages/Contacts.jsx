@@ -86,13 +86,7 @@ function Contacts() {
                 
                 {/* Hero Header Section */}
                 <header className="relative py-14 bg-gradient-to-br from-primary via-dark to-primary overflow-hidden">
-                    {/* Animated Background Elements */}
-                    <div className="absolute inset-0">
-                        <div className="absolute top-7 left-5 w-48 h-48 bg-secondary/5 rounded-full blur-3xl animate-pulse"></div>
-                        <div className="absolute top-40 right-20 w-96 h-96 bg-secondary/5 rounded-full blur-3xl"></div>
-                        <div className="absolute bottom-20 left-1/3 w-64 h-64 bg-secondary/10 rounded-full blur-3xl"></div>                                                
-                    </div>
-
+                    
                     {/* Main Content */}
                     <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8 xl:px-12">
                         <div className="flex flex-col justify-center gap-6 items-center pt-8">
@@ -341,8 +335,8 @@ function Contacts() {
                                             </div>
                                             <div>
                                                 <p className="font-semibold text-primary">Email Us</p>
-                                                <a href="mailto:sales@isosoft.com" className="text-gray-600 hover:text-red-800 transition-colors">
-                                                    sales@isosoft.com
+                                                <a href="mailto:sales@isosoftwares.com" className="text-gray-600 hover:text-red-800 transition-colors">
+                                                    sales@isosoftwares.com
                                                 </a>
                                             </div>
                                         </div>

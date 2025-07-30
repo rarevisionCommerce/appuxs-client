@@ -1,5 +1,7 @@
 import Spring from "../../assets/Spring.jpg"
-import Lemka from "../../assets/Lemka.jpg"
+import Dash1 from "../../assets/Dash1.jpg"
+import Dash2 from "../../assets/Dash2.jpg"
+import Dash3 from "../../assets/Dash3.jpg"
 import Bafrica from "../../assets/Bafrica.jpg"
 import Agape from "../../assets/Agape.PNG"
 import Pearl from "../../assets/Pearl.PNG"
@@ -18,6 +20,7 @@ import {
   TrendingUp
 } from 'lucide-react';
 import CTA from "../Components/CTA";
+import { FaWhatsapp } from "react-icons/fa"
 
 // Counter hook for animated numbers
 const useCounter = (end, duration = 2000, start = 0) => {
@@ -131,6 +134,44 @@ const ProjectCard = ({ image, title, description, link, layout = "standard" }) =
       </div>
     );
   }
+  if (layout === "dashboard") {
+    return (
+    <div className="bg-gradient-to-br from-white to-gray-50/50 rounded-lg overflow-hidden transition-all duration-500  border border-dark/10 hover:border-yellow-200 hover:-translate-y-1">
+      <div className="relative overflow-hidden">
+        <img 
+          src={image} 
+          alt={title}
+          className="w-full h-64 object-cover transition-transform duration-700 "
+        />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent group-hover:from-black/30 transition-all duration-500" />
+        <div className="absolute inset-0 bg-gradient-to-br from-yellow-400/0 via-transparent to-purple-500/0 group-hover:from-yellow-400/10 group-hover:to-purple-500/10 transition-all duration-700" />
+        <div className="absolute top-4 right-4 opacity-0 group-hover:opacity-100 transition-all duration-300 transform translate-y-2 group-hover:translate-y-0">
+          <div className="bg-white/90 backdrop-blur-sm rounded-full p-2 hover:bg-white transition-colors duration-300">
+            <ExternalLink className="w-4 h-4 text-yellow-500" />
+          </div>
+        </div>
+      </div>
+      
+      <div className="p-6 space-y-4">
+        <h3 className="text-xl font-bold text-gray-800 group-hover:text-secondary transition-colors duration-300">
+          {title}
+        </h3>
+        <p className="text-gray-600 leading-relaxed group-hover:text-gray-700 transition-colors duration-300">
+          {description}
+        </p>
+        <a 
+          href={link} 
+          target="_blank" 
+          rel="noopener noreferrer"
+          className=" group inline-flex items-center border border-dark/10 gap-2 hover:bg-gradient-to-r from-green-400 to-green-500  text-dark hover:text-light px-6 py-3 rounded-lg font-semibold transition-all duration-300  hover:shadow-sm group/btn w-full justify-center"
+        >  <FaWhatsapp className="text-green-500 group-hover:text-white h-6 w-6"/>
+          <span>WhatsApp for Demos</span>
+          
+        </a>
+      </div>
+    </div>
+  );
+  }
 
   return (
     <div className="bg-gradient-to-br from-white to-gray-50/50 rounded-lg overflow-hidden transition-all duration-500 group border border-dark/10 hover:border-yellow-200 hover:-translate-y-1">
@@ -192,27 +233,30 @@ function Projects() {
       link: "https://isosalespos.isosoftwares.com/"
     },
     {
-      image: Lemka,
-      title: "Lemka Real Estate Management",
-      description: "Comprehensive solution designed to automate and streamline real estate operations. Features property listing management, lead management, contract management and more with a user-friendly interface.",
-      link: "#"
+      image: Dash1,
+      title: "Property Management System",
+      description: "Comprehensive Dashboard that allows the bussiness owner to control the inventory of their properties.",
+      link: "https://wa.me/254706181387?text=I want to see the property management  system demos",
+      layout: "dashboard"
     },
     
     
     {
-      image: Spring,
-      title: "Springs Hotel Management",
-      description: "Comprehensive solution designed to streamline hotel operations. Features front-desk management, room management, booking management, and complete hospitality solutions.",
-      link: "#"
+      image: Dash2,
+      title: "Retail & Shop Management ERP System",
+      description: "Comprehensive System that allows allows shop owner to manage their shop inventory like sales,stock, revenue deficiets and much more.",
+     link: "https://wa.me/254706181387?text=I want to see the retail and shop management ERP system demos",
+      layout: "dashboard"
     },
     
     
     
     {
-      image: Bafrica, 
-      title: "Builders Africa Platform",
-      description: "O2O industrial Internet platform for global real estate, engineering, building materials, equipment and design industry chain connecting businesses worldwide.",
-      link: "#",
+      image: Dash3, 
+      title: "Custom management systems",
+      description: "A management system that is tailor-made to the owners bussiness needs to automate and ease the workflow.",
+      link: "https://wa.me/254706181387?text=I want to see the custom management system demos",
+      layout: "dashboard"
       
     },
     {
@@ -236,19 +280,7 @@ function Projects() {
     <main className="flex flex-col">
       {/* Hero Section */}
       <section className="relative pt-28 flex items-center justify-center bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 overflow-hidden">
-        {/* Enhanced animated background elements */}
-        <div className="absolute inset-0">
-          <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-yellow-400/10 rounded-full blur-3xl animate-pulse" />
-          <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-blue-500/5 rounded-full blur-3xl animate-pulse delay-700" />
-          <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-full h-full bg-gradient-to-r from-transparent via-yellow-400/5 to-transparent rotate-12" />
-          
-          {/* Additional modern elements */}
-          <div className="absolute top-20 right-1/3 w-32 h-32 bg-purple-500/5 rounded-full blur-2xl animate-bounce delay-300" />
-          <div className="absolute bottom-20 left-2/3 w-48 h-48 bg-green-500/5 rounded-full blur-3xl animate-pulse delay-1500" />
-          
-          {/* Floating particles */}
-          
-        </div>
+        
 
         <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8 xl:px-12">
           <div className="grid lg:grid-cols-2 gap-6 items-center">
@@ -331,7 +363,10 @@ function Projects() {
             
             {/* Regular Projects Grid */}
             <div className="grid md:grid-cols-2 2xl:grid-cols-3  gap-8 2xl:gap-14">
-              {projects.slice(0, 6).map((project, index) => (
+              {projects.slice(0, 3).map((project, index) => (
+                <ProjectCard key={index} {...project} />
+              ))}
+              {projects.slice(3, 6).map((project, index) => (
                 <ProjectCard key={index} {...project} />
               ))}
             </div>

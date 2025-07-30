@@ -55,11 +55,11 @@ function Footer() {
                        <MapPin className="h-6 w-6 text-secondary " />  Spur Mall, Kimbo Juja</p>
                     <a 
                         target="_blank" 
-                        href="mailto:info@isosoftware.com" 
+                        href="mailto:info@isosoftwares.com" 
                         className="text-light text-sm inline-flex items-center gap-2 "
                         rel="noopener noreferrer"
                     >
-                        <Mail className="h-6 w-6 text-secondary " /> info@isosoft.com
+                        <Mail className="h-6 w-6 text-secondary " /> info@isosoftwares.com
                     </a>
                     <a href="tel:+254706181387" className="text-light text-sm inline-flex gap-2 items-center "> 
                         <Phone className="h-6 w-6 text-secondary " /> Call +254706181387</a>

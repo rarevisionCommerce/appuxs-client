@@ -7,17 +7,7 @@ export default {
   theme: {
     extend: {
       backgroundImage:{
-        "homeBg" : "url('/assets/ServicesBackground.jpg')",
-        aboutBg: "url('src/assets/AboutBackground.jpg')",
-        webDevBg: "url('src/assets/WebDevBg.jpg')",
-        mobileAppsBg: "url('src/assets/MobileAppBg.jpg')",
-        bulkSMSBg: "url('src/assets/BulkBg.jpg')",
-        bizManagementBg: "url('src/assets/BizMgtBg.jpg')",
-        webDeisgnBg: "url('src/assets/AuAxBg.jpg')",
-        projectsBg: "url('src/assets/ProjectBg.jpg')",
-        contactsBg: "url('src/assets/Contacts.jpg')",
-        faqBg:"url('src/assets/FaqBg.jpg')",
-        estimateBg:"url('src/assets/EstimateBg.jpg')"
+        "homeBg" : "url('/assets/HeroBg.jpg')"        
       },
       colors: {
   primary: "#1e293b",      

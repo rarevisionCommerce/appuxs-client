@@ -51,7 +51,7 @@ const Services = () => {
               <p className="lg:text-lg text-light leading-relaxed container mx-auto">
                 Transforming businesses through cutting-edge technology solutions. 
                 We specialize in <strong className="text-yellow-300">custom software development</strong>, delivering  
-                <em className="text-blue-300"> scalable</em> and <em className="text-purple-300">innovative</em> digital experiences that drive growth 
+                <em > scalable</em> and <em >innovative</em> digital experiences that drive growth 
                 and competitive advantage in today's digital landscape.
               </p>
               

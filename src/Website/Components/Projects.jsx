@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { FiArrowRight, FiAward, FiClock } from "react-icons/fi";
-import Photo1 from "../../assets/Lemka.jpg";
-import Photo2 from "../../assets/Spring.jpg";
-import Photo3 from "../../assets/Bafrica.jpg";
+import Photo1 from "../../assets/Dash1.jpg";
+import Photo2 from "../../assets/Dash2.jpg";
+import Photo3 from "../../assets/Dash3.jpg";
 import Photo4 from "../../assets/Agape.PNG";
 import Photo5 from "../../assets/Isosales.PNG";
 import Photo6 from "../../assets/Febwin.PNG";
@@ -176,19 +176,19 @@ function ProjectsSection() {
                   ></button>
                   <button
                     className={`w-2 h-2 rounded-full transition-all duration-300 ${
-                      currentImageIndex === 3 ? 'bg-yellow-500 scale-125' : 'bg-white/50'
+                      currentImageIndex === 4 ? 'bg-yellow-500 scale-125' : 'bg-white/50'
                     }`}
                     onClick={() => setCurrentImageIndex(4)}
                   ></button>
                   <button
                     className={`w-2 h-2 rounded-full transition-all duration-300 ${
-                      currentImageIndex === 3 ? 'bg-yellow-500 scale-125' : 'bg-white/50'
+                      currentImageIndex === 5 ? 'bg-yellow-500 scale-125' : 'bg-white/50'
                     }`}
                     onClick={() => setCurrentImageIndex(5)}
                   ></button>
                   <button
                     className={`w-2 h-2 rounded-full transition-all duration-300 ${
-                      currentImageIndex === 3 ? 'bg-yellow-500 scale-125' : 'bg-white/50'
+                      currentImageIndex === 6 ? 'bg-yellow-500 scale-125' : 'bg-white/50'
                     }`}
                     onClick={() => setCurrentImageIndex(6)}
                   ></button>

@@ -40,11 +40,7 @@ function About() {
             {/* Hero Section - keeping original styling */}
             <header className="relative py-5 bg-gradient-to-br from-slate-900 via-slate-800 to-gray-900 overflow-hidden">
                 {/* Animated Background Elements */}
-                <div className="absolute inset-0">
-                    <div className="absolute top-20 left-10 w-72 h-72 bg-yellow-400/10 rounded-full blur-3xl animate-pulse"></div>
-                    <div className="absolute top-40 right-20 w-96 h-96 bg-amber-600/10 rounded-full blur-3xl animate-pulse delay-1000"></div>
-                    <div className="absolute bottom-20 left-1/3 w-64 h-64 bg-yellow-400/5 rounded-full blur-3xl animate-pulse delay-2000"></div>
-                </div>
+                
 
                 {/* Main Content */}
                 <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8 xl:px-12">
@@ -67,13 +63,13 @@ function About() {
                                 Isosoft is a dedicated software developmment company.Founded in 2020 by a Team of passionate and profesional Software developers,mobile developers and UI/UX designers.Following a systemic approach,we are highly esteemed in delivering the best and most cost effective softaware solutions to our clients.
                             </p>
                             <div className="gap-1 md:gap-4 flex">
-                                <span className="inline-flex gap-2 items-center px-4 py-2 bg-secondary/20 text-secondary rounded-full text-sm font-semibold backdrop-blur-sm border border-yellow-400/30 hover:border-yellow-400/50 transition-colors duration-300">
+                                <span className="inline-flex gap-1 items-center px-3 py-2 bg-secondary/20 text-secondary rounded-full text-sm font-semibold backdrop-blur-sm border border-yellow-400/30 hover:border-yellow-400/50 transition-colors duration-300">
                                     <div className="bg-secondary h-2 w-2 rounded-full animate-pulse"></div> Integrity 
                                 </span>
-                                <span className="inline-flex gap-2 items-center px-4 py-2 bg-secondary/20 text-secondary rounded-full text-sm font-semibold backdrop-blur-sm border border-yellow-400/30 hover:border-yellow-400/50 transition-colors duration-300">
+                                <span className="inline-flex gap-1 items-center px-3 py-2 bg-secondary/20 text-secondary rounded-full text-sm font-semibold backdrop-blur-sm border border-yellow-400/30 hover:border-yellow-400/50 transition-colors duration-300">
                                     <div className="bg-secondary h-2 w-2 rounded-full animate-pulse"></div>TeamWork
                                 </span>
-                                <span className="inline-flex gap-2 items-center px-4 py-2 bg-secondary/20 text-secondary rounded-full text-sm font-semibold backdrop-blur-sm border border-yellow-400/30 hover:border-yellow-400/50 transition-colors duration-300">
+                                <span className="inline-flex gap-1 items-center px-3 py-2 bg-secondary/20 text-secondary rounded-full text-sm font-semibold backdrop-blur-sm border border-yellow-400/30 hover:border-yellow-400/50 transition-colors duration-300">
                                     <div className="bg-secondary h-2 w-2 rounded-full animate-pulse"></div> Transparency
                                 </span>
                             </div>
@@ -292,7 +288,7 @@ function About() {
                         <motion.div className="text-center" variants={fadeInUp}>
                             <div className="bg-primary backdrop-blur-sm p-3 rounded-xl">
                                 <div className="text-xl lg:text-2xl font-bold text-secondary mb-2">20+</div>
-                                <div className="text-light/80 font-medium">Projects Completed</div>
+                                <div className="text-light/80 font-medium">Projects Done</div>
                             </div>
                         </motion.div>
                         <motion.div className="text-center" variants={fadeInUp}>

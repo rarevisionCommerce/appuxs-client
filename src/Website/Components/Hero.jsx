@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Link } from 'react-scroll';
-import Hero from "../../assets/Dev2.jpg";
+import Hero from "../../assets/HeroBg.jpg";
 import { CheckCircle, Clock, Cpu, Verified } from "lucide-react";
 import { NavLink } from "react-router-dom";
 
@@ -55,9 +55,9 @@ function HeroSection() {
   }, [currentText, isDeleting, loopNum, typingSpeed, currentIndex]);
 
   return (
-    <section className="min-h-screen 2xl:min-h-full  relative 2xl:py-20 bg-primary bg-homeBg aspect-auto bg-cover bg-center bg-no-repeat py-2">
+    <section className="min-h-screen 2xl:min-h-full  relative 2xl:py-20 bg-primary bg-homeBg aspect-auto bg-center  bg-cover py-2">
       {/* Overlay for better text readability */}
-      <div className="absolute inset-0 bg-primary/70"></div>
+      <div className="absolute inset-0 bg-primary/60"></div>
       
       <div className="relative z-10 pt-16">
         <div className="container mx-auto px-3 lg:px-16">
@@ -116,7 +116,7 @@ function HeroSection() {
             </div>
 
             {/* Right Content - Desktop Only */}
-            <div id="portrait" className="hidden lg:flex flex-col items-center">            
+            <div id="portrait" className="hidden w-1/2 lg:flex flex-col items-center">            
 
               {/* Hero Image */}
               <div className="relative p-3 bg-gradient-to-br from-green-100 via-blue-200 to to-violet-300 rounded-3xl">

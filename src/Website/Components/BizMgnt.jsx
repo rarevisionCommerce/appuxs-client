@@ -1,6 +1,6 @@
 import { Settings, Settings2,BrainIcon, Paperclip } from "lucide-react";
 import { Rating } from "@mantine/core";
-import Portrait from "../../assets/BizMgtBg.jpg";
+import Portrait from "../../assets/HeroBg.jpg";
 
 function BizMgnt() {
     return (<>

@@ -91,13 +91,7 @@ const FAQ = () => {
       <main className="">
         {/**Header Section*/}
         <header className="relative py-5 bg-gradient-to-br from-slate-900 via-slate-800 to-gray-900 overflow-hidden">
-          {/* Animated Background Elements */}
-          <div className="absolute inset-0">
-            <div className="absolute top-20 left-10 w-72 h-72 bg-yellow-400/10 rounded-full blur-3xl animate-pulse"></div>
-            <div className="absolute top-40 right-20 w-96 h-96 bg-amber-600/10 rounded-full blur-3xl animate-pulse delay-1000"></div>
-            <div className="absolute bottom-20 left-1/3 w-64 h-64 bg-yellow-400/5 rounded-full blur-3xl animate-pulse delay-2000"></div>
-          </div>
-
+         
           {/* Main Content */}
           <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8 xl:px-12">
             <div className="flex flex-col justify-center gap-3 items-center pt-16">
@@ -118,7 +112,7 @@ const FAQ = () => {
                 
                 <p className="lg:text-lg text-light leading-relaxed max-w-3xl mx-auto">
                   Get instant answers to common questions about our <strong className="text-yellow-300">software development services</strong>, 
-                  project timelines, <em className="text-blue-300">pricing models</em>, and <em className="text-purple-300">technical expertise</em>. Everything you need 
+                  project timelines, <em className="">pricing models</em>, and <em className="">technical expertise</em>. Everything you need 
                   to know about partnering with Isosoft for your next digital transformation project.
                 </p>
                 
