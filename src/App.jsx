@@ -36,7 +36,7 @@ function App() {
      <ChatWithUs/>
       <Routes>
         <Route exact path="/" element={<Home/>} />
-        <Route exact path="/Login" element={<Login/>} />
+        <Route exact path="/login" element={<Login/>} />
         <Route path="/Faq" element={<Faq/>} />
         <Route path="/Contacts" element={<Contacts/>} />
         <Route path="/Project-Estimate" element={<Estimate/>} />

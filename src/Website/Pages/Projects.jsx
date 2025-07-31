@@ -21,13 +21,14 @@ import {
 } from 'lucide-react';
 import CTA from "../Components/CTA";
 import { FaWhatsapp } from "react-icons/fa"
+import useTitle from "../Components/useTitle"
 
 // Counter hook for animated numbers
 const useCounter = (end, duration = 2000, start = 0) => {
   const [count, setCount] = useState(start);
   const [isVisible, setIsVisible] = useState(false);
   const ref = useRef();
-
+useTitle("Portfolio-Isosoft Softwares")
   useEffect(() => {
     const observer = new IntersectionObserver(
       ([entry]) => {

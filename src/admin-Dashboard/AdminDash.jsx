@@ -1,5 +1,6 @@
 import { Outlet, useLocation } from 'react-router-dom';
 import SideNav from './components/SideNav';
+import useTitle from '../Website/Components/useTitle';
 
 function AdminDashboard() {
   const location = useLocation();
@@ -9,7 +10,7 @@ function AdminDashboard() {
     const path = location.pathname.split('/').pop();
     
   };
-
+useTitle("Welcome Back Admin")
   return (<>
   <div className='h-20 w-full bg-primary fixed top-0'></div>
   <div className="min-h-screen flex flex-col bg-gray-100">

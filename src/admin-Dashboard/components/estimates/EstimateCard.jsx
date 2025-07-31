@@ -96,7 +96,7 @@ function EstimateCard({ estimate, onEdit, onDelete, isDeleting }) {
   } */
  
   return (
-    <div className="group bg-white rounded-md shadow-lg hover:shadow-lg transition-all duration-300
+    <div className="group bg-white rounded-md shadow-sm hover:shadow-md transition-all duration-300
       transform overflow-hidden border border-gray-100 relative">
       
       {/* Status Indicator Bar */}

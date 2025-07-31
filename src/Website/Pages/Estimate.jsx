@@ -4,9 +4,11 @@ import { useMutation } from "@tanstack/react-query";
 import { toast } from "react-toastify";
 import axiosPublic from "../../api/axios"; // Update with your axios config path
 import EstimatePortrait from "../../assets/EstP.jpg";
+import useTitle from "../Components/useTitle";
 
 function Estimate() {
     const [selectedFile, setSelectedFile] = useState(null);
+    useTitle("Get Started-Estimate Your Project")
     
     // SEO Meta Tags Effect
     useEffect(() => {

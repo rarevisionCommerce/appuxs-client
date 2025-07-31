@@ -3,6 +3,7 @@ import '../../App.css';
 import { ChevronDown } from "lucide-react";
 import CTA from "../Components/CTA.jsx";
 import ProjectsSection from "../Components/Projects.jsx";
+import useTitle from "../Components/useTitle.jsx";
 
 const FAQ = () => {
   //Open and close question functionality
@@ -10,6 +11,7 @@ const FAQ = () => {
   const handleToggle = (index) => {
     setOpenIndex(openIndex === index ? null : index);
   };
+  useTitle("FAQ-Isosoft Softwares")
   //Faq questions and answers
   const faqs = [
     {

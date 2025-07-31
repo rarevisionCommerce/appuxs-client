@@ -1,3 +1,4 @@
+import useTitle from '../../../Website/Components/useTitle';
 import EstimatesList from './EstimatesList'; 
 import  useEstimatesQuery  from './useEstimatesQuery'
 
@@ -6,7 +7,7 @@ const EstimatesDashboard = () => {
 	estimatesQuery: { data: estimates, isLoading: estimatesLoading, error: estimatesError },
 	refetchEstimates
   } = useEstimatesQuery();
-  
+  useTitle("Estimates Endpoint")
   return (
 	<div className="mt-16 sm:mt-20 py-3 sm:p-4 md:p-6 bg-gray-50 min-h-screen">
 	  <div className="max-w-7xl mx-auto">

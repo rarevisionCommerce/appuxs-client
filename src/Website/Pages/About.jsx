@@ -19,6 +19,7 @@ import {
     Trophy
 } from 'lucide-react';
 import CTA from '../Components/CTA';
+import useTitle from '../Components/useTitle';
 
 function About() {
     const fadeInUp = {
@@ -34,6 +35,7 @@ function About() {
             }
         }
     };
+    useTitle("About us -Isosoft Softwares")
 
     return (
         <div className="min-h-screen">

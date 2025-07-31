@@ -24,7 +24,7 @@ function Footer() {
         return (
         <div className=" bg-slate-900">
             <div className={`md:grid-cols-2 container mx-auto lg:grid-cols-4 grid  gap-2 sm:gap-8 p-4 ${
-        (pathname.includes("admin-dashboard") || pathname.includes("Login")) &&
+        (pathname.includes("admin-dashboard") || pathname.includes("login")) &&
         "hidden"
       }`} >
                 {/* Logo and Description */}

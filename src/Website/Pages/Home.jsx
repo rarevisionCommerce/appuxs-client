@@ -4,8 +4,10 @@ import Projects from "../Components/Projects.jsx";
 import Technologies from "../Components/Technologies.jsx";
 import "../../App.css";
 import CTA from "../Components/CTA.jsx";
+import useTitle from "../Components/useTitle.jsx";
 
 function Home() {
+  useTitle("Isosoft Softwares")
   return (
     < >
 {/* SEO Meta Elements */}

@@ -1,3 +1,4 @@
+import useTitle from '../../../Website/Components/useTitle';
 import MessagesList from './MessagesList'; 
 import  useMessagesQuery  from './useMessagesQuery'
 
@@ -6,7 +7,7 @@ const MessagesDash = () => {
     messagesQuery: { data: messages, isLoading: messagesLoading, error: messagesError },
     refetchMessages
   } = useMessagesQuery();
-  
+  useTitle("Messages Endpoint")
   return (
     <div className="mt-16 sm:mt-20 p-2 sm:p-4 md:p-6 bg-gray-50 min-h-screen">
       <div className="max-w-7xl mx-auto">

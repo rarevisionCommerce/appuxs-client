@@ -9,9 +9,11 @@ import PaymentGateways from "../Components/PaymentGateWays";
 import POS from "../Components/POS";
 import Ecommerse from "../Components/Ecommerse";
 import SoftwareConsultation from "../Components/SoftwareConsultation";
+import useTitle from "../Components/useTitle";
 
 
 const Services = () => {
+  useTitle("Services-Isosoft Softwares")
   return (
     <>
       <header className="relative py-5 bg-gradient-to-br from-slate-900 via-slate-800 to-gray-900 overflow-hidden">

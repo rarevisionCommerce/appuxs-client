@@ -6,6 +6,7 @@ import 'react-toastify/dist/ReactToastify.css';
 import useLogin from '../hooks/useLogin';
 import useAuth from '../hooks/useAuth';
 import Secure from "../assets/Security.jpg"
+import useTitle from '../Website/Components/useTitle';
 
 
 const Login = () => {
@@ -13,7 +14,7 @@ const Login = () => {
   const { login, isLoading, error, clearError } = useLogin();
   const [showPassword, setShowPassword] = useState(false);
   const [hasShownToast, setHasShownToast] = useState(false);
-  
+  useTitle("Login-Isosoft Softwares")
   const {
     register,
     handleSubmit,
@@ -108,8 +109,8 @@ const Login = () => {
     <>
       <div className='h-20 w-full bg-primary'></div>
       <div className="min-h-screen bg-slate-50 flex items-center justify-center p-4">
-        <div className="w-full max-w-6xl">
-          <div className="bg-white rounded-2xl shadow-2xl overflow-hidden border border-slate-200">
+        <div className="container mx-auto">
+          <div className="bg-white rounded-2xl shadow-md overflow-hidden border border-slate-200">
             <div className="grid lg:grid-cols-2 gap-0">
               
               {/* Left Side - Welcome Section */}

@@ -5,6 +5,7 @@ import { toast } from "react-toastify";
 import {Phone,Mail,MapPin,Clock,MessageCircle,Send,Instagram,Facebook,Linkedin,Github,Users} from "lucide-react";
 import GoogleMap from "../Components/GoogleMap.jsx";
 import { FaWhatsapp } from "react-icons/fa";
+import useTitle from "../Components/useTitle.jsx";
 
 function Contacts() {
 
@@ -57,7 +58,7 @@ function Contacts() {
             console.error('Submission error:', error);
         }
     };
-
+useTitle("Contacts-Isosoft Softwares ")
     return (
         <>
             {/* SEO Meta Tags */}
