@@ -7,7 +7,8 @@ import Agape from "../../assets/Agape.PNG"
 import Pearl from "../../assets/Pearl.PNG"
 import Febwin from "../../assets/Febwin.PNG"
 import Isosales from "../../assets/Isosales.PNG"
-import  { useState, useEffect, useRef } from 'react';
+import { useState, useEffect, useRef } from 'react';
+import { Helmet } from "react-helmet-async"
 import { 
   ArrowRight, 
   ExternalLink, 
@@ -28,7 +29,7 @@ const useCounter = (end, duration = 2000, start = 0) => {
   const [count, setCount] = useState(start);
   const [isVisible, setIsVisible] = useState(false);
   const ref = useRef();
-useTitle("Portfolio-Isosoft Softwares")
+
   useEffect(() => {
     const observer = new IntersectionObserver(
       ([entry]) => {
@@ -279,6 +280,12 @@ function Projects() {
 
   return (
     <main className="flex flex-col">
+      <Helmet>
+        <title>Projects Showcase | Isosoft Software</title>
+        <meta name="description" content=" Isosoft Softwares has gain a positive reputation of delivering the best software solutions and have managed to accomplish 20+ projects.Here are some of the projects accomplished" />              
+        <meta  name="keywords" content="software projects, Portfolio Showcase, Accomplished Projects , UI UX design, 
+          Agape Smart Solutions, Pearl Apartments, Febwin Property Management, TapNserve"/>                        
+      </Helmet>
       {/* Hero Section */}
       <section className="relative pt-28 flex items-center justify-center bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 overflow-hidden">
         
@@ -305,7 +312,7 @@ function Projects() {
 
               <button 
                 onClick={scrollToProjects}
-                className="group inline-flex items-center gap-3 bg-gradient-to-r from-yellow-400 to-yellow-500 hover:from-yellow-500 hover:to-yellow-600 text-white px-8 py-4 rounded-lg font-semibold md:text-lg transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-yellow-500/25"
+                className="group inline-flex items-center gap-3 bg-gradient-to-r from-yellow-400 to-yellow-500 hover:from-yellow-500 hover:to-yellow-600 text-white px-8 py-4 rounded-lg font-semibold md:text-lg transition-all duration-300 hover:scale-105 "
               >
                 <span>Explore Our Work</span>
                 <ArrowRight className="w-5 h-5 transition-transform duration-300 group-hover:translate-x-1" />

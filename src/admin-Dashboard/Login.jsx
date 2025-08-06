@@ -8,7 +8,6 @@ import useAuth from '../hooks/useAuth';
 import Secure from "../assets/Security.jpg"
 import useTitle from '../Website/Components/useTitle';
 
-
 const Login = () => {
   const { persist, setPersist } = useAuth();
   const { login, isLoading, error, clearError } = useLogin();

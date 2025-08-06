@@ -2,6 +2,7 @@ import { useForm } from "react-hook-form";
 import { axiosPublic } from "../../api/axios.jsx";
 import { useMutation } from "@tanstack/react-query";
 import { toast } from "react-toastify";
+import { Helmet } from "react-helmet-async";
 import {Phone,Mail,MapPin,Clock,MessageCircle,Send,Instagram,Facebook,Linkedin,Github,Users} from "lucide-react";
 import GoogleMap from "../Components/GoogleMap.jsx";
 import { FaWhatsapp } from "react-icons/fa";
@@ -58,33 +59,15 @@ function Contacts() {
             console.error('Submission error:', error);
         }
     };
-useTitle("Contacts-Isosoft Softwares ")
+
     return (
         <>
-            {/* SEO Meta Tags */}
-            <div className="hidden">
-                <span itemProp="description">
-                    Contact Isosoft for professional software development services. Reach out for web development, 
-                    mobile app development, custom software solutions, and digital transformation projects in Kenya.
-                </span>
-                <span itemProp="keywords">
-                    contact Isosoft, software development Kenya, web development contact, mobile app development, 
-                    custom software solutions, digital transformation, Juja software company
-                </span>
-                <span itemProp="name">Contact Isosoft Software Development</span>
-                <span itemProp="headline">Contact Us - Professional Software Development Services</span>
-                <meta name="description" content="Get in touch with Isosoft for expert software development services. Contact us for web development, mobile apps, custom software solutions, and digital transformation projects." />
-                <meta name="keywords" content="contact software developer, web development Kenya, mobile app development, custom software, digital solutions, Isosoft contact" />
-                <meta property="og:title" content="Contact Isosoft - Software Development Services | Kenya" />
-                <meta property="og:description" content="Reach out to Isosoft for professional software development services. Expert web development, mobile apps, and custom digital solutions." />
-                <meta property="og:type" content="website" />
-                <meta name="twitter:card" content="summary" />
-                <meta name="twitter:title" content="Contact Isosoft Software Development | Kenya" />
-                <meta name="twitter:description" content="Professional software development services. Contact us for web development, mobile apps, and custom digital solutions." />
-            </div>
-
-            <main className='min-h-screen'>
-                
+        <Helmet>
+            <title>Contact Us | Isosoft Softwares</title>
+            <meta name="description" content="Contact Isosoft for professional software development services. Reach out for web development, mobile app development, custom software solutions, and digital transformation projects in Kenya." />              
+            <meta  name="keywords" content=" contact Isosoft, web development contact,contact freelance company, custom software solutions, digital transformation" />                        
+        </Helmet>
+           <main className='min-h-screen'>                
                 {/* Hero Header Section */}
                 <header className="relative py-14 bg-gradient-to-br from-primary via-dark to-primary overflow-hidden">
                     

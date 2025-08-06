@@ -1,6 +1,7 @@
 import React, { useState} from "react";
 import '../../App.css';
 import { ChevronDown } from "lucide-react";
+import { Helmet } from "react-helmet-async";
 import CTA from "../Components/CTA.jsx";
 import ProjectsSection from "../Components/Projects.jsx";
 import useTitle from "../Components/useTitle.jsx";
@@ -11,7 +12,7 @@ const FAQ = () => {
   const handleToggle = (index) => {
     setOpenIndex(openIndex === index ? null : index);
   };
-  useTitle("FAQ-Isosoft Softwares")
+
   //Faq questions and answers
   const faqs = [
     {
@@ -90,6 +91,12 @@ const FAQ = () => {
 
   return (
     <>
+     <Helmet>
+          <title>Frequently Asked Questions | Isosoft Softwares</title>
+          <meta name="description" content=" Comprehensive FAQ section for Isosoft software development company. Find answers about web development, mobile app development, pricing, project timelines, technical stack, contracts, and maintenance services..." />              
+          <meta  name="keywords" content="software development FAQ, web development questions, mobile app development cost, project timeline, technical stack, contract signing, maintenance support, Kenya software company FAQ" />  
+                        
+     </Helmet>
       <main className="">
         {/**Header Section*/}
         <header className="relative py-5 bg-gradient-to-br from-slate-900 via-slate-800 to-gray-900 overflow-hidden">
@@ -118,35 +125,7 @@ const FAQ = () => {
                   to know about partnering with Isosoft for your next digital transformation project.
                 </p>
                 
-                {/* SEO Meta Elements */}
-                <div className="hidden">
-                  <span itemProp="description">
-                    Comprehensive FAQ section for Isosoft software development company. Find answers about web development, 
-                    mobile app development, pricing, project timelines, technical stack, contracts, and maintenance services.
-                  </span>
-                  <span itemProp="keywords">
-                    software development FAQ, web development questions, mobile app development cost, project timeline, 
-                    technical stack, contract signing, maintenance support, Kenya software company FAQ
-                  </span>
-                  <span itemProp="name">Isosoft Software Development FAQ</span>
-                  <span itemProp="headline">Frequently Asked Questions - Software Development Services</span>
-                  <span itemProp="about">
-                    Common questions and expert answers about custom software development, web applications, 
-                    mobile apps, business solutions, and technical support services
-                  </span>
-                  <span itemProp="audience">
-                    Business owners, entrepreneurs, startups, and companies seeking custom software development solutions
-                  </span>
-                  <meta name="description" content="Get answers to frequently asked questions about Isosoft's software development services, pricing, timelines, technical stack, and project processes. Expert solutions for your business needs." />
-                  <meta name="keywords" content="software development FAQ, web development questions, mobile app costs, project timeline, technical expertise, contract process, maintenance support" />
-                  <meta property="og:title" content="FAQ - Software Development Services | Isosoft" />
-                  <meta property="og:description" content="Find answers to common questions about our software development services, project processes, pricing models, and technical expertise." />
-                  <meta property="og:type" content="website" />
-                  <meta name="twitter:card" content="summary" />
-                  <meta name="twitter:title" content="Software Development FAQ | Isosoft Solutions" />
-                  <meta name="twitter:description" content="Comprehensive answers to questions about custom software development, web apps, mobile development, and business solutions." />
                 </div>
-              </div>
             </div>
           </div> 
         </header>

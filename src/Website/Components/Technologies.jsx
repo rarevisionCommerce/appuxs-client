@@ -261,7 +261,7 @@ const TechStackDropdown = () => {
         {/* Header */}
         <div className=" mb-12">
          <h2 className="text-2xl lg:text-4xl font-bold text-slate-800 mb-3 ">
-            Tech <span className="text-secomdary">Stack</span>
+            Tech <span className="text-secondary">Stack</span>
           </h2> 
 
           <div className="h-[5px] rounded-full w-28 mb-3 bg-gradient-to-r from-transparent to-dark"></div>

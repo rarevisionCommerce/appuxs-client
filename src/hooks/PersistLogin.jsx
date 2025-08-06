@@ -2,6 +2,8 @@ import { useState, useEffect } from 'react';
 import { Outlet } from 'react-router-dom';
 import  useAuth  from './useAuth';
 import  useRefreshToken  from './useRefreshToken';
+import Loading from '../admin-Dashboard/components/Loading';
+
 
 const PersistLogin = () => {
   const [isLoading, setIsLoading] = useState(true);
@@ -41,7 +43,7 @@ const PersistLogin = () => {
   if (isLoading) {
     return (
       <div className="loading-container">
-        <div className="loading-spinner">Loading...</div>
+       <Loading/>
       </div>
     );
   }

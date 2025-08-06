@@ -1,57 +1,14 @@
 import { useState, useEffect } from "react";
 import { useForm } from "react-hook-form";
 import { useMutation } from "@tanstack/react-query";
+import { Helmet } from "react-helmet-async";
 import { toast } from "react-toastify";
 import axiosPublic from "../../api/axios"; // Update with your axios config path
 import EstimatePortrait from "../../assets/EstP.jpg";
-import useTitle from "../Components/useTitle";
 
 function Estimate() {
     const [selectedFile, setSelectedFile] = useState(null);
-    useTitle("Get Started-Estimate Your Project")
-    
-    // SEO Meta Tags Effect
-    useEffect(() => {
-        // Set document title
-        document.title = "Get Your Project Estimate | Professional Web & Mobile Development";
-        
-        // Create or update meta tags
-        const metaTags = [
-            { name: "description", content: "Get a free project estimate for web development, mobile apps, and e-commerce solutions. Professional development services with transparent pricing and clear timelines." },
-            { name: "keywords", content: "project estimate, web development, mobile app development, e-commerce, software development, project quote, development cost" },
-            { name: "author", content: "Your Company Name" },
-            { property: "og:title", content: "Get Your Project Estimate | Professional Development Services" },
-            { property: "og:description", content: "Transform your ideas into reality. Get a detailed estimate for your web or mobile development project with professional consultation." },
-            { property: "og:type", content: "website" },
-            { name: "twitter:card", content: "summary_large_image" },
-            { name: "twitter:title", content: "Get Your Project Estimate | Professional Development Services" },
-            { name: "twitter:description", content: "Transform your ideas into reality. Get a detailed estimate for your web or mobile development project." }
-        ];
-
-        metaTags.forEach(tag => {
-            let element = document.querySelector(`meta[${tag.name ? 'name' : 'property'}="${tag.name || tag.property}"]`);
-            if (!element) {
-                element = document.createElement('meta');
-                if (tag.name) element.name = tag.name;
-                if (tag.property) element.setAttribute('property', tag.property);
-                document.head.appendChild(element);
-            }
-            element.content = tag.content;
-        });
-
-        return () => {
-            // Cleanup meta tags when component unmounts
-            metaTags.forEach(tag => {
-                const element = document.querySelector(`meta[${tag.name ? 'name' : 'property'}="${tag.name || tag.property}"]`);
-                if (element) {
-                    document.head.removeChild(element);
-                }
-            });
-            document.title = "Your App"; // Reset to default title
-        };
-    }, []);
-    
-    const {
+     const {
         register,
         handleSubmit,
         formState: { errors, isSubmitting },
@@ -130,6 +87,11 @@ function Estimate() {
 
     return (
         <div id="Estimate" className="flex flex-col  min-h-screen bg-slate-50">
+            <Helmet>
+                <title>Get Started With A Project Estimate | Isosoft Softwares</title>
+                <meta name="description" content="Contact Isosoft for professional software development services. Reach out for web development, mobile app development, custom software solutions, and digital transformation projects in Kenya." />              
+                <meta  name="keywords" content=" contact Isosoft, web development contact,contact freelance company, custom software solutions, digital transformation" />                        
+            </Helmet>
             {/* Left Side Panel */}
             <header className=" pt-28 bg-slate-800 flex flex-col lg:flex-row gap-5 p-6">
                 <header className="container mx-auto">

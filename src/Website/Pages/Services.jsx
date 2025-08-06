@@ -1,4 +1,5 @@
 import { Link } from "react-scroll";
+import { Helmet } from "react-helmet-async";
 import BizMgnt from "../Components/BizMgnt";
 import BulkSMS from "../Components/BulkSMS";
 import MobileApp from "../Components/MobileApp";
@@ -16,6 +17,12 @@ const Services = () => {
   useTitle("Services-Isosoft Softwares")
   return (
     <>
+    <Helmet>
+      <title>Our Services | Isosoft Software</title>
+      <meta name="description" content=" Isosoft Softwares offers a Package of software solutions that aim in transforming your business using cutting edge technology.We give Your business or organisation a relevant online presence" />              
+      <meta  name="keywords" content="software development, web development, mobile app development, UI UX design, 
+       business automation, bulk SMS, POS Systems, Payment Gateways Intergration, IT Consultation"/>                        
+    </Helmet>
       <header className="relative py-5 bg-gradient-to-br from-slate-900 via-slate-800 to-gray-900 overflow-hidden">
         {/* Enhanced Animated Background Elements */}
         <div className="absolute inset-0">
@@ -57,19 +64,7 @@ const Services = () => {
                 and competitive advantage in today's digital landscape.
               </p>
               
-              {/* SEO Meta Elements */}
-              <div className="hidden">
-                <span itemProp="description">
-                  Professional software development company offering web development, mobile apps, 
-                  UI/UX design, business management solutions, and bulk SMS integration services
-                </span>
-                <span itemProp="keywords">
-                  software development, web development, mobile app development, UI UX design, 
-                  business solutions, bulk SMS, Kenya software company
-                </span>
-              </div>
             </div>
-
             {/* Enhanced Glassmorphic Service Navigation */}
             <div className="relative w-full  mx-auto my-3">
               {/* Main Navigation Container */}

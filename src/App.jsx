@@ -13,6 +13,7 @@ import Services from "./Website/Pages/Services.jsx"
 import Projects from "./Website/Pages/Projects.jsx";
 import Estimate from "./Website/Pages/Estimate.jsx";
 import useScrollToTop from "./Website/Components/ScrollToTop.jsx"
+import ChatWithUs from "./Website/Components/ChatWithUs.jsx"
 import Footer from "./Website/Components/Footer.jsx";
 
 //admin and auth components
@@ -22,7 +23,6 @@ import RequireAuth from './admin-Dashboard/RequireAuth.jsx';
 import AdminDashboard from "./admin-Dashboard/AdminDash.jsx";
 import EstimatesDash from './admin-Dashboard/components/estimates/EstimatesDash.jsx';
 import MessagesDash from './admin-Dashboard/components/messages/MessagesDash.jsx';
-import ChatWithUs from "./Website/Components/ChatWithUs.jsx";
 
 
 
