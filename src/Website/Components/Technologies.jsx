@@ -144,7 +144,7 @@ const TechStackDropdown = () => {
                 </div>
                 <h3 className="text-xl font-semibold">{category.title}</h3>
               </div>
-              <div className="transition-transform duration-300">
+              <div className="transition-transform duration-500">
                 {openDropdown === category.id ? 
                   <ChevronUp className="w-6 h-6" /> : 
                   <ChevronDown className="w-6 h-6" />

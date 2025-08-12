@@ -23,6 +23,8 @@ import RequireAuth from './admin-Dashboard/RequireAuth.jsx';
 import AdminDashboard from "./admin-Dashboard/AdminDash.jsx";
 import EstimatesDash from './admin-Dashboard/components/estimates/EstimatesDash.jsx';
 import MessagesDash from './admin-Dashboard/components/messages/MessagesDash.jsx';
+import UserDash from "./admin-Dashboard/components/users/UserDash.jsx";
+import addUserForm from "./admin-Dashboard/components/users/addUserForm.jsx";
 
 
 
@@ -45,12 +47,13 @@ function App() {
         <Route path="/Services" element={<Services/>} />
 
         <Route element={<PersistLogin />}>
-                <Route element={<RequireAuth  />}>
+                <Route element={<RequireAuth />}>
                   <Route path="/admin-dashboard" element={<AdminDashboard />}>
                     {/* Default route for admin dashboard */}
                     <Route index element={<MessagesDash />} />
-                    <Route path="Estimates" element={<EstimatesDash />} />                 
-                    <Route path="Messages" element={<MessagesDash />} />          
+                    <Route path="estimates" element={<EstimatesDash />} />                 
+                    <Route path="messages" element={<MessagesDash />} />          
+                    <Route path="users" element={<UserDash />} />       
                                       
                   </Route>
                 </Route>

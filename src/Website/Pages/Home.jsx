@@ -6,6 +6,7 @@ import "../../App.css";
 import { Helmet } from "react-helmet-async";
 import CTA from "../Components/CTA.jsx";
 import useTitle from "../Components/useTitle.jsx";
+import Partners from "../Components/Partners.jsx";
 
 function Home() {
   useTitle("Isosoft Softwares")
@@ -21,7 +22,8 @@ function Home() {
       <Services />
       <Projects/>
       <CTA/>   
-      <Technologies />      
+      <Technologies /> 
+      <Partners/>     
     </>
   );
 }

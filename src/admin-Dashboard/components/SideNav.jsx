@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useQuery } from '@tanstack/react-query';
-import { Calculator,  ChevronRight, ChevronLeft, MessageCircle, LogOut } from 'lucide-react';
+import { Calculator,  ChevronRight, ChevronLeft, MessageCircle, LogOut, User } from 'lucide-react';
 import  useAuth  from '../../hooks/useAuth';
 import useAxiosPrivate from '../../hooks/useAxiosPrivate';
 
@@ -26,8 +26,9 @@ function SideNav({ activeView }) {
   })
   
   const navigationItems = [
-    { id: 'estimates', label: 'Project Estimates', icon: Calculator, path: '/admin-dashboard/Estimates' },
+    { id: 'estimates', label: 'Project Estimates', icon: Calculator, path: '/admin-dashboard/estimates' },
     { id: 'messages', label: 'Messages', icon: MessageCircle, path: '/admin-dashboard/messages' },
+    { id: 'users', label: 'Users', icon: User, path: '/admin-dashboard/users' },
     
   ];
 
@@ -103,12 +104,12 @@ function SideNav({ activeView }) {
         <div className={`
           fixed top-[78px] lg:top-0 left-0 h-full bg-gradient-to-b from-primary to-gray-700 
           text-white transition-all duration-300 ease-in-out z-20
-          shadow-2xl border-r border-gray-700
+          shadow-md border-r border-gray-700
           
           /* Mobile: Overlay behavior - slides in from left */
           ${isOpen 
             ? 'w-64 translate-x-0' 
-            : 'w-64 -translate-x-full'
+            : 'w-40 -translate-x-full'
           }
           
           /* Desktop: Push behavior - fixed positioning with proper width */

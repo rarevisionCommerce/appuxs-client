@@ -1,5 +1,8 @@
 import { Calculator, Clock, DollarSign, Download, Mail, Pen, Phone, Eye } from "lucide-react";
 import useEstimatesQuery from "./useEstimatesQuery"
+import useAxiosPrivate from "../../../hooks/useAxiosPrivate";
+import { toast } from "react-toastify";
+import { useState } from "react";
 
 function EstimateCard({ estimate, onEdit, onDelete, isDeleting }) {
   const {
@@ -36,18 +39,53 @@ function EstimateCard({ estimate, onEdit, onDelete, isDeleting }) {
     }
   }
 
-  const handleDownloadDocument = () => {
-    if (estimate.documentPath) {
-      // Assuming documentPath is a URL or you have an endpoint to download
-      const link = document.createElement('a');
-      link.href = estimate.documentPath;
-      link.download = estimate.originalFileName || 'document';
-      document.body.appendChild(link);
-      link.click();
-      document.body.removeChild(link);
-    }
+  // In any component where you want to download
+    
+        const [isDownloading, setIsDownloading] = useState(false);
+      const axios = useAxiosPrivate()
+        
+        const downloadDocument = async (estimateId, originalFileName) => {
+  if (!estimateId) {
+    toast.error("No estimate ID provided.");
+    return;
   }
 
+  setIsDownloading(true);
+
+  try {
+    const response = await axios.get(`/estimates/${estimateId}/download`, {
+      responseType: 'blob',
+ 
+
+    });
+
+    const blob = new Blob([response.data]);
+    const url = window.URL.createObjectURL(blob);
+         console.log("Downloading estimate:", estimateId)
+
+    const link = document.createElement('a');
+    link.href = url;
+    link.download = originalFileName?.trim() || `document-${estimateId}.pdf`;
+
+    document.body.appendChild(link);
+    link.click();
+
+    document.body.removeChild(link);
+    window.URL.revokeObjectURL(url);
+    console.log("Downloading estimate:", estimateId);
+
+    toast.success('Downloaded successfully!');
+  } catch (error) {
+    console.error('Download error:', error);
+    console.log("Downloading estimate:", estimateId);
+    toast.error('Download failed');
+  } finally {
+    setIsDownloading(false);
+  }
+  console.log("Downloading estimate:", estimateId);
+};
+
+       
 /*  const handleOpenDocument = () => {
     if (estimate.documentPath) {
       const fileName = estimate.originalFileName || '';
@@ -209,11 +247,13 @@ function EstimateCard({ estimate, onEdit, onDelete, isDeleting }) {
                 </button> */}
                 
                 <button
-                  onClick={handleDownloadDocument}
-                  className="px-3 py-1 bg-secondary  text-sm rounded hover:bg-yellow-300 transition-colors"
+                 onClick={() => downloadDocument(estimate._id, estimate.originalFileName)}
+                  className="px-3 py-1 bg-secondary text-sm rounded hover:bg-yellow-300 transition-colors"
                 >
                   Download
                 </button>
+
+
               </div>
             </div>
           </div>
