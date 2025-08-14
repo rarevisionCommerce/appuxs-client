@@ -11,12 +11,16 @@ import POS from "../Components/POS";
 import Ecommerse from "../Components/Ecommerse";
 import SoftwareConsultation from "../Components/SoftwareConsultation";
 import useTitle from "../Components/useTitle";
+import Header from "../Components/Header";
+import Footer from "../Components/Footer";
 
 
 const Services = () => {
-  useTitle("Services-Isosoft Softwares")
+ 
   return (
+   
     <>
+     <Header/>
     <Helmet>
       <title>Our Services | Isosoft Software</title>
       <meta name="description" content=" Isosoft Softwares offers a Package of software solutions that aim in transforming your business using cutting edge technology.We give Your business or organisation a relevant online presence" />              
@@ -211,6 +215,7 @@ const Services = () => {
           <CTA/>
         </section>
       </main>
+      <Footer/>
     </>
   );
 };

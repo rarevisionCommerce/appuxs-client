@@ -7,6 +7,8 @@ import useLogin from '../hooks/useLogin';
 import useAuth from '../hooks/useAuth';
 import Secure from "../assets/Security.jpg"
 import useTitle from '../Website/Components/useTitle';
+import Header from '../Website/Components/Header';
+import Footer from '../Website/Components/Footer';
 
 const Login = () => {
   const { persist, setPersist } = useAuth();
@@ -106,6 +108,7 @@ const Login = () => {
 
   return (
     <>
+    <Header/>
       <div className='h-20 w-full bg-primary'></div>
       <div className="min-h-screen bg-slate-50 flex items-center justify-center p-4">
         <div className="container mx-auto">
@@ -279,21 +282,7 @@ const Login = () => {
           </div>
         </div>
       </div>
-      
-      {/* Toast Container */}
-      <ToastContainer 
-        position="top-center"
-        autoClose={5000}
-        theme='colored'
-        hideProgressBar={false}
-        newestOnTop={false}
-        closeOnClick
-        rtl={false}
-        pauseOnFocusLoss
-        draggable
-        pauseOnHover
-        toastClassName={"top-16"}
-      />
+      <Footer/>
     </>
   );
 };

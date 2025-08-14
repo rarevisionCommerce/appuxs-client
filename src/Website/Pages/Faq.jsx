@@ -5,6 +5,8 @@ import { Helmet } from "react-helmet-async";
 import CTA from "../Components/CTA.jsx";
 import ProjectsSection from "../Components/Projects.jsx";
 import useTitle from "../Components/useTitle.jsx";
+import Footer from "../Components/Footer.jsx";
+import Header from "../Components/Header.jsx";
 
 const FAQ = () => {
   //Open and close question functionality
@@ -91,6 +93,7 @@ const FAQ = () => {
 
   return (
     <>
+    <Header/>
      <Helmet>
           <title>Frequently Asked Questions | Isosoft Softwares</title>
           <meta name="description" content=" Comprehensive FAQ section for Isosoft software development company. Find answers about web development, mobile app development, pricing, project timelines, technical stack, contracts, and maintenance services..." />              
@@ -157,6 +160,7 @@ const FAQ = () => {
       </main>
               
       <CTA/>
+      <Footer/>
     </>
   );
 };

@@ -23,6 +23,8 @@ import {
 import CTA from "../Components/CTA";
 import { FaWhatsapp } from "react-icons/fa"
 import useTitle from "../Components/useTitle"
+import Header from "../Components/Header"
+import Footer from "../Components/Footer"
 
 // Counter hook for animated numbers
 const useCounter = (end, duration = 2000, start = 0) => {
@@ -280,6 +282,7 @@ function Projects() {
 
   return (
     <main className="flex flex-col">
+      <Header/>
       <Helmet>
         <title>Projects Showcase | Isosoft Software</title>
         <meta name="description" content=" Isosoft Softwares has gain a positive reputation of delivering the best software solutions and have managed to accomplish 20+ projects.Here are some of the projects accomplished" />              
@@ -383,6 +386,7 @@ function Projects() {
       </section>
       
       <CTA/>
+      <Footer/>
     </main>
   );
 }

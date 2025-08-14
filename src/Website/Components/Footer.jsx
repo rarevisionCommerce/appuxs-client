@@ -108,7 +108,7 @@ function Footer() {
                 </header>
                 <div className="flex md:flex-col  gap-3">
                      <a 
-                        href="https://www.facebook.com" 
+                        href="https://www.facebook.com/peter.kim.gachora" 
                         target="_blank" 
                         rel="noopener noreferrer"
                         className="flex items-center gap-3 text-light group"
@@ -133,7 +133,7 @@ function Footer() {
                         <span className="text-sm hidden md:block ">Instagram</span>
                     </a>
                     <a 
-                        href="https://www.linkedin.com" 
+                      
                         target="_blank" 
                         rel="noopener noreferrer"
                         className="flex items-center gap-3 text-light group"
@@ -146,7 +146,7 @@ function Footer() {
                     </a>
                     
                     <a 
-                        href="https://www.github.com" 
+                        href="https://github.com/peter514" 
                         target="_blank" 
                         rel="noopener noreferrer"
                        className="flex items-center gap-3 text-light group"

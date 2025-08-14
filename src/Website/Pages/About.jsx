@@ -18,6 +18,8 @@ import {
 } from 'lucide-react';
 import CTA from '../Components/CTA';
 import useTitle from '../Components/useTitle';
+import Header from '../Components/Header';
+import Footer from '../Components/Footer';
 
 function About() {
     const fadeInUp = {
@@ -35,6 +37,7 @@ function About() {
     };
   
     return (<>
+    <Header/>
     <Helmet>
         <title>About Us | Isosoft Softwares</title>
         <meta name="description" content="Learn about Isosoft, a leading software development company founded in 2020. Discover our mission, culture, team of expert developers, and commitment to delivering innovative digital solutions for businesses worldwide.." />              
@@ -390,6 +393,7 @@ function About() {
 
             
         </div>
+        <Footer/>
      </>
         
     );

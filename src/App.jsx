@@ -25,6 +25,7 @@ import EstimatesDash from './admin-Dashboard/components/estimates/EstimatesDash.
 import MessagesDash from './admin-Dashboard/components/messages/MessagesDash.jsx';
 import UserDash from "./admin-Dashboard/components/users/UserDash.jsx";
 import addUserForm from "./admin-Dashboard/components/users/addUserForm.jsx";
+import F404 from "./F404.jsx";
 
 
 
@@ -34,10 +35,11 @@ function App() {
   const queryClient = new QueryClient()
   return (<> 
    <QueryClientProvider client={queryClient} >
-     <Header />
+   
      <ChatWithUs/>
       <Routes>
         <Route exact path="/" element={<Home/>} />
+        <Route  path="/*" element={<F404/>} />
         <Route exact path="/login" element={<Login/>} />
         <Route path="/Faq" element={<Faq/>} />
         <Route path="/Contacts" element={<Contacts/>} />
@@ -53,13 +55,13 @@ function App() {
                     <Route index element={<MessagesDash />} />
                     <Route path="estimates" element={<EstimatesDash />} />                 
                     <Route path="messages" element={<MessagesDash />} />          
-                    <Route path="users" element={<UserDash />} />       
+                    <Route path="users" element={<UserDash />} />     
                                       
                   </Route>
                 </Route>
               </Route>
       </Routes>
-<Footer/>
+
 
         <ToastContainer
         position="top-center"

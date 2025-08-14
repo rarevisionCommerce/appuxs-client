@@ -6,7 +6,8 @@ import { Helmet } from "react-helmet-async";
 import {Phone,Mail,MapPin,Clock,MessageCircle,Send,Instagram,Facebook,Linkedin,Github,Users} from "lucide-react";
 import GoogleMap from "../Components/GoogleMap.jsx";
 import { FaWhatsapp } from "react-icons/fa";
-import useTitle from "../Components/useTitle.jsx";
+import Footer from "../Components/Footer.jsx";
+import Header from "../Components/Header.jsx";
 
 function Contacts() {
 
@@ -62,6 +63,7 @@ function Contacts() {
 
     return (
         <>
+        <Header/>
         <Helmet>
             <title>Contact Us | Isosoft Softwares</title>
             <meta name="description" content="Contact Isosoft for professional software development services. Reach out for web development, mobile app development, custom software solutions, and digital transformation projects in Kenya." />              
@@ -251,14 +253,15 @@ function Contacts() {
 
                                     <div className="grid grid-cols-3 gap-3">
                                         {[
-                                            { icon: Instagram, name: "Instagram", handle: "@isosoft_dev", color: "from-pink-500 to-purple-500" },
-                                            { icon: Facebook, name: "Facebook", handle: "Isosoft Solutions", color: "from-blue-600 to-blue-800" },
-                                            { icon: Linkedin, name: "LinkedIn", handle: "Isosoft Company", color: "from-blue-700 to-blue-900" },
-                                            { icon: Github, name: "GitHub", handle: "@isosoft-dev", color: "from-gray-700 to-gray-900" },
+                                            { icon: Instagram, name: "Instagram", link: "https://www.instagram.com/gachora_kimani?igsh=Z2M2Mm92aW00ZWk5", color: "from-pink-500 to-purple-500" },
+                                            { icon: Facebook, name: "Facebook", link: "https://www.facebook.com/peter.kim.gachora", color: "from-blue-600 to-blue-800" },
+                                            { icon: Linkedin, name: "LinkedIn", color: "from-blue-700 to-blue-900" },
+                                            { icon: Github, name: "GitHub", link: "https://github.com/peter514", color: "from-gray-700 to-gray-900" },
                                         ].map((social, index) => (
                                             <a
                                                 key={index}
-                                                href="#"
+                                                href={social.link}
+                                                target="blank"
                                                 className="group flex flex-col items-center justify-center p-3 bg-gray-50 rounded-2xl hover:bg-white hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1"
                                             >
                                                 <div className={`w-10 h-10 bg-gradient-to-br ${social.color} rounded-xl flex items-center justify-center mb-2 group-hover:scale-110 transition-transform duration-300`}>
@@ -372,6 +375,7 @@ function Contacts() {
                     </div>
                 </section>
             </main>
+            <Footer/>
         </>
     );
 }

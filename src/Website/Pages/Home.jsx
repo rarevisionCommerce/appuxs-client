@@ -7,9 +7,12 @@ import { Helmet } from "react-helmet-async";
 import CTA from "../Components/CTA.jsx";
 import useTitle from "../Components/useTitle.jsx";
 import Partners from "../Components/Partners.jsx";
+import Header from "../Components/Header.jsx";
+import Footer from "../Components/Footer.jsx";
 
 function Home() {
   useTitle("Isosoft Softwares")
+  // <Partners/>  
   return (
     < >
     <Helmet>
@@ -17,13 +20,14 @@ function Home() {
       <meta name="description" content=" Isosoft, a leading software development company founded in 2020. Committed  to delivering innovative digital solutions for businesses and organisations worldwide." />              
       <meta  name="keywords" content="Best Software development company, web development Firm, mobile app developers, UI/UX designers,POS Systems, Kenya software company, custom software solutions, business applications, digital ,software developers transformation" />                        
     </Helmet>
-
+      <Header/>
        <Hero />
       <Services />
       <Projects/>
       <CTA/>   
       <Technologies /> 
-      <Partners/>     
+     
+      <Footer/>   
     </>
   );
 }

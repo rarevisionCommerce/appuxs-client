@@ -1,6 +1,8 @@
 import { Outlet, useLocation } from 'react-router-dom';
 import SideNav from './components/SideNav';
 import useTitle from '../Website/Components/useTitle';
+import Header from '../Website/Components/Header';
+import Footer from '../Website/Components/Footer';
 
 function AdminDashboard() {
   const location = useLocation();
@@ -12,6 +14,7 @@ function AdminDashboard() {
   };
 useTitle("Welcome Back Admin")
   return (<>
+  <Header/>
   <div className='h-20 w-full bg-primary fixed top-0'></div>
   <div className="min-h-screen flex flex-col bg-gray-100">
       
@@ -34,6 +37,7 @@ useTitle("Welcome Back Admin")
       
      
     </div>
+    <Footer/>
   </>
     
   );

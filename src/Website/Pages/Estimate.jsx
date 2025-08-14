@@ -5,6 +5,8 @@ import { Helmet } from "react-helmet-async";
 import { toast } from "react-toastify";
 import axiosPublic from "../../api/axios"; // Update with your axios config path
 import EstimatePortrait from "../../assets/EstP.jpg";
+import Header from "../Components/Header";
+import Footer from "../Components/Footer";
 
 function Estimate() {
     const [selectedFile, setSelectedFile] = useState(null);
@@ -87,6 +89,7 @@ function Estimate() {
 
     return (
         <div id="Estimate" className="flex flex-col  min-h-screen bg-slate-50">
+            <Header/>
             <Helmet>
                 <title>Get Started With A Project Estimate | Isosoft Softwares</title>
                 <meta name="description" content="Contact Isosoft for professional software development services. Reach out for web development, mobile app development, custom software solutions, and digital transformation projects in Kenya." />              
@@ -383,6 +386,7 @@ function Estimate() {
                 </div>
             </div>
         </div>
+        <Footer/>
         </div>
     );
 }
