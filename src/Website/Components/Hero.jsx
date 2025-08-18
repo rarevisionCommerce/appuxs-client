@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Link } from 'react-scroll';
-import Hero from "../../assets/HeroBg.jpg";
+import Hero from "../../assets/heroo.jpg";
 import { CheckCircle, Clock, Cpu, Verified } from "lucide-react";
 import { NavLink } from "react-router-dom";
 
@@ -155,7 +155,7 @@ function HeroSection() {
             </div>
             <div className="flex flex-col gap-1 rounded-xl text-light items-center justify-center bg-red-600 py-2 px-4">
               <div className="p-1 bg- text-secondary bg-light rounded-full"><Verified className=""/> </div>
-              <p className="font-bold text-lg">Guarnateed</p>
+              <p className="font-bold text-lg">Guaranteed</p>
               <span className="font-semibold">Quality Assured</span>
             </div>
           </div>
