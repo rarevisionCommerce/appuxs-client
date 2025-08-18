@@ -189,7 +189,7 @@ function Contacts() {
                               ? "border-red-500 bg-red-50"
                               : "border-gray-200 focus:border-secondary focus:bg-secondary/5"
                           }`}
-                          placeholder="Ruto Must Go!"
+                          placeholder="Name"
                         />
                         {errors.name && (
                           <span className="text-red-500 text-sm flex items-center gap-1">
