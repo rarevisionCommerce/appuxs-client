@@ -218,24 +218,8 @@ const ProjectCard = ({ image, title, description, link, layout = "standard" }) =
 function Projects() {
   const projects = [
     
-    {
-      image: Pearl,
-      title: "Pearl Apartments",
-      description: "An Accomodation platform that offers Executive rooms feature premium amenities such as spacious layouts, high-end furnishings, and exclusive access to executive lounges.",
-      link: "https://pearlapartments.co.ke/"
-    },
-    {
-      image: Febwin,
-      title: "Febwin Property Management",
-      description: "A Kenyan Property managment Agency that offers services like Renting premium properties, Selling  homes, and aid in booking amazing holiday stays and BnB experiences across Kenya's most beautiful locations.",
-      link: "https://febwin.co.ke/"
-    },
-    {
-      image: Isosales,
-      title: "Isosales POS",
-      description: "Tap into efficiency with tapNserve, the modern POS system built for bars and restaurants. From streamlined inventory management to seamless payment integrations, our platform handles it all.",
-      link: "https://isosalespos.isosoftwares.com/"
-    },
+    
+    
     {
       image: Dash1,
       title: "Property Management System",
@@ -264,12 +248,13 @@ function Projects() {
       
     },
     {
-      image: Agape,
-      title: "Agape Smart Solutions",
-      description: "Ultimate destination for online classes and assignment help. Offering essay writing, expert assignment editing, dissertation writing, and online class assistance.",
-      link: "https://agapesmartsolutions.com/",
+      image: Pearl,
+      title: "Pearl Apartments",
+      description: "An Accomodation platform that offers Executive rooms feature premium amenities such as spacious layouts, high-end furnishings, and exclusive access to executive lounges.",
+      link: "https://pearlapartments.co.ke/",
       layout: "featured"
     },
+    
     
   ];
 
@@ -284,7 +269,7 @@ function Projects() {
     <main className="flex flex-col">
       <Header/>
       <Helmet>
-        <title>Projects Showcase | Isosoft Software</title>
+        <title>Projects Showcase | Appuxs LLC</title>
         <meta name="description" content=" Isosoft Softwares has gain a positive reputation of delivering the best software solutions and have managed to accomplish 20+ projects.Here are some of the projects accomplished" />              
         <meta  name="keywords" content="software projects, Portfolio Showcase, Accomplished Projects , UI UX design, 
           Agape Smart Solutions, Pearl Apartments, Febwin Property Management, TapNserve"/>                        
@@ -309,7 +294,7 @@ function Projects() {
                 </h1>
                 
                 <p className="md:text-lg text-gray-300 leading-relaxed max-w-2xl">
-                  Since Isosoft's founding, we've maintained our moral commitment to deliver highest-quality IT services. Our talented teams of software development experts prioritize customer satisfaction above all else.
+                  Since Appuxs founding, we've maintained our moral commitment to deliver highest-quality IT services. Our talented teams of software development experts prioritize customer satisfaction above all else.
                 </p>
               </div>
 
@@ -369,7 +354,7 @@ function Projects() {
           <div className="space-y-8">
             {/* Featured Project */}
             <div className="mb-12">
-              <ProjectCard {...projects[6]} />
+              <ProjectCard {...projects[3]} />
             </div>
             
             {/* Regular Projects Grid */}
@@ -377,9 +362,7 @@ function Projects() {
               {projects.slice(0, 3).map((project, index) => (
                 <ProjectCard key={index} {...project} />
               ))}
-              {projects.slice(3, 6).map((project, index) => (
-                <ProjectCard key={index} {...project} />
-              ))}
+             
             </div>
           </div>
         </div>

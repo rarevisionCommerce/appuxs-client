@@ -3,16 +3,11 @@ import { FiArrowRight, FiAward, FiClock } from "react-icons/fi";
 import Photo1 from "../../assets/Dash1.jpg";
 import Photo2 from "../../assets/Dash2.jpg";
 import Photo3 from "../../assets/Dash3.jpg";
-import Photo4 from "../../assets/Agape.PNG";
-import Photo5 from "../../assets/Isosales.PNG";
-import Photo6 from "../../assets/Febwin.PNG";
-import Photo7 from "../../assets/Pearl.PNG";
+import Photo4 from "../../assets/Pearl.PNG";
 import { NavLink } from "react-router-dom";
 
-
-
 // Projects images array
-const images = [Photo1, Photo2, Photo3, Photo4,Photo5,Photo6,Photo7];
+const images = [Photo1, Photo2, Photo3, Photo4];
 
 function ProjectsSection() {
   // Image slider functionality
@@ -114,32 +109,13 @@ function ProjectsSection() {
                     currentImageIndex === 2 ? 'opacity-100' : 'opacity-0'
                   }`}
                 />
+                
+                
                 <img
                   src={images[3]}
                   alt="Project 4"
                   className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 ${
                     currentImageIndex === 3 ? 'opacity-100' : 'opacity-0'
-                  }`}
-                />
-                <img
-                  src={images[4]}
-                  alt="Project 4"
-                  className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 ${
-                    currentImageIndex === 4 ? 'opacity-100' : 'opacity-0'
-                  }`}
-                />
-                <img
-                  src={images[5]}
-                  alt="Project 5"
-                  className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 ${
-                    currentImageIndex === 5 ? 'opacity-100' : 'opacity-0'
-                  }`}
-                />
-                <img
-                  src={images[6]}
-                  alt="Project 6"
-                  className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 ${
-                    currentImageIndex === 6 ? 'opacity-100' : 'opacity-0'
                   }`}
                 />
               </div>
@@ -174,24 +150,7 @@ function ProjectsSection() {
                     }`}
                     onClick={() => setCurrentImageIndex(3)}
                   ></button>
-                  <button
-                    className={`w-2 h-2 rounded-full transition-all duration-300 ${
-                      currentImageIndex === 4 ? 'bg-yellow-500 scale-125' : 'bg-white/50'
-                    }`}
-                    onClick={() => setCurrentImageIndex(4)}
-                  ></button>
-                  <button
-                    className={`w-2 h-2 rounded-full transition-all duration-300 ${
-                      currentImageIndex === 5 ? 'bg-yellow-500 scale-125' : 'bg-white/50'
-                    }`}
-                    onClick={() => setCurrentImageIndex(5)}
-                  ></button>
-                  <button
-                    className={`w-2 h-2 rounded-full transition-all duration-300 ${
-                      currentImageIndex === 6 ? 'bg-yellow-500 scale-125' : 'bg-white/50'
-                    }`}
-                    onClick={() => setCurrentImageIndex(6)}
-                  ></button>
+                 
                 </div>
               </div>
 

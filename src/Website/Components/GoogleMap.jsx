@@ -1,4 +1,4 @@
-const GoogleMap = ({ location = "Kimbo, Kiambu County, Kenya" }) => {
+const GoogleMap = ({ location = "1 Michael Drive Beaverly Hills,FL 34465" }) => {
   // This uses Google's basic embed - no API key needed but limited customization
   const mapSrc = `https://maps.google.com/maps?width=100%25&height=400&hl=en&q=${encodeURIComponent(location)}&t=&z=14&ie=UTF8&iwloc=&output=embed`;
   

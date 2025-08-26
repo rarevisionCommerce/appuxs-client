@@ -38,11 +38,11 @@ const FAQ = () => {
       answer: <>
         <p>Please check out these links for some typical sample works:</p>
         <div className="grid lg:grid-cols-2 gap-2">
-          <a href="https://agapesmartsolutions.com/" className="text-yellow-500 hover:text-yellow-600 transition-colors duration-300 underline">Agape Smart Solutions</a>
+         
           <a href="https://pearlapartments.co.ke/" className="text-yellow-500 hover:text-yellow-600 transition-colors duration-300 underline">Pearl Apartments</a>
-          <a href="https://febwin.co.ke/" className="text-yellow-500 hover:text-yellow-600 transition-colors duration-300 underline">Febwin Properties</a>
           
-          <a href="https://isosalespos.isosoftwares.com/" className="text-yellow-500 hover:text-yellow-600 transition-colors duration-300 underline">Isosales Pos</a>
+          
+        
         </div>
         
         
@@ -95,9 +95,9 @@ const FAQ = () => {
     <>
     <Header/>
      <Helmet>
-          <title>Frequently Asked Questions | Isosoft Softwares</title>
-          <meta name="description" content=" Comprehensive FAQ section for Isosoft software development company. Find answers about web development, mobile app development, pricing, project timelines, technical stack, contracts, and maintenance services..." />              
-          <meta  name="keywords" content="software development FAQ, web development questions, mobile app development cost, project timeline, technical stack, contract signing, maintenance support, Kenya software company FAQ" />  
+          <title>Frequently Asked Questions | Appuxs LLC</title>
+          <meta name="description" content=" Comprehensive FAQ section for Appuxs LLC . Find answers about web development, mobile app development, pricing, project timelines, technical stack, contracts, and maintenance services..." />              
+          <meta  name="keywords" content="software development FAQ, web development questions, mobile app development cost, project timeline, technical stack, contract signing, maintenance support " />  
                         
      </Helmet>
       <main className="">

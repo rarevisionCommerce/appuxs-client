@@ -34,7 +34,7 @@ function PaymentGateways() {
 										<Rating value={5}/>
 									</div>
 									<p className="text-dark text-sm sm:text-base  leading-relaxed">
-										Isosoft builds seamless payment gateway integration, connecting businesses with leading financial platforms including M-Pesa, PayPal, Stripe, and major card networks like Visa and Mastercard. ensuring your customers enjoy secure, reliable, and diverse payment options across all channels.
+										Appuxs builds seamless payment gateway integration, connecting businesses with leading financial platforms including  PayPal, Stripe, and major card networks like Visa and Mastercard. ensuring your customers enjoy secure, reliable, and diverse payment options across all channels.
 									</p>
 								</div>
 							</div>
@@ -43,18 +43,7 @@ function PaymentGateways() {
 							<div className="p-2  flex flex-col ">
 								<h1 className="font-semibold mb-2 ">Top Pick Intergrations Done:</h1>                        
 								<div className="flex flex-col text-sm lg:text-lg gap-2">
-									{/* User-Friendly Design */}
-									<div className="flex items-center  gap-3  ">
-										<div className="p-2 rounded-full">
-											<FaSimCard className="w-5 h-5sm:w-6 sm:h-6 text-green-600" />
-										</div>
-										<div>
-											<span className="font-semibold  text-dark">
-												Mpesa/Daraja Payment Intergration
-											</span>
-											
-										</div>
-									</div>
+									
 		
 									{/* Fast Loading Times */}
 									<div className="flex gap-3 items-center ">

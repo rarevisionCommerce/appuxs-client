@@ -39,18 +39,16 @@ function About() {
     return (<>
     <Header/>
     <Helmet>
-        <title>About Us | Isosoft Softwares</title>
-        <meta name="description" content="Learn about Isosoft, a leading software development company founded in 2020. Discover our mission, culture, team of expert developers, and commitment to delivering innovative digital solutions for businesses worldwide.." />              
-        <meta  name="keywords" content="about Isosoft, software development company, web development team, mobile app developers, UI/UX designers, Kenya software company, custom software solutions, business applications, digital transformation" />    
+        <title>About Us | Appuxs LLC</title>
+        <meta name="description" content="Learn about Appuxs, a leading software development company founded in 2020. Discover our mission, culture, team of expert developers, and commitment to delivering innovative digital solutions for businesses worldwide.." />              
+        <meta  name="keywords" content="about Appuxs, software development company, web development team, mobile app developers, UI/UX designers, Kenya software company, custom software solutions, business applications, digital transformation" />    
                         
     </Helmet>
 <div className="min-h-screen">
             
-            {/* Hero Section - keeping original styling */}
+           
             <header className="relative py-5 bg-gradient-to-br from-slate-900 via-slate-800 to-gray-900 overflow-hidden">
-                {/* Animated Background Elements */}
-                
-
+            
                 {/* Main Content */}
                 <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8 xl:px-12">
                     <div className="flex flex-col justify-center gap-3 items-center pt-16">
@@ -63,13 +61,13 @@ function About() {
                             </div>
                             
                             <h1 className="text-2xl lg:text-4xl font-bold text-white leading-tight">
-                                About  <span className="text-yellow-400 bg-gradient-to-r from-yellow-400 to-yellow-300 bg-clip-text text-transparent">  Isosoft</span>
+                                About  <span className="text-yellow-400 bg-gradient-to-r from-yellow-400 to-yellow-300 bg-clip-text text-transparent">  Appuxs LLC</span>
                             </h1>
                             
                             <div className="w-28 lg:ml-[-80px] h-1 bg-gradient-to-r from-transparent rounded-2xl to-yellow-400"></div>
                             
                             <p className="lg:text-lg text-light leading-relaxed max-w-3xl mx-auto">
-                                Isosoft is a dedicated software developmment company.Founded in 2020 by a Team of passionate and profesional Software developers,mobile developers and UI/UX designers.Following a systemic approach,we are highly esteemed in delivering the best and most cost effective softaware solutions to our clients.
+                                Appuxs LLC is a dedicated software developmment company.Founded in 2020 by a Team of passionate and profesional Software developers,mobile developers and UI/UX designers.Following a systemic approach,we are highly esteemed in delivering the best and most cost effective softaware solutions to our clients.
                             </p>
                             <div className="gap-1 md:gap-4 flex">
                                 <span className="inline-flex gap-1 items-center px-3 py-2 bg-secondary/20 text-secondary rounded-full text-sm font-semibold backdrop-blur-sm border border-yellow-400/30 hover:border-yellow-400/50 transition-colors duration-300">
@@ -150,7 +148,7 @@ function About() {
                                         </h2>
                                     </div>
                                     <p className="text-primary lg:text-lg leading-relaxed font-medium">
-                                        At Isosoft, we believe that a successful product must help clients resolve their business problem, and furthermore, improve their business growth. Impactful products, satisfied customers, developmental businesses are our service roadmap.
+                                        At Appuxs LLC, we believe that a successful product must help clients resolve their business problem, and furthermore, improve their business growth. Impactful products, satisfied customers, developmental businesses are our service roadmap.
                                     </p>
                                     <div className="mt-6 flex items-center gap-2">
                                         <div className="w-12 h-1 bg-gradient-to-r from-secondary to-tertiary rounded-full"></div>
@@ -226,7 +224,7 @@ function About() {
                                         </h2>
                                     </div>
                                     <p className="text-primary  lg:text-lg leading-relaxed font-medium">
-                                        We are building a long-term and trusted relationship with valuable partners. Here are Isosoft partners:
+                                        We are building a long-term and trusted relationship with valuable partners. Here are Appuxs LLC partners:
                                     </p>
                                     <div className="mt-6 flex items-center gap-2">
                                         <div className="w-12 h-1 bg-gradient-to-r from-secondary to-tertiary rounded-full"></div>
@@ -309,7 +307,7 @@ function About() {
                                             <Award className="w-6 h-6 text-white" />
                                         </div>
                                         <h2 className="text-lg lg:text-2xl text-dark font-bold bt">
-                                            Why Choose Isosoft?
+                                            Why Choose Appuxs LLC?
                                         </h2>
                                     </div>
                                     
@@ -370,7 +368,7 @@ function About() {
                                                     <CheckCircle className="w-6 h-6 text-white" />
                                                 </div> Cutting-Edge Technology</h3>
                                                     <p className="text-primary/80  leading-relaxed">
-                                                        Isosoft prioritizes keeping up with trends as part of our software development services to help firms maintain their relevance in their respective, competitive industry.
+                                                        Appuxs prioritizes keeping up with trends as part of our software development services to help firms maintain their relevance in their respective, competitive industry.
                                                     </p>
                                                 </div>
                                             </div>

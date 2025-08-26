@@ -69,10 +69,10 @@ function HeroSection() {
               {/* Company Title */}
               <div  className="flex flex-col gap-5 2xl:gap-10">
                 <h1 className="text-2xl lg:text-4xl 2xl:text-6xl font-bold text-secondary mb-2">
-                  Check Telegram
+                Appuxs LLC
                 </h1>
                 <p className="text-light 2xl:text-lg 2xl:mb-6 leading-relaxed">
-                  Check Telegram is a company that is comprised of a qualified team of talented, 
+                  Appuxs LLC is a company that is comprised of a qualified team of talented, 
                   passionate and skilled developers and designers that have the zeal to deliver 
                   the best and most cost-efficient tech services to our clients.
                 </p>
@@ -90,7 +90,7 @@ function HeroSection() {
               {/* Description */}
               <div id="Developers" className="mb-5 lg:mb-7 2xl:mb-12">
                 <p className="text-light 2xl:text-lg leading-relaxed">
-                  Check Telegram team of software developers will create long-term value with our 
+                  Appuxs LLC team of software developers will create long-term value with our 
                   excellent mobile apps development services. 
                 </p>
               </div>
@@ -145,8 +145,8 @@ function HeroSection() {
             </div>
             <div className="flex flex-col gap-1 rounded-xl text-light items-center justify-center bg-purple-700 py-2 px-6">
               <div className="p-1 bg- text-secondary bg-light rounded-full"><Clock className=""/> </div>
-              <p className="font-bold text-lg">2000+</p>
-              <span className="font-semibold">Working Hours</span>
+              <p className="font-bold text-lg">5+</p>
+              <span className="font-semibold">Working Years</span>
             </div>
             <div className="flex flex-col gap-1 rounded-xl text-light items-center justify-center bg-pink-600 py-2 px-4">
               <div className="p-1 bg- text-secondary bg-light rounded-full"><Cpu className=""/> </div>

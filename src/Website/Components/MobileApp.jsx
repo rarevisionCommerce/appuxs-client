@@ -33,7 +33,7 @@ function MobileApp() {
                                         <Rating value={5}/>
                                     </div>
                                     <p className="text-dark text-sm sm:text-base  leading-relaxed">
-                                        Isosoft designs highly practical, technologically transformational, feature-rich native mobile apps for consumers and enterprises. We'll oversee mobile app development from inception to delivery and maintenance.
+                                        Appuxs designs highly practical, technologically transformational, feature-rich native mobile apps for consumers and enterprises. We'll oversee mobile app development from inception to delivery and maintenance.
                                     </p>
                                 </div>
                             </div>

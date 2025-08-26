@@ -12,13 +12,7 @@ import { ChevronRight, Mail, MapPin, Phone } from "lucide-react";
 function Footer() {
   const location = useLocation();
   const { pathname } = location;
-  const openWhatsApp = () => {
-    const phoneNumber = "254706181387";
-    const message = "HELLO! I would like to enquire about something.";
-    const encodedMessage = encodeURIComponent(message);
-    const whatsappURL = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
-    window.open(whatsappURL, "_blank");
-  };
+  
 
   return (
     <div className=" bg-slate-900">
@@ -32,7 +26,7 @@ function Footer() {
         {/* Logo and Description */}
         <div className=" w-full border-light/20 border-b lg:border-none ">
           <div className="mb-4">
-            <img src={Logo} className="h-14 mb-4" alt="Logo" />
+          <h1 className="text-secondary font-bold text-2xl">Appuxs LLC</h1>
             <p className="text-light text-sm leading-relaxed">
               Your reliable partner in software development services.
             </p>
@@ -53,43 +47,31 @@ function Footer() {
           </header>
           <div className="flex flex-col gap-3">
             <p className="text-light text-sm inline-flex gap-2 items-center  ">
-              <MapPin className="h-6 w-6 text-secondary " /> Spur Mall, Kimbo
-              Juja
+              <MapPin className="h-6 w-6 text-secondary " /> 1 MICHAEL DRIVE BEVERLY HILLS,
+              FL 34465
             </p>
             <a
               target="_blank"
-              href="mailto:info@isosoftwares.com"
+              href="mailto:info@appuxs.com"
               className="text-light text-sm inline-flex items-center gap-2 "
               rel="noopener noreferrer"
             >
-              <Mail className="h-6 w-6 text-secondary " /> info@isosoftwares.com
+              <Mail className="h-6 w-6 text-secondary " /> info@appuxs.com
             </a>
             <div className="text-light text-sm inline-flex gap-2 items-center">
               <Phone className="h-6 w-6 text-secondary " />
               <div className="flex gap-2">
                 <a
-                  href="tel:+254706181387"
+                  href="tel: +1 (256) 305-3000"
                   className="hover:text-secondary transition-colors"
                 >
-                  +254706181387
+                 +1 (256) 305-3000
                 </a>
-                <span>or</span>
-                <a
-                  href="tel:+254797936714"
-                  className="hover:text-secondary transition-colors"
-                >
-                  +254797936714
-                </a>
+                
               </div>
             </div>
           </div>
-          <button
-            onClick={openWhatsApp}
-            className="text-light text-sm inline-flex items-center gap-2 bg-green-500 p-3 rounded-lg max-w-44 mt-2 transition-all duration-200 hover:scale-110 "
-          >
-            {" "}
-            <FaWhatsapp /> Chat on WhatsApp
-          </button>
+          
         </div>
 
         {/* Quick Links */}

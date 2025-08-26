@@ -23,9 +23,8 @@ function ServicesSection() {
           <div className="h-[5px] rounded-full w-28 mb-3 bg-gradient-to-r from-transparent to-dark"></div>
           <div className="max-w-4xl ">
             <p className="text-slate-600 leading-relaxed md:max-w-2xl">
-              At Isosoft, customer satisfaction is always our priority. We provide best services 
-              with cutting edge technology. Our tech stack is constantly evolving. We embrace new 
-              technologies as they emerge. 
+              At Appuxs LLC customer satisfaction is always our priority. We provide best mobile Apps development 
+              services. Our tech stack is constantly evolving. We embrace new technologies as they emerge. 
             </p>
           </div>
         </div>
@@ -46,18 +45,8 @@ function ServicesSection() {
             </div>
           </div>
 
-          {/* Web Design */}
-          <div className="group bg-white  p-3 shadow-md  transition-all duration-300 transform hover:-translate-y-2 border border-slate-200 hover:border-yellow-500/50">
-            <div className="text-center">
-              <div className="w-12 h-12 mx-auto mb-2 bg-secondary  rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                <FiLayers className="text-3xl text-white" />
-              </div>
-              <h3 className="md:text-lg text-sm font-semibold text-slate-800 group-hover:text-yellow-600 transition-colors duration-300">
-                Web Design
-              </h3>
-              <div className="w-12 h-1 bg-yellow-500 mx-auto mt-4 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-            </div>
-          </div>
+          
+        
 
           {/* Mobile Application */}
           <div className="group bg-white  p-3 shadow-md  transition-all duration-300 transform hover:-translate-y-2 border border-slate-200 hover:border-yellow-500/50">
@@ -98,7 +87,8 @@ function ServicesSection() {
             </div>
           </div>
           {/* Bulk SMS */}
-          <div className="group bg-white  p-3 shadow-md  transition-all duration-300 transform hover:-translate-y-2 border border-slate-200 hover:border-yellow-500/50 md:col-span-2 lg:col-span-1">
+         {/** 
+          * <div className="group bg-white  p-3 shadow-md  transition-all duration-300 transform hover:-translate-y-2 border border-slate-200 hover:border-yellow-500/50 md:col-span-2 lg:col-span-1">
             <div className="text-center">
               <div className="w-12 h-12 mx-auto mb-2 bg-secondary rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
                 <FaSimCard className="text-3xl text-white" />
@@ -109,6 +99,7 @@ function ServicesSection() {
               <div className="w-12 h-1 bg-yellow-500 mx-auto mt-4 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
             </div>
           </div>
+         */}  
           {/**Payment gateways */}
           <div className="group bg-white  p-3 shadow-md  transition-all duration-300 transform hover:-translate-y-2 border border-slate-200 hover:border-yellow-500/50 md:col-span-2 lg:col-span-1">
             <div className="text-center">

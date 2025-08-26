@@ -15,7 +15,7 @@ const Login = () => {
   const { login, isLoading, error, clearError } = useLogin();
   const [showPassword, setShowPassword] = useState(false);
   const [hasShownToast, setHasShownToast] = useState(false);
-  useTitle("Login-Isosoft Softwares")
+  useTitle("Login-Appuxs LLC")
   const {
     register,
     handleSubmit,

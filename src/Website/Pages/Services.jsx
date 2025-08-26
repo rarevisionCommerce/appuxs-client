@@ -22,8 +22,8 @@ const Services = () => {
     <>
      <Header/>
     <Helmet>
-      <title>Our Services | Isosoft Software</title>
-      <meta name="description" content=" Isosoft Softwares offers a Package of software solutions that aim in transforming your business using cutting edge technology.We give Your business or organisation a relevant online presence" />              
+      <title>Our Services | Appuxs LLC</title>
+      <meta name="description" content=" Appuxs offers a Package of software solutions that aim in transforming your business using cutting edge technology.We give Your business or organisation a relevant online presence" />              
       <meta  name="keywords" content="software development, web development, mobile app development, UI UX design, 
        business automation, bulk SMS, POS Systems, Payment Gateways Intergration, IT Consultation"/>                        
     </Helmet>

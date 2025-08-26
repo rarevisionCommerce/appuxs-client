@@ -65,7 +65,7 @@ function Header() {
                 <section className="container mx-auto px-3 flex justify-between items-center">
                     {/* Logo Section */}
                     <div className="text-xl flex items-center gap-3">
-                        <h1 className="text-secondary font-bold text-2xl">Check Telegram</h1>
+                        <h1 className="text-secondary font-bold text-2xl">Appuxs LLC</h1>
                         <h1 className="text-secondary"></h1>
                     </div>
 

@@ -77,10 +77,10 @@ function Contacts() {
     <>
       <Header />
       <Helmet>
-        <title>Contact Us | Isosoft Softwares</title>
+        <title>Contact Us | Appuxs LLC</title>
         <meta
           name="description"
-          content="Contact Isosoft for professional software development services. Reach out for web development, mobile app development, custom software solutions, and digital transformation projects in Kenya."
+          content="Contact Appuxs LLC for professional software development services. Reach out for web development, mobile app development, custom software solutions, and digital transformation projects."
         />
         <meta
           name="keywords"
@@ -388,25 +388,13 @@ function Contacts() {
                       </div>
                       <div className="space-y-2">
                         <a href="tel:+254706181387" className="block text-blue-700 hover:text-blue-900 font-medium transition-colors">
-                          +254 706 181 387
+                          +1 (256) 305-3000
                         </a>
-                        <a href="tel:+254797936714" className="block text-blue-700 hover:text-blue-900 font-medium transition-colors">
-                          +254 797 936 714
-                        </a>
+                       
                       </div>
                     </div>
 
-                    {/* WhatsApp Card */}
-                    <div onClick={openWhatsApp} className="bg-gradient-to-br from-green-50 to-green-100 p-4 rounded-xl border border-green-200 hover:shadow-lg transition-all duration-300 group cursor-pointer">
-                      <div className="flex items-center gap-3 mb-3">
-                        <div className="p-2 bg-green-600 rounded-lg">
-                          <FaWhatsapp className='w-5 h-5 text-white'/>
-                        </div>
-                        <h3 className="font-bold text-green-800">WhatsApp Chat</h3>
-                      </div>
-                      <p className="text-green-700 font-medium">+254 706 181 387</p>
-                      <p className="text-green-600 text-sm mt-1">Click to start chat</p>
-                    </div>
+                    
 
                     {/* Email Card */}
                     <div className="bg-gradient-to-br from-red-50 to-red-100 p-4 rounded-xl border border-red-200 hover:shadow-lg transition-all duration-300 group">
@@ -416,8 +404,8 @@ function Contacts() {
                         </div>
                         <h3 className="font-bold text-red-800">Email Address</h3>
                       </div>
-                      <a href="mailto:info@isosoftwares.com" className="text-red-700 hover:text-red-900 font-medium transition-colors block">
-                        info@isosoftwares.com
+                      <a href="mailto:info@appuxs.com" className="text-red-700 hover:text-red-900 font-medium transition-colors block">
+                        info@appuxs.com
                       </a>
                     </div>
 
@@ -429,8 +417,8 @@ function Contacts() {
                         </div>
                         <h3 className="font-bold text-purple-800">Office Location</h3>
                       </div>
-                      <p className="text-purple-700 font-medium">Spur Mall Kimbo</p>
-                      <p className="text-purple-600 text-sm">Juja, Kenya</p>
+                      <p className="text-purple-700 font-medium">1 MICHAEL DRIVE</p>
+                      <p className="text-purple-600 text-sm">BEVERLY HILLS, FL 34465</p>
                     </div>
                   </div>
 
@@ -464,10 +452,7 @@ function Contacts() {
                     Our Location
                   </h2>
                 </div>
-                <p className="text-gray-600 text-center m-3">
-                  Located in the heart of Juja, Kenya - Easy to reach and ready
-                  to serve
-                </p>
+                
                 {/* Google Maps Placeholder */}
                 <div className="w-full h-[400px] bg-gradient-to-br from-gray-100 to-gray-200 rounded-2xl flex items-center justify-center border-2 border-dashed border-gray-300 hover:border-secondary transition-colors duration-300">
                   <GoogleMap />
