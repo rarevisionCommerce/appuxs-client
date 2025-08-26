@@ -32,8 +32,7 @@ function Estimate() {
             toast.success(`Estimate for ${data.newEstimate.name} submitted successfully!`);
             reset();
             setSelectedFile(null);
-        },
-        onError: (error) => {
+        },        onError: (error) => {
             const errorMessage = error.response?.data?.message || 'Something went wrong!';
             toast.error(errorMessage);
         },

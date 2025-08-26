@@ -36,7 +36,7 @@ function App() {
   return (<> 
    <QueryClientProvider client={queryClient} >
    
-     <ChatWithUs/>
+    
       <Routes>
         <Route exact path="/" element={<Home/>} />
         <Route  path="/*" element={<F404/>} />

@@ -5,7 +5,7 @@ import { CheckCircle, Clock, Cpu, Verified } from "lucide-react";
 import { NavLink } from "react-router-dom";
 
 // Typing animation texts
-const texts = ["Web Development", "AU/AX Design", "Mobile App Development", "Business Automation", "Bulk SMS Integration"];
+const texts = ["Web Development", "Mobile App Development"];
 
 function HeroSection() {
   // Title animation functionality
@@ -69,10 +69,10 @@ function HeroSection() {
               {/* Company Title */}
               <div  className="flex flex-col gap-5 2xl:gap-10">
                 <h1 className="text-2xl lg:text-4xl 2xl:text-6xl font-bold text-secondary mb-2">
-                  Isosoft Softwares
+                  Check Telegram
                 </h1>
                 <p className="text-light 2xl:text-lg 2xl:mb-6 leading-relaxed">
-                  Isosoft is a company that is comprised of a qualified team of talented, 
+                  Check Telegram is a company that is comprised of a qualified team of talented, 
                   passionate and skilled developers and designers that have the zeal to deliver 
                   the best and most cost-efficient tech services to our clients.
                 </p>
@@ -90,8 +90,8 @@ function HeroSection() {
               {/* Description */}
               <div id="Developers" className="mb-5 lg:mb-7 2xl:mb-12">
                 <p className="text-light 2xl:text-lg leading-relaxed">
-                  Isosoft's team of software developers will create long-term value with our 
-                  excellent software development services. 
+                  Check Telegram team of software developers will create long-term value with our 
+                  excellent mobile apps development services. 
                 </p>
               </div>
 

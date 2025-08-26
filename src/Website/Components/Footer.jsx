@@ -38,7 +38,7 @@ function Footer() {
             </p>
             <p className="text-green-400 inline-flex items-center gap-2 leading-relaxed">
               <div className="h-2 w-2 rounded-full bg-green-500"></div>
-              20+ Satisfied Customers
+              150+ Satisfied Customers
             </p>
           </div>
         </div>
