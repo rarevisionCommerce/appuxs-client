@@ -224,7 +224,7 @@ function Projects() {
       image: Dash1,
       title: "Property Management System",
       description: "Comprehensive Dashboard that allows the bussiness owner to control the inventory of their properties.",
-      link: "https://wa.me/254706181387?text=I want to see the property management  system demos",
+      link: "https://wa.me/+1 (256) 305-3000?text=I want to see the property management  system demos",
       layout: "dashboard"
     },
     
@@ -233,7 +233,7 @@ function Projects() {
       image: Dash2,
       title: "Retail & Shop Management ERP System",
       description: "Comprehensive System that allows allows shop owner to manage their shop inventory like sales,stock, revenue deficiets and much more.",
-     link: "https://wa.me/254706181387?text=I want to see the retail and shop management ERP system demos",
+     link: "https://wa.me/+1 (256) 305-3000?text=I want to see the retail and shop management ERP system demos",
       layout: "dashboard"
     },
     
@@ -243,7 +243,7 @@ function Projects() {
       image: Dash3, 
       title: "Custom management systems",
       description: "A management system that is tailor-made to the owners bussiness needs to automate and ease the workflow.",
-      link: "https://wa.me/254706181387?text=I want to see the custom management system demos",
+      link: "https://wa.me/+1 (256) 305-3000?text=I want to see the custom management system demos",
       layout: "dashboard"
       
     },

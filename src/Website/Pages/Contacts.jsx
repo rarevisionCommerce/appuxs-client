@@ -23,7 +23,7 @@ import Header from "../Components/Header.jsx";
 
 function Contacts() {
   const openWhatsApp = () => {
-    const phoneNumber = "254706181387";
+    const phoneNumber = "+1 (256) 305-3000";
     const message = "HELLO! I would like to enquire about something.";
     const encodedMessage = encodeURIComponent(message);
     const whatsappURL = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
