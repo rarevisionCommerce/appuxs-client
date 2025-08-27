@@ -26,6 +26,8 @@ import MessagesDash from './admin-Dashboard/components/messages/MessagesDash.jsx
 import UserDash from "./admin-Dashboard/components/users/UserDash.jsx";
 import addUserForm from "./admin-Dashboard/components/users/addUserForm.jsx";
 import F404 from "./F404.jsx";
+import TermsAndConditions from "./Website/Components/TermsAndConditions.jsx";
+import PrivacyPolicy from "./Website/Components/PrivacyPolicy.jsx";
 
 
 
@@ -47,6 +49,8 @@ function App() {
         <Route path="/About" element={<About/>} />        
         <Route path="/Projects" element={<Projects/>} />        
         <Route path="/Services" element={<Services/>} />
+        <Route path="/terms-conditions" element={<TermsAndConditions/>} />
+        <Route path="/privacy-policy" element={<PrivacyPolicy/>} />
 
         <Route element={<PersistLogin />}>
                 <Route element={<RequireAuth />}>

@@ -1,5 +1,5 @@
 const whatsappNumber = () => {   
-    return '+254706181387';
+    return '+1 (256) 305-3000';
   };
   
   export default whatsappNumber;

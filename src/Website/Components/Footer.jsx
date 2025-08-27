@@ -12,7 +12,6 @@ import { ChevronRight, Mail, MapPin, Phone } from "lucide-react";
 function Footer() {
   const location = useLocation();
   const { pathname } = location;
-  
 
   return (
     <div className=" bg-slate-900">
@@ -24,113 +23,111 @@ function Footer() {
         }`}
       >
         {/* Logo and Description */}
-        <div className=" w-full border-light/20 border-b lg:border-none ">
+        <div className="w-full border-b border-light/20 lg:border-none">
           <div className="mb-4">
-          <h1 className="text-secondary font-bold text-2xl">Appuxs LLC</h1>
-            <p className="text-light text-sm leading-relaxed">
+            <h1 className="text-2xl font-bold text-secondary">Appuxs LLC</h1>
+            <p className="text-sm leading-relaxed text-light">
               Your reliable partner in software development services.
             </p>
-            <p className="text-green-400 inline-flex items-center gap-2 leading-relaxed">
-              <div className="h-2 w-2 rounded-full bg-green-500"></div>
+            <p className="inline-flex items-center gap-2 leading-relaxed text-green-400">
+              <div className="w-2 h-2 bg-green-500 rounded-full"></div>
               150+ Satisfied Customers
             </p>
           </div>
         </div>
 
         {/* Contact Info */}
-        <div className="flex flex-col gap-3  w-full py-3 border-light/20 border-b lg:border-none  md:mb-0">
+        <div className="flex flex-col w-full gap-3 py-3 border-b border-light/20 lg:border-none md:mb-0">
           <header className="flex flex-col gap-2">
-            <h1 className=" text-light  text-lg font-semibold rounded-tr-2xl rounded-bl-2xl ">
+            <h1 className="text-lg font-semibold text-light rounded-tr-2xl rounded-bl-2xl">
               Get In Touch
             </h1>
-            <div className="h-1 w-20 bg-gradient-to-r from-transparent to-secondary  "></div>
+            <div className="w-20 h-1 bg-gradient-to-r from-transparent to-secondary "></div>
           </header>
           <div className="flex flex-col gap-3">
-            <p className="text-light text-sm inline-flex gap-2 items-center  ">
-              <MapPin className="h-6 w-6 text-secondary " /> 1 MICHAEL DRIVE BEVERLY HILLS,
-              FL 34465
+            <p className="inline-flex items-center gap-2 text-sm text-light ">
+              <MapPin className="w-6 h-6 text-secondary " /> 1 MICHAEL DRIVE
+              BEVERLY HILLS, FL 34465
             </p>
             <a
               target="_blank"
               href="mailto:info@appuxs.com"
-              className="text-light text-sm inline-flex items-center gap-2 "
+              className="inline-flex items-center gap-2 text-sm text-light "
               rel="noopener noreferrer"
             >
-              <Mail className="h-6 w-6 text-secondary " /> info@appuxs.com
+              <Mail className="w-6 h-6 text-secondary " /> info@appuxs.com
             </a>
-            <div className="text-light text-sm inline-flex gap-2 items-center">
-              <Phone className="h-6 w-6 text-secondary " />
+            <div className="inline-flex items-center gap-2 text-sm text-light">
+              <Phone className="w-6 h-6 text-secondary " />
               <div className="flex gap-2">
                 <a
                   href="tel: +1 (256) 305-3000"
-                  className="hover:text-secondary transition-colors"
+                  className="transition-colors hover:text-secondary"
                 >
-                 +1 (256) 305-3000
+                  +1 (256) 305-3000
                 </a>
-                
               </div>
             </div>
           </div>
-          
         </div>
 
         {/* Quick Links */}
-        <div className="flex flex-col gap-3 py-3 border-light/20 border-b lg:border-none w-full  md:mb-0">
+        <div className="flex flex-col w-full gap-3 py-3 border-b border-light/20 lg:border-none md:mb-0">
           <header className="flex flex-col gap-2">
-            <h1 className=" text-light  text-lg font-semibold rounded-tr-2xl rounded-bl-2xl ">
+            <h1 className="text-lg font-semibold text-light rounded-tr-2xl rounded-bl-2xl">
               Quick Links
             </h1>
-            <div className="h-1 w-20 bg-gradient-to-r from-transparent to-secondary  "></div>
+            <div className="w-20 h-1 bg-gradient-to-r from-transparent to-secondary "></div>
           </header>
           <div className="flex flex-col gap-3">
             <Link
               to="/"
-              className="text-light group inline-flex gap-2 items-center hover:text-secondary text-sm transition-colors duration-300 "
+              className="inline-flex items-center gap-2 text-sm transition-colors duration-300 text-light group hover:text-secondary "
             >
-              <ChevronRight className="group-hover:translate-x-1 h-4 w-4 text-secondary transition-all duration-300" />
+              <ChevronRight className="w-4 h-4 transition-all duration-300 group-hover:translate-x-1 text-secondary" />
               Home
             </Link>
             <Link
               to="/Services"
-              className="text-light group inline-flex gap-2 items-center hover:text-secondary text-sm transition-colors duration-300 "
+              className="inline-flex items-center gap-2 text-sm transition-colors duration-300 text-light group hover:text-secondary "
             >
-              <ChevronRight className="group-hover:translate-x-1 h-4 w-4 text-secondary transition-all duration-300" />{" "}
+              <ChevronRight className="w-4 h-4 transition-all duration-300 group-hover:translate-x-1 text-secondary" />{" "}
               Services
             </Link>
             <Link
               to="/About"
-              className="text-light group inline-flex gap-2 items-center hover:text-secondary text-sm transition-colors duration-300 "
+              className="inline-flex items-center gap-2 text-sm transition-colors duration-300 text-light group hover:text-secondary "
             >
-              <ChevronRight className="group-hover:translate-x-1 h-4 w-4 text-secondary transition-all duration-300" />{" "}
+              <ChevronRight className="w-4 h-4 transition-all duration-300 group-hover:translate-x-1 text-secondary" />{" "}
               About
             </Link>
             <Link
               to="/Projects"
-              className="text-light group inline-flex gap-2 items-center hover:text-secondary text-sm transition-colors duration-300 "
+              className="inline-flex items-center gap-2 text-sm transition-colors duration-300 text-light group hover:text-secondary "
             >
-              <ChevronRight className="group-hover:translate-x-1 h-4 w-4 text-secondary transition-all duration-300" />{" "}
+              <ChevronRight className="w-4 h-4 transition-all duration-300 group-hover:translate-x-1 text-secondary" />{" "}
               Portfolio
             </Link>
 
             <Link
               to="/Faq"
-              className="text-light group inline-flex gap-2 items-center hover:text-secondary text-sm transition-colors duration-300 "
+              className="inline-flex items-center gap-2 text-sm transition-colors duration-300 text-light group hover:text-secondary "
             >
-              <ChevronRight className="group-hover:translate-x-1 h-4 w-4 text-secondary transition-all duration-300" />{" "}
+              <ChevronRight className="w-4 h-4 transition-all duration-300 group-hover:translate-x-1 text-secondary" />{" "}
               FAQ
             </Link>
           </div>
         </div>
 
         {/* Social Media Section */}
-        <div className="flex flex-col gap-3 py-3  w-full ">
+        <div className="flex flex-col w-full gap-3 py-3 ">
           <header className="flex flex-col gap-2">
-            <h1 className=" text-light  text-lg font-semibold rounded-tr-2xl rounded-bl-2xl ">
+            <h1 className="text-lg font-semibold text-light rounded-tr-2xl rounded-bl-2xl">
               Follow Us
             </h1>
-            <div className="h-1 w-20 bg-gradient-to-r from-transparent to-secondary  "></div>
+            <div className="w-20 h-1 bg-gradient-to-r from-transparent to-secondary "></div>
           </header>
-          <div className="flex md:flex-col  gap-3">
+          <div className="flex gap-3 md:flex-col">
             <a
               href="#"
               target="_blank"
@@ -138,10 +135,10 @@ function Footer() {
               className="flex items-center gap-3 text-light group"
               aria-label="Facebook"
             >
-              <div className="bg-blue-600 p-2 rounded-full group-hover:scale-110 transition-all duration-200">
+              <div className="p-2 transition-all duration-200 bg-blue-600 rounded-full group-hover:scale-110">
                 <FaFacebookF size={16} />
               </div>
-              <span className="text-sm hidden md:block ">Facebook</span>
+              <span className="hidden text-sm md:block ">Facebook</span>
             </a>
 
             <a
@@ -151,10 +148,10 @@ function Footer() {
               className="flex items-center gap-3 text-light group"
               aria-label="Instagram"
             >
-              <div className="bg-pink-600 p-2 rounded-full group-hover:scale-110 transition-all duration-200">
+              <div className="p-2 transition-all duration-200 bg-pink-600 rounded-full group-hover:scale-110">
                 <FaInstagram size={16} />
               </div>
-              <span className="text-sm hidden md:block ">Instagram</span>
+              <span className="hidden text-sm md:block ">Instagram</span>
             </a>
             <a
               target="_blank"
@@ -162,10 +159,10 @@ function Footer() {
               className="flex items-center gap-3 text-light group"
               aria-label="LinkedIn"
             >
-              <div className="bg-blue-600 p-2 rounded-full group-hover:scale-110 transition-all duration-200">
+              <div className="p-2 transition-all duration-200 bg-blue-600 rounded-full group-hover:scale-110">
                 <FaLinkedinIn size={16} />
               </div>
-              <span className="text-sm hidden md:block ">LinkedIn</span>
+              <span className="hidden text-sm md:block ">LinkedIn</span>
             </a>
 
             {/* <a
@@ -175,21 +172,35 @@ function Footer() {
               className="flex items-center gap-3 text-light group"
               aria-label="GitHub"
             >
-              <div className="bg-gray-600 p-2 rounded-full group-hover:scale-110 transition-all duration-200">
+              <div className="p-2 transition-all duration-200 bg-gray-600 rounded-full group-hover:scale-110">
                 <FaGithub size={16} />
               </div>
-              <span className="text-sm hidden md:block ">GitHub</span>
+              <span className="hidden text-sm md:block ">GitHub</span>
             </a> */}
           </div>
         </div>
       </div>
 
       {/* Copyright Section */}
-      <div className="bg-primary text-center py-5">
-        <p className="text-white text-xs">
-          Copyright &copy; {new Date().getFullYear()} Isosoft. All rights
+      <div className="py-5 text-center bg-primary">
+        <p className="text-xs text-white">
+          Copyright &copy; {new Date().getFullYear()} Appuxs LLC. All rights
           reserved.
         </p>
+        <div className="mt-2 space-x-4">
+          <a
+            href="/privacy-policy"
+            className="text-xs text-blue-200 underline transition-colors hover:text-white"
+          >
+            Privacy Policy
+          </a>
+          <a
+            href="/terms-conditions"
+            className="text-xs text-blue-200 underline transition-colors hover:text-white"
+          >
+            Terms & Conditions
+          </a>
+        </div>
       </div>
     </div>
   );

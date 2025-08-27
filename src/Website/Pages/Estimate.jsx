@@ -195,7 +195,7 @@ function Estimate() {
                                                     message: "Please enter a valid phone number"
                                                 }
                                         })}
-                                        placeholder="e.g. +254712345678" 
+                                        placeholder="e.g. (123) 456-7890" 
                                         className={`p-3 border outline-none rounded-lg transition-all duration-200 text-sm ${
                                             errors.phoneNumber 
                                                 ? 'border-red-400 bg-red-50 focus:border-red-500' 

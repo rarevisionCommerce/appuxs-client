@@ -213,7 +213,7 @@ function Contacts() {
                               message: "Please enter a valid phone number",
                             },
                           })}
-                          placeholder="+254712345678"
+                          placeholder="(123) 456-7890"
                           className={`w-full p-3 border-2 outline-none rounded-xl transition-all duration-300 ${
                             errors.phoneNumber
                               ? "border-red-500 bg-red-50"
@@ -387,7 +387,7 @@ function Contacts() {
                         <h3 className="font-bold text-blue-800">Phone Numbers</h3>
                       </div>
                       <div className="space-y-2">
-                        <a href="tel:+254706181387" className="block text-blue-700 hover:text-blue-900 font-medium transition-colors">
+                        <a href="tel:+1 (256) 305-3000" className="block text-blue-700 hover:text-blue-900 font-medium transition-colors">
                           +1 (256) 305-3000
                         </a>
                        

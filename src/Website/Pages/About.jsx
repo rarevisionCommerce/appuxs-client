@@ -40,7 +40,7 @@ function About() {
     <Header/>
     <Helmet>
         <title>About Us | Appuxs LLC</title>
-        <meta name="description" content="Learn about Appuxs, a leading software development company founded in 2020. Discover our mission, culture, team of expert developers, and commitment to delivering innovative digital solutions for businesses worldwide.." />              
+        <meta name="description" content="Learn about Appuxs, a leading software development company founded in 2015. Discover our mission, culture, team of expert developers, and commitment to delivering innovative digital solutions for businesses worldwide.." />              
         <meta  name="keywords" content="about Appuxs, software development company, web development team, mobile app developers, UI/UX designers, Kenya software company, custom software solutions, business applications, digital transformation" />    
                         
     </Helmet>
@@ -67,7 +67,7 @@ function About() {
                             <div className="w-28 lg:ml-[-80px] h-1 bg-gradient-to-r from-transparent rounded-2xl to-yellow-400"></div>
                             
                             <p className="lg:text-lg text-light leading-relaxed max-w-3xl mx-auto">
-                                Appuxs LLC is a dedicated software developmment company.Founded in 2020 by a Team of passionate and profesional Software developers,mobile developers and UI/UX designers.Following a systemic approach,we are highly esteemed in delivering the best and most cost effective softaware solutions to our clients.
+                                Appuxs LLC is a dedicated software developmment company.Founded in 2015 by a Team of passionate and profesional Software developers,mobile developers and UI/UX designers.Following a systemic approach,we are highly esteemed in delivering the best and most cost effective softaware solutions to our clients.
                             </p>
                             <div className="gap-1 md:gap-4 flex">
                                 <span className="inline-flex gap-1 items-center px-3 py-2 bg-secondary/20 text-secondary rounded-full text-sm font-semibold backdrop-blur-sm border border-yellow-400/30 hover:border-yellow-400/50 transition-colors duration-300">

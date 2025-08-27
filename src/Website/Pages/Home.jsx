@@ -17,7 +17,7 @@ function Home() {
     < >
     <Helmet>
       <title>Appuxs LLC | Best Mobile Apps Developers</title>
-      <meta name="description" content=" Isosoft, a leading software development company founded in 2020. Committed  to delivering innovative digital solutions for businesses and organisations worldwide." />              
+      <meta name="description" content=" Isosoft, a leading software development company founded in 2015. Committed  to delivering innovative digital solutions for businesses and organisations worldwide." />              
       <meta  name="keywords" content="Best Software development company, web development Firm, mobile app developers, UI/UX designers,POS Systems, Kenya software company, custom software solutions, business applications, digital ,software developers transformation" />                        
     </Helmet>
       <Header/>
